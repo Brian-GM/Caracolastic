@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=3 uid="uid://dn351c0o6kfb3"]
+
+[ext_resource type="Texture2D" uid="uid://3g73bm61kvm3" path="res://Assets/Sprites/Characters/depositphotos_7192443-stock-photo-snail-view-from-above-removebg-preview.png" id="1_5dcte"]
+[ext_resource type="Script" path="res://Scripts/caracol.gd" id="1_bwwei"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_g0n4l"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_5dcte")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5fl3k"]
+radius = 123.0
+height = 520.0
+
+[node name="Caracol" type="CharacterBody2D"]
+position = Vector2(-2, -2)
+scale = Vector2(0.5, 0.5)
+collision_mask = 2
+script = ExtResource("1_bwwei")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_g0n4l")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-6, 70)
+scale = Vector2(-0.968038, 0.567638)
+shape = SubResource("CapsuleShape2D_5fl3k")
