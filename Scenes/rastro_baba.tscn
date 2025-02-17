@@ -4,24 +4,16 @@
 [ext_resource type="Texture2D" uid="uid://bne41y030use4" path="res://Assets/Sprites/Characters/baba.png" id="1_a3cwi"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yq5ex"]
-size = Vector2(128, 128)
+size = Vector2(80, 80)
 
 [node name="Baba" type="StaticBody2D" groups=["baba"]]
 collision_layer = 2
 script = ExtResource("1_5dy4i")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.621138, 0.624727)
 texture = ExtResource("1_a3cwi")
-
-[node name="Area2D" type="Area2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-scale = Vector2(0.994186, 1)
-shape = SubResource("RectangleShape2D_yq5ex")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 scale = Vector2(0.994186, 1)
 shape = SubResource("RectangleShape2D_yq5ex")
-
-[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
-[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

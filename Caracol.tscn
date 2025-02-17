@@ -14,20 +14,18 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5fl3k"]
-radius = 123.0
-height = 520.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8uqjk"]
+size = Vector2(80, 80)
 
 [node name="Caracol" type="CharacterBody2D"]
-position = Vector2(-2, -2)
-scale = Vector2(0.5, 0.5)
 collision_mask = 2
 script = ExtResource("1_bwwei")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(29, 1)
+rotation = 1.5708
+scale = Vector2(0.378678, 0.411961)
 sprite_frames = SubResource("SpriteFrames_g0n4l")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-6, 70)
-scale = Vector2(-0.968038, 0.567638)
-shape = SubResource("CapsuleShape2D_5fl3k")
+shape = SubResource("RectangleShape2D_8uqjk")
