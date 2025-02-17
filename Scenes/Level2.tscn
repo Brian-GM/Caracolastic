@@ -1,3 +1,45 @@
-[gd_scene format=3 uid="uid://dwtouuq381gse"]
+[gd_scene load_steps=6 format=3 uid="uid://dwtouuq381gse"]
+
+[ext_resource type="PackedScene" uid="uid://2pcmu3q1xh3c" path="res://Caracollvl2.tscn" id="1_e1uyw"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_u2pje"]
+b = Vector2(0, 720)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_u2ihb"]
+a = Vector2(1280, 0)
+b = Vector2(1280, 720)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_ea52x"]
+b = Vector2(1280, 0)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_c05dq"]
+a = Vector2(0, 720)
+b = Vector2(1280, 720)
 
 [node name="Level2" type="Node2D"]
+
+[node name="Left" type="StaticBody2D" parent="."]
+collision_layer = 2
+
+[node name="Left" type="CollisionShape2D" parent="Left"]
+shape = SubResource("SegmentShape2D_u2pje")
+
+[node name="Right" type="StaticBody2D" parent="."]
+collision_layer = 2
+
+[node name="Right" type="CollisionShape2D" parent="Right"]
+shape = SubResource("SegmentShape2D_u2ihb")
+
+[node name="Up" type="StaticBody2D" parent="."]
+collision_layer = 2
+
+[node name="Up" type="CollisionShape2D" parent="Up"]
+shape = SubResource("SegmentShape2D_ea52x")
+
+[node name="Bottom" type="StaticBody2D" parent="."]
+collision_layer = 2
+
+[node name="Bottom" type="CollisionShape2D" parent="Bottom"]
+shape = SubResource("SegmentShape2D_c05dq")
+
+[node name="Caracol" parent="." instance=ExtResource("1_e1uyw")]
