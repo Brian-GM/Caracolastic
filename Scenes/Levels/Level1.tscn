@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://bcxi8vqo4dnbf"]
 
 [ext_resource type="Script" path="res://Scripts/level_1.gd" id="1_2teri"]
-[ext_resource type="PackedScene" uid="uid://dn351c0o6kfb3" path="res://Caracol.tscn" id="2_u4hch"]
+[ext_resource type="PackedScene" uid="uid://dn351c0o6kfb3" path="res://Scenes/Caracol/Caracol.tscn" id="2_u4hch"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_3isfn"]
 b = Vector2(0, 720)

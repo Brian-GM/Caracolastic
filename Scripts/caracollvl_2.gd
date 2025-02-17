@@ -31,3 +31,5 @@ func rotate_character(direction: Vector2) -> void:
         rotation_degrees = 180
     elif direction == Vector2.UP:
         rotation_degrees = 0
+    
+    # TODO: HAcer la animacion ams flojita con lerp
