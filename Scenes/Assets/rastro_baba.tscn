@@ -1,19 +1,28 @@
 [gd_scene load_steps=4 format=3 uid="uid://dpxq4ofuj8422"]
 
 [ext_resource type="Script" path="res://Scripts/rastro_baba.gd" id="1_5dy4i"]
-[ext_resource type="Texture2D" uid="uid://bne41y030use4" path="res://Assets/Sprites/Characters/baba.png" id="1_a3cwi"]
+[ext_resource type="Texture2D" uid="uid://bne41y030use4" path="res://Assets/Sprites/Characters/Baba.png" id="1_a3cwi"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yq5ex"]
 size = Vector2(80, 80)
 
 [node name="Baba" type="StaticBody2D" groups=["baba"]]
-collision_layer = 2
 script = ExtResource("1_5dy4i")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+scale = Vector2(0.994186, 1)
+shape = SubResource("RectangleShape2D_yq5ex")
+debug_color = Color(0.640144, 0.337599, 1, 0.42)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.621138, 0.624727)
 texture = ExtResource("1_a3cwi")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+visible = false
 scale = Vector2(0.994186, 1)
 shape = SubResource("RectangleShape2D_yq5ex")
+
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

@@ -1,11 +1,12 @@
 extends Node2D
 
 @onready var levels = {
-	"level1": preload("res://scenes/Level1.tscn"),
-	"level2": preload("res://scenes/Level1.tscn"),
-	"level3": preload("res://scenes/Level1.tscn"),
-	"level4": preload("res://scenes/Level1.tscn"),
-	"level5": preload("res://scenes/Level1.tscn"),
+	"level1": preload("res://scenes/Levels/Level1.tscn"),
+	#"level2": preload("res://scenes/Levels/Level2.tscn"),
+	#"level3": preload("res://scenes/Levels/Level3.tscn"),
+	#"level4": preload("res://scenes/Levels/Level4.tscn"),
+	#"level5": preload("res://scenes/Levels/Level5.tscn"),
+
 
 }
 

@@ -21,9 +21,11 @@ b = Vector2(1280, 720)
 script = ExtResource("1_2teri")
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("2_u4hch")]
-position = Vector2(66, 653)
+position = Vector2(40, 680)
+slide_on_ceiling = false
 
 [node name="Left" type="StaticBody2D" parent="."]
+position = Vector2(-1.5, 0)
 collision_layer = 2
 
 [node name="Left" type="CollisionShape2D" parent="Left"]
@@ -33,16 +35,19 @@ shape = SubResource("SegmentShape2D_3isfn")
 collision_layer = 2
 
 [node name="Right" type="CollisionShape2D" parent="Right"]
+position = Vector2(1.5, 0)
 shape = SubResource("SegmentShape2D_i06g8")
 
 [node name="Up" type="StaticBody2D" parent="."]
 collision_layer = 2
 
 [node name="Up" type="CollisionShape2D" parent="Up"]
+position = Vector2(0, -1.5)
 shape = SubResource("SegmentShape2D_6oiuq")
 
 [node name="Bottom" type="StaticBody2D" parent="."]
 collision_layer = 2
 
 [node name="Bottom" type="CollisionShape2D" parent="Bottom"]
+position = Vector2(0, 1.5)
 shape = SubResource("SegmentShape2D_xir2w")

@@ -17,15 +17,17 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8uqjk"]
 size = Vector2(80, 80)
 
-[node name="Caracol" type="CharacterBody2D"]
-collision_mask = 2
+[node name="Caracol" type="CharacterBody2D" groups=["caracol"]]
+collision_mask = 3
+safe_margin = 0.001
 script = ExtResource("1_bwwei")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(29, 1)
+position = Vector2(29, 0)
 rotation = 1.5708
 scale = Vector2(0.378678, 0.411961)
 sprite_frames = SubResource("SpriteFrames_g0n4l")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_8uqjk")
+debug_color = Color(3.00817e-06, 0.647324, 0.214177, 0.42)
