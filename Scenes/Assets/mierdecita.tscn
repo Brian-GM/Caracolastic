@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://h4k8ar65lb2o"]
+
+[ext_resource type="Script" path="res://Scripts/mierdecita.gd" id="1_6vpp3"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_66b3x"]
+radius = 16.0
+
+[node name="Node2D" type="Area2D"]
+script = ExtResource("1_6vpp3")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_66b3x")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

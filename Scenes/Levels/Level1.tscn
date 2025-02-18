@@ -1,7 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://bcxi8vqo4dnbf"]
+[gd_scene load_steps=9 format=3 uid="uid://bcxi8vqo4dnbf"]
 
 [ext_resource type="Script" path="res://Scripts/level_1.gd" id="1_2teri"]
 [ext_resource type="PackedScene" uid="uid://dn351c0o6kfb3" path="res://Scenes/Caracol/Caracol.tscn" id="2_u4hch"]
+[ext_resource type="PackedScene" uid="uid://b6yo8ymw4ioqm" path="res://Scenes/Assets/obstaculo_oficina_1.tscn" id="3_o6p6k"]
+[ext_resource type="PackedScene" uid="uid://h4k8ar65lb2o" path="res://Scenes/Assets/mierdecita.tscn" id="4_m3nh1"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_3isfn"]
 b = Vector2(0, 720)
@@ -51,3 +53,64 @@ collision_layer = 2
 [node name="Bottom" type="CollisionShape2D" parent="Bottom"]
 position = Vector2(0, 1.5)
 shape = SubResource("SegmentShape2D_xir2w")
+
+[node name="Node2D" parent="." instance=ExtResource("3_o6p6k")]
+position = Vector2(40, 40)
+
+[node name="Node2D5" parent="." instance=ExtResource("3_o6p6k")]
+position = Vector2(220, 120)
+
+[node name="Node2D6" parent="." instance=ExtResource("3_o6p6k")]
+position = Vector2(562, 340)
+
+[node name="Node2D2" parent="." instance=ExtResource("3_o6p6k")]
+position = Vector2(810, 120)
+
+[node name="Node2D3" parent="." instance=ExtResource("3_o6p6k")]
+position = Vector2(440, 520)
+
+[node name="Node2D4" parent="." instance=ExtResource("3_o6p6k")]
+position = Vector2(1241, 431)
+
+[node name="Mierdas" type="Node2D" parent="."]
+
+[node name="Mierdecita" parent="Mierdas" instance=ExtResource("4_m3nh1")]
+position = Vector2(306, 681)
+
+[node name="Mierdecita2" parent="Mierdas" instance=ExtResource("4_m3nh1")]
+position = Vector2(38, 518)
+
+[node name="Mierdecita3" parent="Mierdas" instance=ExtResource("4_m3nh1")]
+position = Vector2(225, 34)
+
+[node name="Mierdecita4" parent="Mierdas" instance=ExtResource("4_m3nh1")]
+position = Vector2(1238, 130)
+
+[node name="Mierdecita5" parent="Mierdas" instance=ExtResource("4_m3nh1")]
+position = Vector2(639, 341)
+
+[node name="Mierdecita6" parent="Mierdas" instance=ExtResource("4_m3nh1")]
+position = Vector2(522, 120)
+
+[node name="Mierdecita7" parent="Mierdas" instance=ExtResource("4_m3nh1")]
+position = Vector2(567, 256)
+
+[node name="Mierdecita8" parent="Mierdas" instance=ExtResource("4_m3nh1")]
+position = Vector2(1250, 688)
+
+[node name="Mierdecita9" parent="Mierdas" instance=ExtResource("4_m3nh1")]
+position = Vector2(832, 517)
+
+[node name="Tiempo" type="Label" parent="."]
+offset_left = 13.0
+offset_top = 1.0
+offset_right = 70.0
+offset_bottom = 70.0
+theme_override_font_sizes/font_size = 50
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 30.0
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
