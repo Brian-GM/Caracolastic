@@ -2,7 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< HEAD
 uid="uid://d1yt3rmm3jfmo"
+=======
+uid="uid://bb7vm25esk1ox"
+>>>>>>> temp-branch
 path="res://.godot/imported/Papel.png-2e90e6cf039fcd0885fc292cfa5ae97b.ctex"
 metadata={
 "vram_texture": false

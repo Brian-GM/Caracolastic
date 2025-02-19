@@ -2,20 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-<<<<<<< HEAD
-uid="uid://detcbycq687yb"
-=======
-uid="uid://bqb4vi8e7yce0"
->>>>>>> temp-branch
-path="res://.godot/imported/Baba-esquina_izquierda-arriba.png-d328d3a4ae7681c80d0fcfeba2ae0879.ctex"
+uid="uid://dm3mmhy2hmc4d"
+path="res://.godot/imported/mesa-arriba.png-c01e33056f8c6fda8080f67449d67b64.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/Characters/Baba-esquina_izquierda-arriba.png"
-dest_files=["res://.godot/imported/Baba-esquina_izquierda-arriba.png-d328d3a4ae7681c80d0fcfeba2ae0879.ctex"]
+source_file="res://Assets/Sprites/Characters/mesa-arriba.png"
+dest_files=["res://.godot/imported/mesa-arriba.png-c01e33056f8c6fda8080f67449d67b64.ctex"]
 
 [params]
 
