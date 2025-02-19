@@ -50,9 +50,6 @@ collision_layer = 2
 shape = SubResource("SegmentShape2D_c05dq")
 
 [node name="Caracol" parent="." instance=ExtResource("1_e1uyw")]
-<<<<<<< HEAD
-script = null
-=======
 position = Vector2(493, 245)
 
 [node name="Recoger" type="Area2D" parent="."]
@@ -152,4 +149,3 @@ shape = SubResource("CircleShape2D_6e4c1")
 [connection signal="body_entered" from="Mesa4" to="Caracol" method="_on_mesa_4_body_entered"]
 [connection signal="body_entered" from="Mesa5" to="Caracol" method="_on_mesa_5_body_entered"]
 [connection signal="body_entered" from="Mesa6" to="Caracol" method="_on_mesa_6_body_entered"]
->>>>>>> fa317ac100569486bd6ea988946404e96b1d7736
