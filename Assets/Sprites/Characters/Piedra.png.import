@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bne41y030use4"
-path="res://.godot/imported/Baba.png-410711f3142001d66dd488b4ed66a84b.ctex"
+uid="uid://dale3c6cfapnn"
+path="res://.godot/imported/Piedra.png-314ea266b474194160ce01f51ef9d4a6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/Characters/Baba.png"
-dest_files=["res://.godot/imported/Baba.png-410711f3142001d66dd488b4ed66a84b.ctex"]
+source_file="res://Assets/Sprites/Characters/Piedra.png"
+dest_files=["res://.godot/imported/Piedra.png-314ea266b474194160ce01f51ef9d4a6.ctex"]
 
 [params]
 

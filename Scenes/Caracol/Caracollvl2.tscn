@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://2pcmu3q1xh3c"]
 
-[ext_resource type="Script" path="res://caracollvl_2.gd" id="1_mg4f5"]
+[ext_resource type="Script" path="res://Scripts/caracollvl_2.gd" id="1_kw7h6"]
 [ext_resource type="Texture2D" uid="uid://3g73bm61kvm3" path="res://Assets/Sprites/Characters/depositphotos_7192443-stock-photo-snail-view-from-above-removebg-preview.png" id="2_v3mcy"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_g0n4l"]
@@ -22,7 +22,7 @@ height = 520.0
 position = Vector2(216, 281)
 scale = Vector2(0.5, 0.5)
 collision_mask = 2
-script = ExtResource("1_mg4f5")
+script = ExtResource("1_kw7h6")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_g0n4l")
