@@ -52,15 +52,54 @@ shape = SubResource("SegmentShape2D_c05dq")
 [node name="Caracol" parent="." instance=ExtResource("1_e1uyw")]
 position = Vector2(493, 245)
 
-[node name="Recoger" type="Area2D" parent="."]
+[node name="RecogerCafe" type="Area2D" parent="."]
 script = ExtResource("2_d3ryu")
 
-[node name="Sprite2D" type="Sprite2D" parent="Recoger"]
+[node name="Sprite2D" type="Sprite2D" parent="RecogerCafe"]
 position = Vector2(58, 61)
 scale = Vector2(0.197266, 0.197266)
 texture = ExtResource("2_dyi75")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Recoger"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RecogerCafe"]
+position = Vector2(58, 61)
+shape = SubResource("CircleShape2D_6e4c1")
+
+[node name="TirarCafe" type="Area2D" parent="."]
+position = Vector2(451, 0)
+script = ExtResource("2_d3ryu")
+
+[node name="Sprite2D" type="Sprite2D" parent="TirarCafe"]
+position = Vector2(58, 61)
+scale = Vector2(0.197266, 0.197266)
+texture = ExtResource("2_dyi75")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TirarCafe"]
+position = Vector2(58, 61)
+shape = SubResource("CircleShape2D_6e4c1")
+
+[node name="RecogerLechuga" type="Area2D" parent="."]
+position = Vector2(202, -3)
+script = ExtResource("2_d3ryu")
+
+[node name="Sprite2D" type="Sprite2D" parent="RecogerLechuga"]
+position = Vector2(58, 61)
+scale = Vector2(0.197266, 0.197266)
+texture = ExtResource("2_dyi75")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RecogerLechuga"]
+position = Vector2(58, 61)
+shape = SubResource("CircleShape2D_6e4c1")
+
+[node name="TirarLechuga" type="Area2D" parent="."]
+position = Vector2(576, 0)
+script = ExtResource("2_d3ryu")
+
+[node name="Sprite2D" type="Sprite2D" parent="TirarLechuga"]
+position = Vector2(58, 61)
+scale = Vector2(0.197266, 0.197266)
+texture = ExtResource("2_dyi75")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TirarLechuga"]
 position = Vector2(58, 61)
 shape = SubResource("CircleShape2D_6e4c1")
 
@@ -142,7 +181,10 @@ texture = ExtResource("3_c1gso")
 position = Vector2(58, 61)
 shape = SubResource("CircleShape2D_6e4c1")
 
-[connection signal="body_entered" from="Recoger" to="Caracol" method="_on_recoger_body_entered"]
+[connection signal="body_entered" from="RecogerCafe" to="Caracol" method="_on_recoger_cafe_body_entered"]
+[connection signal="body_entered" from="TirarCafe" to="Caracol" method="_on_tirar_cafe_body_entered"]
+[connection signal="body_entered" from="RecogerLechuga" to="Caracol" method="_on_recoger_lechuga_body_entered"]
+[connection signal="body_entered" from="TirarLechuga" to="Caracol" method="_on_tirar_lechuga_body_entered"]
 [connection signal="body_entered" from="Mesa1" to="Caracol" method="_on_mesa_1_body_entered"]
 [connection signal="body_entered" from="Mesa2" to="Caracol" method="_on_mesa_2_body_entered"]
 [connection signal="body_entered" from="Mesa3" to="Caracol" method="_on_mesa_3_body_entered"]
