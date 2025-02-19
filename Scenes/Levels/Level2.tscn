@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://dwtouuq381gse"]
+[gd_scene load_steps=11 format=3 uid="uid://thj2nubeijma"]
 
 [ext_resource type="PackedScene" uid="uid://2pcmu3q1xh3c" path="res://Scenes/Caracol/Caracollvl2.tscn" id="1_e1uyw"]
 [ext_resource type="Script" path="res://Scenes/Levels/recoger.gd" id="2_d3ryu"]
