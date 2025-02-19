@@ -1,6 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://b6yo8ymw4ioqm"]
+[gd_scene load_steps=3 format=3 uid="uid://s6jup0d7ihu2"]
 
-[ext_resource type="Texture2D" uid="uid://djkbrd3xqgb7s" path="res://Assets/Sprites/Characters/mesa-arriba.png" id="1_427rr"]
+[ext_resource type="Texture2D" uid="uid://dfso13eg03fa8" path="res://Assets/Sprites/Characters/Planta.png" id="1_6ww8g"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ngq2s"]
 size = Vector2(80, 80)
@@ -9,8 +9,8 @@ size = Vector2(80, 80)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0, -1)
-scale = Vector2(0.742087, 0.695119)
-texture = ExtResource("1_427rr")
+scale = Vector2(0.647931, 0.590119)
+texture = ExtResource("1_6ww8g")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_ngq2s")

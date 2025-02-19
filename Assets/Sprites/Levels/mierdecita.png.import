@@ -2,20 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-<<<<<<< HEAD
-uid="uid://dspuiywma5mdt"
-=======
-uid="uid://3udj8tedldab"
->>>>>>> fa317ac100569486bd6ea988946404e96b1d7736
-path="res://.godot/imported/suelo.png-d972361297abd6b16bcc46cad5bd2720.ctex"
+uid="uid://c0vlpslgy0fwt"
+path="res://.godot/imported/mierdecita.png-b7e8a4aa3cf48ba189a082903b9a71d2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/Characters/suelo.png"
-dest_files=["res://.godot/imported/suelo.png-d972361297abd6b16bcc46cad5bd2720.ctex"]
+source_file="res://Assets/Sprites/Levels/mierdecita.png"
+dest_files=["res://.godot/imported/mierdecita.png-b7e8a4aa3cf48ba189a082903b9a71d2.ctex"]
 
 [params]
 

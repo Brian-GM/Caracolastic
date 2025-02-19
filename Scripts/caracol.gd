@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 var first_frame: bool = true  # Variable para detectar el primer frame
-var speed: float = 500 
+var speed: float =300
 var direction: Vector2 = Vector2.ZERO
 var moving: bool = false
 var rastro_baba_vertical = preload("res://Scenes/Assets/rastro_baba_vertical.tscn")

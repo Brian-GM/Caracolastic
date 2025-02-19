@@ -24,9 +24,9 @@ safe_margin = 0.001
 script = ExtResource("1_bwwei")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(-0.0165791, -0.0154674)
+position = Vector2(-5, -2.22045e-16)
 rotation = 1.5708
-scale = Vector2(1.63236, 1.58284)
+scale = Vector2(0.763147, 0.691121)
 sprite_frames = SubResource("SpriteFrames_g0n4l")
 offset = Vector2(3.68511, -6.32826)
 
