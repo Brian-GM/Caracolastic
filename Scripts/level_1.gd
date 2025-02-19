@@ -3,9 +3,6 @@ extends Node2D
 @onready var tiempo: Label = $Tiempo
 @onready var timer: Timer = $Timer
 
-var maximo_mierdecitas = 10
-
-var mierdecitas_actuales = 10
 
 # Called when the node enters the scene tree for the first time.
 func _process(delta: float) -> void:

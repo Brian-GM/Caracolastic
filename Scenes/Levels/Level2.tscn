@@ -43,3 +43,4 @@ collision_layer = 2
 shape = SubResource("SegmentShape2D_c05dq")
 
 [node name="Caracol" parent="." instance=ExtResource("1_e1uyw")]
+script = null
