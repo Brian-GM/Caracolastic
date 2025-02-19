@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://bcxi8vqo4dnbf"]
+[gd_scene load_steps=12 format=3 uid="uid://bcxi8vqo4dnbf"]
 
 [ext_resource type="Script" path="res://Scripts/level_1.gd" id="1_2teri"]
 [ext_resource type="Texture2D" uid="uid://b1087rh6ipqww" path="res://Assets/Sprites/Levels/suelo.png" id="2_bjbo5"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://b6yo8ymw4ioqm" path="res://Scenes/Assets/obstaculo_oficina_1.tscn" id="3_o6p6k"]
 [ext_resource type="PackedScene" uid="uid://h4k8ar65lb2o" path="res://Scenes/Assets/mierdecita.tscn" id="4_m3nh1"]
 [ext_resource type="PackedScene" uid="uid://s6jup0d7ihu2" path="res://Scenes/Assets/obstaculo_oficina_2.tscn" id="5_52fjs"]
+[ext_resource type="Texture2D" uid="uid://6i1cf56go6jw" path="res://Assets/Sprites/Levels/Pared.png" id="7_gieu7"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_3isfn"]
 b = Vector2(0, 720)
@@ -420,7 +421,7 @@ position = Vector2(527, 424)
 scale = Vector2(1.5, 1.5)
 
 [node name="Mierdecita20" parent="Mierdas" instance=ExtResource("4_m3nh1")]
-position = Vector2(286, 22)
+position = Vector2(290, 44)
 scale = Vector2(1.5, 1.5)
 
 [node name="Mierdecita21" parent="Mierdas" instance=ExtResource("4_m3nh1")]
@@ -454,5 +455,27 @@ theme_override_font_sizes/font_size = 50
 wait_time = 45.0
 one_shot = true
 autostart = true
+
+[node name="Pared" type="Sprite2D" parent="."]
+position = Vector2(-14, 347.75)
+scale = Vector2(1, 5.89453)
+texture = ExtResource("7_gieu7")
+
+[node name="Pared2" type="Sprite2D" parent="."]
+position = Vector2(1294, 368)
+scale = Vector2(1, 5.89453)
+texture = ExtResource("7_gieu7")
+
+[node name="Pared3" type="Sprite2D" parent="."]
+position = Vector2(206, -18)
+rotation = 1.5708
+scale = Vector2(1.24748, 18.7027)
+texture = ExtResource("7_gieu7")
+
+[node name="Pared4" type="Sprite2D" parent="."]
+position = Vector2(604, 737)
+rotation = 1.5708
+scale = Vector2(1.24748, 18.7027)
+texture = ExtResource("7_gieu7")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
