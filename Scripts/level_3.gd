@@ -33,7 +33,7 @@ func _process(delta: float) -> void:
 	tiempo.text = str(int(timer.time_left))
 
 	if points >= 10:
-		get_tree().change_scene_to_file("res://Scenes/Levels/Level4.tscn")
+		get_tree().change_scene_to_file("res://Scenes/Levels/lvl_4.tscn")
 
 func _input(event: InputEvent) -> void:
 	if event is InputEventKey:

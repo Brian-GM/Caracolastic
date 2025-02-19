@@ -8,7 +8,7 @@ extends Node2D
 func _process(delta: float) -> void:
 	tiempo.text = str(int(timer.time_left))
 	if mierdas.get_child_count() <= 0:
-		get_tree().change_scene_to_file("res://Scenes/Levels/Level2.tscn")
+		get_tree().change_scene_to_file("res://Scenes/Levels/lvl_2.tscn")
 
 
 func _on_timer_timeout() -> void:

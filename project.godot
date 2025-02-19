@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Caracolastic"
-run/main_scene="res://Scenes/Stories/MainScene.tscn"
+run/main_scene="res://Scenes/Levels/lvl_1.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
 config/icon="res://icon.svg"
 

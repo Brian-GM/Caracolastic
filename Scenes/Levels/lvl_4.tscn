@@ -1,0 +1,117 @@
+[gd_scene load_steps=20 format=3 uid="uid://cgc8ya85s51db"]
+
+[ext_resource type="Script" path="res://Scripts/lvl_4_win.gd" id="1_j3npd"]
+[ext_resource type="Texture2D" uid="uid://cecukutu158b5" path="res://Assets/Sprites/animations/animaciones_cambiar_nivel/lvl_4/asxensor/fotograma0000.png" id="2_tnbmi"]
+[ext_resource type="Texture2D" uid="uid://cwxl0l35ay43p" path="res://Assets/Sprites/animations/animaciones_cambiar_nivel/lvl_4/asxensor/fotograma0001.png" id="3_dx8gc"]
+[ext_resource type="Texture2D" uid="uid://b4oemx0xvasik" path="res://Assets/Sprites/animations/animaciones_cambiar_nivel/lvl_4/asxensor/fotograma0002.png" id="4_ga234"]
+[ext_resource type="Texture2D" uid="uid://bb8h76r07ubqi" path="res://Assets/Sprites/animations/animaciones_cambiar_nivel/lvl_4/asxensor/fotograma0003.png" id="5_6vvy2"]
+[ext_resource type="Texture2D" uid="uid://dpegsqyimq4i2" path="res://Assets/Sprites/animations/animaciones_cambiar_nivel/lvl_4/asxensor/fotograma0004.png" id="6_heacy"]
+[ext_resource type="Texture2D" uid="uid://bxd8cj8axa5sf" path="res://Assets/Sprites/animations/animaciones_cambiar_nivel/lvl_4/asxensor/fotograma0005.png" id="7_535gm"]
+[ext_resource type="Texture2D" uid="uid://cxm4b423ewfn7" path="res://Assets/Sprites/animations/animaciones_cambiar_nivel/lvl_4/asxensor/fotograma0006.png" id="8_k20lh"]
+[ext_resource type="Texture2D" uid="uid://dlgmdghvinufe" path="res://Assets/Sprites/animations/animaciones_cambiar_nivel/lvl_4/abrir_puerta/fotograma0000.png" id="9_5mxnc"]
+[ext_resource type="Texture2D" uid="uid://w07y8j5i2bud" path="res://Assets/Sprites/animations/animaciones_cambiar_nivel/lvl_4/abrir_puerta/fotograma0001.png" id="10_0slfu"]
+[ext_resource type="Texture2D" uid="uid://lk1obu63ia7o" path="res://Assets/Sprites/animations/animaciones_cambiar_nivel/lvl_4/abrir_puerta/fotograma0002.png" id="11_cm0ac"]
+[ext_resource type="Texture2D" uid="uid://biadn6cqkapf8" path="res://Assets/Sprites/animations/animaciones_cambiar_nivel/lvl_4/abrir_puerta/fotograma0003.png" id="12_togvy"]
+[ext_resource type="Texture2D" uid="uid://clso2uty3qcjq" path="res://Assets/Sprites/animations/animaciones_cambiar_nivel/lvl_4/abrir_puerta/fotograma0004.png" id="13_2wipc"]
+[ext_resource type="Texture2D" uid="uid://c0d54qskde0fm" path="res://Assets/Sprites/animations/animaciones_cambiar_nivel/lvl_4/abrir_puerta/fotograma0005.png" id="14_vp83a"]
+[ext_resource type="Texture2D" uid="uid://d4awsqrkeok25" path="res://Assets/Sprites/animations/animaciones_cambiar_nivel/lvl_4/abrir_puerta/fotograma0006.png" id="15_4k0to"]
+[ext_resource type="Texture2D" uid="uid://cm2rqhlxmc1kn" path="res://Assets/Sprites/animations/animaciones_cambiar_nivel/lvl_1/abrir_puerta/fotograma0000.png" id="16_mehr5"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fm4u6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_tnbmi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_dx8gc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ga234")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_6vvy2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_heacy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_535gm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_k20lh")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_w1paa"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_5mxnc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_0slfu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_cm0ac")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_togvy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_2wipc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_vp83a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_4k0to")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_uoylm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("16_mehr5")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="lvl_4" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_j3npd")
+
+[node name="ascensor" type="AnimatedSprite2D" parent="."]
+position = Vector2(640, 360)
+sprite_frames = SubResource("SpriteFrames_fm4u6")
+
+[node name="open" type="AnimatedSprite2D" parent="."]
+position = Vector2(640, 360)
+sprite_frames = SubResource("SpriteFrames_w1paa")
+
+[node name="close" type="AnimatedSprite2D" parent="."]
+position = Vector2(640, 360)
+sprite_frames = SubResource("SpriteFrames_uoylm")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+autostart = true
+
+[connection signal="animation_finished" from="open" to="." method="_on_open_animation_finished"]
+[connection signal="animation_looped" from="open" to="." method="_on_open_animation_looped"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
