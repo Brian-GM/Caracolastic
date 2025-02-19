@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://b6yo8ymw4ioqm"]
 
-[ext_resource type="Texture2D" uid="uid://dbvftffjou6pb" path="res://Assets/Sprites/Characters/mesa-arriba.png" id="1_427rr"]
+[ext_resource type="Texture2D" uid="uid://ccebq1nyyt6eo" path="res://Assets/Sprites/Characters/mesa-arriba.png" id="1_427rr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ngq2s"]
 size = Vector2(80, 80)

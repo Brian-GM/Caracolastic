@@ -13,6 +13,9 @@ func _ready() -> void:
 	for i in range(1, 7):
 		var mesa = get_node("../Mesa" + str(i))
 		if mesa:
+			# creaomos un objeto mesa con el nombre de la mesa, y 2 variables, cafe y lechuga que seran booleanas de manera random pero una si o si tiene que ser true
+
+			
 			mesas.append(mesa)
 
 func _process(_delta: float) -> void:
