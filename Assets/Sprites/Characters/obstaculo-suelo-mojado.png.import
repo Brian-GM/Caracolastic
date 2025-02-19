@@ -2,7 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< HEAD
 uid="uid://lq0ucu75fa7o"
+=======
+uid="uid://dqvrjx1nvhc2u"
+>>>>>>> fa317ac100569486bd6ea988946404e96b1d7736
 path="res://.godot/imported/obstaculo-suelo-mojado.png-c0cfc61f764f91056dc4b1fe59f2d096.ctex"
 metadata={
 "vram_texture": false

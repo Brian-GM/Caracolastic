@@ -2,7 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< HEAD
 uid="uid://d872sswld3hn"
+=======
+uid="uid://dhcmeql3x52wi"
+>>>>>>> temp-branch
 path="res://.godot/imported/Baba-abajo.png-426fc3f5982999cdc45fe93b7d66f980.ctex"
 metadata={
 "vram_texture": false
