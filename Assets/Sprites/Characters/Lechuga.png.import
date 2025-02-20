@@ -2,7 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< HEAD
 uid="uid://dfwigwl1lxamq"
+=======
+uid="uid://c5ndqcbuuy5ll"
+>>>>>>> bdd51d31cf68c0e15348b5cda7ae85cfdbb4bebc
 path="res://.godot/imported/Lechuga.png-38a494d986f1d2d3d7e8c5c655e8bd75.ctex"
 metadata={
 "vram_texture": false

@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 [gd_scene load_steps=16 format=3 uid="uid://thj2nubeijma"]
+=======
+[gd_scene load_steps=12 format=3 uid="uid://thj2nubeijma"]
+>>>>>>> bdd51d31cf68c0e15348b5cda7ae85cfdbb4bebc
 
 [ext_resource type="PackedScene" uid="uid://2pcmu3q1xh3c" path="res://Scenes/Caracol/Caracollvl2.tscn" id="1_e1uyw"]
 [ext_resource type="Texture2D" uid="uid://dbsyc5p0wvpqi" path="res://Assets/Sprites/Characters/suelo.png" id="1_qadld"]
@@ -6,7 +10,10 @@
 [ext_resource type="Texture2D" uid="uid://cpm1jbykry4ss" path="res://Assets/Sprites/spritesdeprueba/circulodemierda.png" id="2_dyi75"]
 [ext_resource type="Script" path="res://Scenes/Levels/soltar.gd" id="4_gmdsm"]
 [ext_resource type="Texture2D" uid="uid://ccebq1nyyt6eo" path="res://Assets/Sprites/Characters/mesa-arriba.png" id="6_jacte"]
+<<<<<<< HEAD
 [ext_resource type="Texture2D" uid="uid://d4fqw0oss7sen" path="res://Assets/Sprites/Levels/Soltar.png" id="6_ywdt8"]
+=======
+>>>>>>> bdd51d31cf68c0e15348b5cda7ae85cfdbb4bebc
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_u2pje"]
 b = Vector2(0, 720)
@@ -342,6 +349,7 @@ texture = ExtResource("1_qadld")
 position = Vector2(-64, 64)
 texture = ExtResource("1_qadld")
 
+<<<<<<< HEAD
 [node name="Fila7" type="Node2D" parent="fondo"]
 position = Vector2(-2, 900)
 
@@ -444,6 +452,8 @@ texture = ExtResource("1_qadld")
 position = Vector2(-64, 64)
 texture = ExtResource("1_qadld")
 
+=======
+>>>>>>> bdd51d31cf68c0e15348b5cda7ae85cfdbb4bebc
 [node name="Left" type="StaticBody2D" parent="."]
 collision_layer = 2
 
@@ -548,7 +558,11 @@ scale = Vector2(0.357145, 0.357145)
 
 [node name="Sprite2D" type="Sprite2D" parent="Mesa1/ColisionMesa1"]
 position = Vector2(57, 61)
+<<<<<<< HEAD
 scale = Vector2(1.1, 1.1)
+=======
+scale = Vector2(0.677266, 0.677266)
+>>>>>>> bdd51d31cf68c0e15348b5cda7ae85cfdbb4bebc
 texture = ExtResource("6_jacte")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Mesa1/ColisionMesa1"]
@@ -578,7 +592,11 @@ scale = Vector2(0.357145, 0.357145)
 
 [node name="Sprite2D" type="Sprite2D" parent="Mesa2/ColisionMesa2"]
 position = Vector2(57, 61)
+<<<<<<< HEAD
 scale = Vector2(1.1, 1.1)
+=======
+scale = Vector2(0.197266, 0.197266)
+>>>>>>> bdd51d31cf68c0e15348b5cda7ae85cfdbb4bebc
 texture = ExtResource("6_jacte")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Mesa2/ColisionMesa2"]
@@ -610,7 +628,11 @@ collision_mask = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="Mesa3/ColisionMesa3"]
 position = Vector2(57, 61)
+<<<<<<< HEAD
 scale = Vector2(1.1, 1.1)
+=======
+scale = Vector2(0.197266, 0.197266)
+>>>>>>> bdd51d31cf68c0e15348b5cda7ae85cfdbb4bebc
 texture = ExtResource("6_jacte")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Mesa3/ColisionMesa3"]
@@ -641,7 +663,11 @@ scale = Vector2(0.357145, 0.357145)
 
 [node name="Sprite2D" type="Sprite2D" parent="Mesa4/ColisionMesa4"]
 position = Vector2(57, 61)
+<<<<<<< HEAD
 scale = Vector2(1.1, 1.1)
+=======
+scale = Vector2(0.197266, 0.197266)
+>>>>>>> bdd51d31cf68c0e15348b5cda7ae85cfdbb4bebc
 texture = ExtResource("6_jacte")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Mesa4/ColisionMesa4"]
@@ -672,7 +698,11 @@ scale = Vector2(0.357145, 0.357145)
 
 [node name="Sprite2D" type="Sprite2D" parent="Mesa5/ColisionMesa5"]
 position = Vector2(57, 61)
+<<<<<<< HEAD
 scale = Vector2(1.1, 1.1)
+=======
+scale = Vector2(0.197266, 0.197266)
+>>>>>>> bdd51d31cf68c0e15348b5cda7ae85cfdbb4bebc
 texture = ExtResource("6_jacte")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Mesa5/ColisionMesa5"]
@@ -690,8 +720,15 @@ position = Vector2(20.0001, -17.8573)
 scale = Vector2(0.357145, 0.357145)
 script = ExtResource("4_gmdsm")
 
+<<<<<<< HEAD
 [node name="Sprite2D2" type="Sprite2D" parent="Mesa6/Mesa6"]
 texture = ExtResource("6_ywdt8")
+=======
+[node name="Sprite2D" type="Sprite2D" parent="Mesa6"]
+position = Vector2(57, 61)
+scale = Vector2(0.197266, 0.197266)
+texture = ExtResource("6_jacte")
+>>>>>>> bdd51d31cf68c0e15348b5cda7ae85cfdbb4bebc
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Mesa6/Mesa6"]
 position = Vector2(6.10352e-05, 0)
