@@ -9,7 +9,7 @@ var pideCafe: bool = false
 var pideLechuga: bool = false
 var segundos: int = 15
 var tiempo_acumulado: float = 0.0
-
+var mirando_a_derecha: bool
 
 
 func _ready() -> void:
@@ -65,18 +65,21 @@ func _process(_delta: float) -> void:
 	else:
 		velocity = Vector2.ZERO
 
+	if mirando_a_derecha:
+		$Sprite2D.flip_h = false
+	else:
+		$Sprite2D.flip_h = true
+
 	move_and_slide()
 	actualizar_tiempo(_delta)
 
 func rotate_character(direction: Vector2) -> void:
 	if direction == Vector2.RIGHT:
-		rotation_degrees = 90
+		mirando_a_derecha = true
+
 	elif direction == Vector2.LEFT:
-		rotation_degrees = 270
-	elif direction == Vector2.DOWN:
-		rotation_degrees = 180
-	elif direction == Vector2.UP:
-		rotation_degrees = 0
+		mirando_a_derecha = false
+	
 
 func _on_recoger_cafe_body_entered(_body: Node2D) -> void:
 	if not cafeRecogido:
@@ -217,6 +220,3 @@ func _on_mesa_6_body_entered(_body: Node2D) -> void:
 		else:
 			print("No has traido la comanda correcta, deshecha lo que no se ha requerido y recoge lo que se te ha pedido.")	
 			
-
-
-

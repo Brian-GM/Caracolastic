@@ -1,6 +1,8 @@
 extends Node
 
-# Called when the node enters the scene tree for the first time.
+var firs_time = true
+var current_level = ""
+
 func _ready() -> void:
 	pass
 
