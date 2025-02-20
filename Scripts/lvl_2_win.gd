@@ -18,6 +18,8 @@ func reproducir_musica_aleatoria() -> void:
 		musica_ascensor.play()
 
 func _ready() -> void:
+	$AnimationPlayer.play("desvanecer_entrada")
+
 	close.visible = true
 
 func _on_timer_timeout() -> void:
@@ -31,6 +33,8 @@ func _on_open_animation_finished() -> void:
 	open.stop()
 	ascensor.play("default")
 	await get_tree().create_timer(5.0).timeout
+	$AnimationPlayer.play("desvanecer_salir")
+	await get_tree().create_timer(1.0).timeout  # Espera 2 segundos
 	get_tree().change_scene_to_file("res://Scenes/Levels/Level2.tscn")
 	
 func _on_timer_2_timeout() -> void:

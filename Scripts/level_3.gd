@@ -27,6 +27,8 @@ var typed_word = ""
 
 
 func _ready() -> void:
+	$AnimationPlayer.play("desvanecer_entrada")
+
 	GameManager.current_level = "res://Scenes/Levels/Level3.tscn"
 	puntos.text = str(points) + " /10"
 	_1.visible = false
@@ -37,6 +39,8 @@ func _process(delta: float) -> void:
 	guiones.text = marca
 
 	if points >= 10:
+		$AnimationPlayer.play("desvanecer_salir")
+		await get_tree().create_timer(1.0).timeout  # Espera 2 segundos
 		get_tree().change_scene_to_file("res://Scenes/Levels/lvl_4.tscn")
 
 func _input(event: InputEvent) -> void:
@@ -87,4 +91,6 @@ func new_word() -> void:
 
 
 func _on_timer_timeout() -> void:
+	$AnimationPlayer.play("desvanecer_salir")
+	await get_tree().create_timer(1.0).timeout  # Espera 2 segundos
 	get_tree().change_scene_to_file("res://Scenes/Levels/despedido.tscn")

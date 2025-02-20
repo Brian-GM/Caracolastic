@@ -1,60 +1,192 @@
-[gd_scene load_steps=3 format=3 uid="uid://cx6rj2isurjb"]
+[gd_scene load_steps=15 format=3 uid="uid://cx6rj2isurjb"]
 
 [ext_resource type="FontFile" uid="uid://bre1cjdaepuvc" path="res://Assets/Fonts/PressStart2P-Regular.ttf" id="1_dorf8"]
 [ext_resource type="Script" path="res://Scripts/menu.gd" id="1_n5bv2"]
+[ext_resource type="Texture2D" uid="uid://di4ax0p7ftkng" path="res://Fondo-menu.png" id="3_0yrk5"]
+[ext_resource type="Texture2D" uid="uid://drmstm88ixw2f" path="res://Assets/Sprites/UI/R.png" id="3_kbcmi"]
+[ext_resource type="Texture2D" uid="uid://bgeq5ylio3nc8" path="res://Fondo-menu2.png" id="4_sgw87"]
+[ext_resource type="Script" path="res://Scenes/Levels/npc_derecha_izquierda.gd" id="6_56soe"]
+[ext_resource type="Texture2D" uid="uid://pmbjmhgpyrrk" path="res://Assets/Sprites/Characters/CaracolConcha.png" id="6_cbflw"]
+[ext_resource type="Script" path="res://Scenes/Levels/npc_izquierda_derecha.gd" id="6_iudm8"]
+
+[sub_resource type="Animation" id="Animation_lfgtj"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TextureRect:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_uwxkt"]
+resource_name = "desvanecer_entrada"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TextureRect:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_2swc2"]
+resource_name = "desvanecer_salir"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TextureRect:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="Animation" id="Animation_7ubi0"]
+resource_name = "desvanecer_salir_team"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0333333, 3.06667, 3.96667),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TextureRect:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.0333333, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_xx4bh"]
+_data = {
+"RESET": SubResource("Animation_lfgtj"),
+"desvanecer_entrada": SubResource("Animation_uwxkt"),
+"desvanecer_salir": SubResource("Animation_2swc2"),
+"desvanecer_salir_team": SubResource("Animation_7ubi0")
+}
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_a7dt5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_0yrk5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_sgw87")
+}],
+"loop": true,
+"name": &"default",
+"speed": 0.5
+}]
 
 [node name="Menu" type="Control"]
 layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_n5bv2")
 
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_xx4bh")
+}
+
 [node name="Play" type="Button" parent="."]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 555.0
-offset_top = 347.0
+offset_top = 368.0
 offset_right = 763.0
-offset_bottom = 405.0
+offset_bottom = 426.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("1_dorf8")
 theme_override_font_sizes/font_size = 50
 text = "Play"
 
-[node name="Exit" type="Button" parent="."]
-visible = false
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 560.0
-offset_top = 587.0
-offset_right = 768.0
-offset_bottom = 645.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_fonts/font = ExtResource("1_dorf8")
-theme_override_font_sizes/font_size = 50
-text = "Exit"
-
 [node name="Options" type="Button" parent="."]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 481.0
-offset_top = 464.0
+offset_top = 507.0
 offset_right = 839.0
-offset_bottom = 522.0
+offset_bottom = 565.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("1_dorf8")
 theme_override_font_sizes/font_size = 50
 text = "Options"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+z_index = -3
+position = Vector2(640, 360)
+sprite_frames = SubResource("SpriteFrames_a7dt5")
+frame_progress = 0.498448
 
 [node name="Titulo" type="Label" parent="."]
 layout_mode = 2
@@ -64,6 +196,7 @@ offset_right = 1397.0
 offset_bottom = 285.0
 size_flags_horizontal = 6
 size_flags_vertical = 6
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("1_dorf8")
 theme_override_font_sizes/font_size = 75
 text = "Corporate
@@ -71,19 +204,53 @@ text = "Corporate
  Shell"
 horizontal_alignment = 1
 
-[node name="Press Space to continue" type="Label" parent="."]
-layout_mode = 2
-offset_left = -73.0
-offset_top = 555.0
-offset_right = 1427.0
-offset_bottom = 786.0
-size_flags_horizontal = 6
-size_flags_vertical = 6
-theme_override_fonts/font = ExtResource("1_dorf8")
-theme_override_font_sizes/font_size = 35
-text = "Press Space to continue..."
-horizontal_alignment = 1
+[node name="TextureRect" type="TextureRect" parent="."]
+z_index = 5
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -357.0
+offset_top = -157.0
+offset_right = 961.0
+offset_bottom = 611.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2.33246, 1.74173)
+texture = ExtResource("3_kbcmi")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+script = ExtResource("6_56soe")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+position = Vector2(28, 629)
+scale = Vector2(0.314416, 0.384055)
+texture = ExtResource("6_cbflw")
+
+[node name="CharacterBody2D2" type="CharacterBody2D" parent="."]
+position = Vector2(452, -4)
+script = ExtResource("6_56soe")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D2"]
+position = Vector2(-264, 640)
+scale = Vector2(0.160822, 0.144121)
+texture = ExtResource("6_cbflw")
+
+[node name="CharacterBody2D3" type="CharacterBody2D" parent="."]
+script = ExtResource("6_iudm8")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D3"]
+position = Vector2(969, 629)
+scale = Vector2(-0.398428, 0.372667)
+texture = ExtResource("6_cbflw")
+
+[node name="CharacterBody2D4" type="CharacterBody2D" parent="."]
+script = ExtResource("6_iudm8")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D4"]
+position = Vector2(1312, 634)
+scale = Vector2(-0.235479, 0.236638)
+texture = ExtResource("6_cbflw")
 
 [connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
-[connection signal="pressed" from="Exit" to="." method="_on_exit_pressed"]
 [connection signal="pressed" from="Options" to="." method="_on_options_pressed"]

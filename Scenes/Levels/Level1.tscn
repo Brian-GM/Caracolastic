@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://bcxi8vqo4dnbf"]
+[gd_scene load_steps=20 format=3 uid="uid://bcxi8vqo4dnbf"]
 
 [ext_resource type="Script" path="res://Scripts/level_1.gd" id="1_2teri"]
 [ext_resource type="Texture2D" uid="uid://b1087rh6ipqww" path="res://Assets/Sprites/Levels/suelo.png" id="2_bjbo5"]
@@ -8,6 +8,8 @@
 [ext_resource type="PackedScene" uid="uid://s6jup0d7ihu2" path="res://Scenes/Assets/obstaculo_oficina_2.tscn" id="5_52fjs"]
 [ext_resource type="FontFile" uid="uid://bre1cjdaepuvc" path="res://Assets/Fonts/PressStart2P-Regular.ttf" id="6_ohtr3"]
 [ext_resource type="Texture2D" uid="uid://6i1cf56go6jw" path="res://Assets/Sprites/Levels/Pared.png" id="7_gieu7"]
+[ext_resource type="AudioStream" uid="uid://bbtxm3bnxpjyq" path="res://Assets/Music/Effects/Quick Reverb Fat - Sound Effect (HD) (mp3cut.net) (2).mp3" id="9_3sifq"]
+[ext_resource type="Texture2D" uid="uid://drmstm88ixw2f" path="res://Assets/Sprites/UI/R.png" id="10_apfvb"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_3isfn"]
 b = Vector2(0, 720)
@@ -22,6 +24,123 @@ b = Vector2(1280, 0)
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_xir2w"]
 a = Vector2(0, 720)
 b = Vector2(1280, 720)
+
+[sub_resource type="Animation" id="Animation_lfgtj"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TextureRect:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_uwxkt"]
+resource_name = "desvanecer_entrada"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TextureRect:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_2swc2"]
+resource_name = "desvanecer_salir"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TextureRect:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="Animation" id="Animation_7ubi0"]
+resource_name = "desvanecer_salir_team"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0333333, 3.06667, 3.96667),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TextureRect:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.0333333, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_xx4bh"]
+_data = {
+"RESET": SubResource("Animation_lfgtj"),
+"desvanecer_entrada": SubResource("Animation_uwxkt"),
+"desvanecer_salir": SubResource("Animation_2swc2"),
+"desvanecer_salir_team": SubResource("Animation_7ubi0")
+}
 
 [node name="Level1" type="Node2D"]
 script = ExtResource("1_2teri")
@@ -381,10 +500,6 @@ theme_override_font_sizes/font_size = 50
 
 [node name="Mierdas" type="Node2D" parent="."]
 
-[node name="Mierdecita" parent="Mierdas" instance=ExtResource("4_m3nh1")]
-position = Vector2(54, 247)
-scale = Vector2(1.5, 1.5)
-
 [node name="Mierdecita2" parent="Mierdas" instance=ExtResource("4_m3nh1")]
 position = Vector2(38, 560)
 scale = Vector2(1.5, 1.5)
@@ -394,11 +509,7 @@ position = Vector2(127, 677)
 scale = Vector2(1.5, 1.5)
 
 [node name="Mierdecita3" parent="Mierdas" instance=ExtResource("4_m3nh1")]
-position = Vector2(534, 40)
-scale = Vector2(1.5, 1.5)
-
-[node name="Mierdecita8" parent="Mierdas" instance=ExtResource("4_m3nh1")]
-position = Vector2(414, 675)
+position = Vector2(747, 36)
 scale = Vector2(1.5, 1.5)
 
 [node name="Mierdecita9" parent="Mierdas" instance=ExtResource("4_m3nh1")]
@@ -409,36 +520,20 @@ scale = Vector2(1.5, 1.5)
 position = Vector2(390, 383)
 scale = Vector2(1.5, 1.5)
 
-[node name="Mierdecita10" parent="Mierdas" instance=ExtResource("4_m3nh1")]
-position = Vector2(250, 480)
-scale = Vector2(1.5, 1.5)
-
 [node name="Mierdecita11" parent="Mierdas" instance=ExtResource("4_m3nh1")]
 position = Vector2(559, 274)
-scale = Vector2(1.5, 1.5)
-
-[node name="Mierdecita13" parent="Mierdas" instance=ExtResource("4_m3nh1")]
-position = Vector2(919, 673)
 scale = Vector2(1.5, 1.5)
 
 [node name="Mierdecita14" parent="Mierdas" instance=ExtResource("4_m3nh1")]
 position = Vector2(320, 591)
 scale = Vector2(1.5, 1.5)
 
-[node name="Mierdecita16" parent="Mierdas" instance=ExtResource("4_m3nh1")]
-position = Vector2(869, 272)
-scale = Vector2(1.5, 1.5)
-
 [node name="Mierdecita17" parent="Mierdas" instance=ExtResource("4_m3nh1")]
 position = Vector2(1193, 678)
 scale = Vector2(1.5, 1.5)
 
-[node name="Mierdecita19" parent="Mierdas" instance=ExtResource("4_m3nh1")]
-position = Vector2(520, 424)
-scale = Vector2(1.5, 1.5)
-
 [node name="Mierdecita20" parent="Mierdas" instance=ExtResource("4_m3nh1")]
-position = Vector2(290, 44)
+position = Vector2(242, 45)
 scale = Vector2(1.5, 1.5)
 
 [node name="Mierdecita21" parent="Mierdas" instance=ExtResource("4_m3nh1")]
@@ -449,16 +544,8 @@ scale = Vector2(1.5, 1.5)
 position = Vector2(517, 519)
 scale = Vector2(1.5, 1.5)
 
-[node name="Mierdecita18" parent="Mierdas" instance=ExtResource("4_m3nh1")]
-position = Vector2(1193, 678)
-scale = Vector2(1.5, 1.5)
-
 [node name="Mierdecita4" parent="Mierdas" instance=ExtResource("4_m3nh1")]
 position = Vector2(1211, 276)
-scale = Vector2(1.5, 1.5)
-
-[node name="Mierdecita5" parent="Mierdas" instance=ExtResource("4_m3nh1")]
-position = Vector2(1199, 552)
 scale = Vector2(1.5, 1.5)
 
 [node name="Tiempo" type="Label" parent="."]
@@ -495,5 +582,28 @@ position = Vector2(604, 737)
 rotation = 1.5708
 scale = Vector2(1.24748, 18.7027)
 texture = ExtResource("7_gieu7")
+
+[node name="pedo" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("9_3sifq")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_xx4bh")
+}
+
+[node name="TextureRect" type="TextureRect" parent="."]
+z_index = 10
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -151.0
+offset_top = -129.0
+offset_right = 1495.0
+offset_bottom = 830.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("10_apfvb")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
