@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://2pcmu3q1xh3c"]
 
 [ext_resource type="Script" path="res://Scripts/caracollvl_2.gd" id="1_kw7h6"]
-[ext_resource type="Texture2D" uid="uid://cntag5bi3mhos" path="res://Assets/Sprites/Characters/Caracol-Becario.png" id="2_dbv2l"]
+[ext_resource type="Texture2D" uid="uid://cat1glswei00n" path="res://Assets/Sprites/Characters/Caracol-Becario.png" id="2_dbv2l"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_glsgq"]
 size = Vector2(90.9055, 116.271)
