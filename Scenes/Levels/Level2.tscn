@@ -1,14 +1,16 @@
-[gd_scene load_steps=19 format=3 uid="uid://thj2nubeijma"]
+[gd_scene load_steps=23 format=3 uid="uid://thj2nubeijma"]
 
 [ext_resource type="PackedScene" uid="uid://2pcmu3q1xh3c" path="res://Scenes/Caracol/Caracollvl2.tscn" id="1_e1uyw"]
 [ext_resource type="Texture2D" uid="uid://dbsyc5p0wvpqi" path="res://Assets/Sprites/Characters/suelo.png" id="1_qadld"]
 [ext_resource type="Script" path="res://Scenes/Levels/recoger.gd" id="2_d3ryu"]
-[ext_resource type="Texture2D" uid="uid://cpm1jbykry4ss" path="res://Assets/Sprites/spritesdeprueba/circulodemierda.png" id="2_dyi75"]
 [ext_resource type="Texture2D" uid="uid://bh18xvvplxwmd" path="res://Assets/Sprites/Levels/coger.png" id="4_d8doh"]
 [ext_resource type="Script" path="res://Scenes/Levels/soltar.gd" id="4_gmdsm"]
 [ext_resource type="Texture2D" uid="uid://derijfj6cu7d5" path="res://Assets/Sprites/Characters/Cafetera.png" id="5_675yf"]
 [ext_resource type="Texture2D" uid="uid://ccebq1nyyt6eo" path="res://Assets/Sprites/Characters/mesa-arriba.png" id="6_jacte"]
+[ext_resource type="Texture2D" uid="uid://o3ad6u8u44ds" path="res://Assets/Sprites/Characters/papelera.png" id="6_vqheb"]
 [ext_resource type="Texture2D" uid="uid://d4fqw0oss7sen" path="res://Assets/Sprites/Levels/Soltar.png" id="6_ywdt8"]
+[ext_resource type="Texture2D" uid="uid://chcdoq5wo6jjp" path="res://Assets/Sprites/Characters/Lechuguero.png" id="7_irdem"]
+[ext_resource type="Texture2D" uid="uid://d2i7iwqhxndfx" path="res://Assets/Sprites/Characters/papelera2.png" id="8_2ud6h"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_u2pje"]
 b = Vector2(0, 720)
@@ -29,6 +31,11 @@ radius = 44.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3jg30"]
 size = Vector2(23.6191, 24.1734)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_tx8jc"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_s0ssp"]
+radius = 12.1056
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_o4yeg"]
 
@@ -507,18 +514,32 @@ position = Vector2(58.1121, 60.9196)
 scale = Vector2(3.3776, 3.31608)
 shape = SubResource("RectangleShape2D_3jg30")
 
-[node name="TirarCafe" type="Area2D" parent="."]
+[node name="BasuraCafe" type="Node2D" parent="."]
 position = Vector2(1157, 338)
+
+[node name="TirarCafe" type="Area2D" parent="BasuraCafe"]
 script = ExtResource("2_d3ryu")
 
-[node name="Sprite2D" type="Sprite2D" parent="TirarCafe"]
-position = Vector2(58, 61)
-scale = Vector2(0.197266, 0.197266)
-texture = ExtResource("2_dyi75")
+[node name="Sprite2D" type="Sprite2D" parent="BasuraCafe/TirarCafe"]
+position = Vector2(-59, 59)
+scale = Vector2(1.47727, 1.47727)
+texture = ExtResource("4_d8doh")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="TirarCafe"]
-position = Vector2(58, 61)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BasuraCafe/TirarCafe"]
+position = Vector2(-60, 59)
 shape = SubResource("CircleShape2D_6e4c1")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="BasuraCafe"]
+
+[node name="Sprite2D" type="Sprite2D" parent="BasuraCafe/StaticBody2D"]
+position = Vector2(50, 59)
+scale = Vector2(0.88, 0.88)
+texture = ExtResource("6_vqheb")
+
+[node name="Shape" type="CollisionShape2D" parent="BasuraCafe/StaticBody2D"]
+position = Vector2(50, 59)
+scale = Vector2(5.55999, 5.55999)
+shape = SubResource("CircleShape2D_tx8jc")
 
 [node name="Lechuguera" type="Node2D" parent="."]
 position = Vector2(1160, 97)
@@ -542,25 +563,41 @@ position = Vector2(1, 0)
 [node name="Sprite2D" type="Sprite2D" parent="Lechuguera/Area2D2"]
 position = Vector2(58, 61)
 scale = Vector2(0.630412, 0.630412)
-texture = ExtResource("5_675yf")
+texture = ExtResource("7_irdem")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Lechuguera/Area2D2"]
 position = Vector2(58.1121, 60.9196)
 scale = Vector2(3.3776, 3.31608)
-shape = SubResource("RectangleShape2D_3jg30")
+shape = SubResource("CircleShape2D_s0ssp")
 
-[node name="TirarLechuga" type="Area2D" parent="."]
-position = Vector2(1163, 471)
+[node name="BasuraLechuga" type="Node2D" parent="."]
+position = Vector2(1157, 471)
+
+[node name="TirarLechuga" type="Area2D" parent="BasuraLechuga"]
+position = Vector2(-118, 0)
 script = ExtResource("2_d3ryu")
 
-[node name="Sprite2D" type="Sprite2D" parent="TirarLechuga"]
+[node name="Sprite2D" type="Sprite2D" parent="BasuraLechuga/TirarLechuga"]
 position = Vector2(58, 61)
-scale = Vector2(0.197266, 0.197266)
-texture = ExtResource("2_dyi75")
+scale = Vector2(1.47727, 1.47727)
+texture = ExtResource("4_d8doh")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="TirarLechuga"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BasuraLechuga/TirarLechuga"]
 position = Vector2(58, 61)
 shape = SubResource("CircleShape2D_6e4c1")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="BasuraLechuga"]
+position = Vector2(0, 3)
+
+[node name="Sprite2D" type="Sprite2D" parent="BasuraLechuga/StaticBody2D2"]
+position = Vector2(50, 59)
+scale = Vector2(0.88, 0.88)
+texture = ExtResource("8_2ud6h")
+
+[node name="Shape" type="CollisionShape2D" parent="BasuraLechuga/StaticBody2D2"]
+position = Vector2(50, 59)
+scale = Vector2(5.55999, 5.55999)
+shape = SubResource("CircleShape2D_tx8jc")
 
 [node name="Mesa1" type="Node2D" parent="."]
 position = Vector2(100, 295)
@@ -748,9 +785,9 @@ scale = Vector2(2.79998, 2.79998)
 shape = SubResource("RectangleShape2D_onjwd")
 
 [connection signal="body_entered" from="Cafetera/RecogerCafe" to="Caracol" method="_on_recoger_cafe_body_entered"]
-[connection signal="body_entered" from="TirarCafe" to="Caracol" method="_on_tirar_cafe_body_entered"]
+[connection signal="body_entered" from="BasuraCafe/TirarCafe" to="Caracol" method="_on_tirar_cafe_body_entered"]
 [connection signal="body_entered" from="Lechuguera/RecogerLechuga" to="Caracol" method="_on_recoger_lechuga_body_entered"]
-[connection signal="body_entered" from="TirarLechuga" to="Caracol" method="_on_tirar_lechuga_body_entered"]
+[connection signal="body_entered" from="BasuraLechuga/TirarLechuga" to="Caracol" method="_on_tirar_lechuga_body_entered"]
 [connection signal="body_entered" from="Mesa1/Mesa1" to="Caracol" method="_on_mesa_1_body_entered"]
 [connection signal="body_entered" from="Mesa2/Mesa2" to="Caracol" method="_on_mesa_2_body_entered"]
 [connection signal="body_entered" from="Mesa3/Mesa3" to="Caracol" method="_on_mesa_3_body_entered"]
