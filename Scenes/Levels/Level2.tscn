@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://thj2nubeijma"]
+[gd_scene load_steps=16 format=3 uid="uid://thj2nubeijma"]
 
 [ext_resource type="PackedScene" uid="uid://2pcmu3q1xh3c" path="res://Scenes/Caracol/Caracollvl2.tscn" id="1_e1uyw"]
 [ext_resource type="Texture2D" uid="uid://dbsyc5p0wvpqi" path="res://Assets/Sprites/Characters/suelo.png" id="1_qadld"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://cpm1jbykry4ss" path="res://Assets/Sprites/spritesdeprueba/circulodemierda.png" id="2_dyi75"]
 [ext_resource type="Script" path="res://Scenes/Levels/soltar.gd" id="4_gmdsm"]
 [ext_resource type="Texture2D" uid="uid://ccebq1nyyt6eo" path="res://Assets/Sprites/Characters/mesa-arriba.png" id="6_jacte"]
+[ext_resource type="Texture2D" uid="uid://d4fqw0oss7sen" path="res://Assets/Sprites/Levels/Soltar.png" id="6_ywdt8"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_u2pje"]
 b = Vector2(0, 720)
@@ -23,6 +24,14 @@ b = Vector2(1280, 720)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_6e4c1"]
 radius = 44.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o4yeg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_onjwd"]
+size = Vector2(37.8574, 48.2146)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6x8ud"]
+size = Vector2(54, 54)
 
 [node name="Level2" type="Node2D"]
 
@@ -333,6 +342,108 @@ texture = ExtResource("1_qadld")
 position = Vector2(-64, 64)
 texture = ExtResource("1_qadld")
 
+[node name="Fila7" type="Node2D" parent="fondo"]
+position = Vector2(-2, 900)
+
+[node name="Sprite2D" type="Sprite2D" parent="fondo/Fila7"]
+position = Vector2(65, 64)
+texture = ExtResource("1_qadld")
+
+[node name="Sprite2D2" type="Sprite2D" parent="fondo/Fila7"]
+position = Vector2(192, 64)
+texture = ExtResource("1_qadld")
+
+[node name="Sprite2D3" type="Sprite2D" parent="fondo/Fila7"]
+position = Vector2(320, 64)
+texture = ExtResource("1_qadld")
+
+[node name="Sprite2D4" type="Sprite2D" parent="fondo/Fila7"]
+position = Vector2(448, 64)
+texture = ExtResource("1_qadld")
+
+[node name="Sprite2D5" type="Sprite2D" parent="fondo/Fila7"]
+position = Vector2(576, 64)
+texture = ExtResource("1_qadld")
+
+[node name="Sprite2D6" type="Sprite2D" parent="fondo/Fila7"]
+position = Vector2(704, 64)
+texture = ExtResource("1_qadld")
+
+[node name="Sprite2D7" type="Sprite2D" parent="fondo/Fila7"]
+position = Vector2(831, 64)
+texture = ExtResource("1_qadld")
+
+[node name="Sprite2D8" type="Sprite2D" parent="fondo/Fila7"]
+position = Vector2(956, 64)
+texture = ExtResource("1_qadld")
+
+[node name="Sprite2D9" type="Sprite2D" parent="fondo/Fila7"]
+position = Vector2(1084, 64)
+texture = ExtResource("1_qadld")
+
+[node name="Sprite2D10" type="Sprite2D" parent="fondo/Fila7"]
+position = Vector2(1211, 64)
+texture = ExtResource("1_qadld")
+
+[node name="Sprite2D11" type="Sprite2D" parent="fondo/Fila7"]
+position = Vector2(1340, 64)
+texture = ExtResource("1_qadld")
+
+[node name="Sprite2D12" type="Sprite2D" parent="fondo/Fila7"]
+position = Vector2(-64, 64)
+texture = ExtResource("1_qadld")
+
+[node name="Fila8" type="Node2D" parent="fondo"]
+position = Vector2(-3, 771)
+
+[node name="Sprite2D" type="Sprite2D" parent="fondo/Fila8"]
+position = Vector2(65, 64)
+texture = ExtResource("1_qadld")
+
+[node name="Sprite2D2" type="Sprite2D" parent="fondo/Fila8"]
+position = Vector2(192, 64)
+texture = ExtResource("1_qadld")
+
+[node name="Sprite2D3" type="Sprite2D" parent="fondo/Fila8"]
+position = Vector2(320, 64)
+texture = ExtResource("1_qadld")
+
+[node name="Sprite2D4" type="Sprite2D" parent="fondo/Fila8"]
+position = Vector2(448, 64)
+texture = ExtResource("1_qadld")
+
+[node name="Sprite2D5" type="Sprite2D" parent="fondo/Fila8"]
+position = Vector2(576, 64)
+texture = ExtResource("1_qadld")
+
+[node name="Sprite2D6" type="Sprite2D" parent="fondo/Fila8"]
+position = Vector2(704, 64)
+texture = ExtResource("1_qadld")
+
+[node name="Sprite2D7" type="Sprite2D" parent="fondo/Fila8"]
+position = Vector2(831, 64)
+texture = ExtResource("1_qadld")
+
+[node name="Sprite2D8" type="Sprite2D" parent="fondo/Fila8"]
+position = Vector2(956, 64)
+texture = ExtResource("1_qadld")
+
+[node name="Sprite2D9" type="Sprite2D" parent="fondo/Fila8"]
+position = Vector2(1084, 64)
+texture = ExtResource("1_qadld")
+
+[node name="Sprite2D10" type="Sprite2D" parent="fondo/Fila8"]
+position = Vector2(1211, 64)
+texture = ExtResource("1_qadld")
+
+[node name="Sprite2D11" type="Sprite2D" parent="fondo/Fila8"]
+position = Vector2(1340, 64)
+texture = ExtResource("1_qadld")
+
+[node name="Sprite2D12" type="Sprite2D" parent="fondo/Fila8"]
+position = Vector2(-64, 64)
+texture = ExtResource("1_qadld")
+
 [node name="Left" type="StaticBody2D" parent="."]
 collision_layer = 2
 
@@ -358,9 +469,13 @@ collision_layer = 2
 shape = SubResource("SegmentShape2D_c05dq")
 
 [node name="Caracol" parent="." instance=ExtResource("1_e1uyw")]
-position = Vector2(493, 245)
+position = Vector2(946, 118)
+scale = Vector2(0.980001, 0.980001)
+collision_layer = 3
+collision_mask = 3
 
 [node name="RecogerCafe" type="Area2D" parent="."]
+position = Vector2(1161, -11)
 script = ExtResource("2_d3ryu")
 
 [node name="Sprite2D" type="Sprite2D" parent="RecogerCafe"]
@@ -373,7 +488,7 @@ position = Vector2(58, 61)
 shape = SubResource("CircleShape2D_6e4c1")
 
 [node name="TirarCafe" type="Area2D" parent="."]
-position = Vector2(451, 0)
+position = Vector2(1157, 338)
 script = ExtResource("2_d3ryu")
 
 [node name="Sprite2D" type="Sprite2D" parent="TirarCafe"]
@@ -386,7 +501,7 @@ position = Vector2(58, 61)
 shape = SubResource("CircleShape2D_6e4c1")
 
 [node name="RecogerLechuga" type="Area2D" parent="."]
-position = Vector2(202, -3)
+position = Vector2(1160, 97)
 script = ExtResource("2_d3ryu")
 
 [node name="Sprite2D" type="Sprite2D" parent="RecogerLechuga"]
@@ -399,7 +514,7 @@ position = Vector2(58, 61)
 shape = SubResource("CircleShape2D_6e4c1")
 
 [node name="TirarLechuga" type="Area2D" parent="."]
-position = Vector2(576, 0)
+position = Vector2(1163, 471)
 script = ExtResource("2_d3ryu")
 
 [node name="Sprite2D" type="Sprite2D" parent="TirarLechuga"]
@@ -411,91 +526,197 @@ texture = ExtResource("2_dyi75")
 position = Vector2(58, 61)
 shape = SubResource("CircleShape2D_6e4c1")
 
-[node name="Mesa1" type="Area2D" parent="."]
-position = Vector2(1100, 578)
+[node name="Mesa1" type="Node2D" parent="."]
+position = Vector2(100, 295)
+scale = Vector2(2.79998, 2.79998)
+
+[node name="Mesa1" type="Area2D" parent="Mesa1"]
+position = Vector2(20.0001, -17.8573)
+scale = Vector2(0.357145, 0.357145)
 script = ExtResource("4_gmdsm")
 
-[node name="Sprite2D" type="Sprite2D" parent="Mesa1"]
+[node name="Sprite2D2" type="Sprite2D" parent="Mesa1/Mesa1"]
+texture = ExtResource("6_ywdt8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mesa1/Mesa1"]
+position = Vector2(1.19209e-07, 0)
+scale = Vector2(2.84001, 2.84001)
+shape = SubResource("RectangleShape2D_o4yeg")
+
+[node name="ColisionMesa1" type="StaticBody2D" parent="Mesa1"]
+scale = Vector2(0.357145, 0.357145)
+
+[node name="Sprite2D" type="Sprite2D" parent="Mesa1/ColisionMesa1"]
 position = Vector2(57, 61)
-scale = Vector2(0.677266, 0.677266)
+scale = Vector2(1.1, 1.1)
 texture = ExtResource("6_jacte")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Mesa1"]
-position = Vector2(58, 61)
-shape = SubResource("CircleShape2D_6e4c1")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mesa1/ColisionMesa1"]
+position = Vector2(57, 58.5)
+scale = Vector2(2.79998, 2.79998)
+shape = SubResource("RectangleShape2D_onjwd")
 
-[node name="Mesa2" type="Area2D" parent="."]
-position = Vector2(900, 578)
+[node name="Mesa2" type="Node2D" parent="."]
+position = Vector2(325, 295)
+scale = Vector2(2.79998, 2.79998)
+
+[node name="Mesa2" type="Area2D" parent="Mesa2"]
+position = Vector2(20.0001, -17.8573)
+scale = Vector2(0.357145, 0.357145)
 script = ExtResource("4_gmdsm")
 
-[node name="Sprite2D" type="Sprite2D" parent="Mesa2"]
+[node name="Sprite2D2" type="Sprite2D" parent="Mesa2/Mesa2"]
+texture = ExtResource("6_ywdt8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mesa2/Mesa2"]
+position = Vector2(1.19209e-07, 0)
+scale = Vector2(2.84001, 2.84001)
+shape = SubResource("RectangleShape2D_o4yeg")
+
+[node name="ColisionMesa2" type="StaticBody2D" parent="Mesa2"]
+scale = Vector2(0.357145, 0.357145)
+
+[node name="Sprite2D" type="Sprite2D" parent="Mesa2/ColisionMesa2"]
 position = Vector2(57, 61)
-scale = Vector2(0.197266, 0.197266)
+scale = Vector2(1.1, 1.1)
 texture = ExtResource("6_jacte")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Mesa2"]
-position = Vector2(58, 61)
-shape = SubResource("CircleShape2D_6e4c1")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mesa2/ColisionMesa2"]
+position = Vector2(57, 58.5)
+scale = Vector2(2.79998, 2.79998)
+shape = SubResource("RectangleShape2D_onjwd")
 
-[node name="Mesa3" type="Area2D" parent="."]
-position = Vector2(700, 578)
+[node name="Mesa3" type="Node2D" parent="."]
+position = Vector2(550, 295)
+scale = Vector2(2.79998, 2.79998)
+
+[node name="Mesa3" type="Area2D" parent="Mesa3"]
+position = Vector2(20.0001, -17.8573)
+scale = Vector2(0.357145, 0.357145)
 script = ExtResource("4_gmdsm")
 
-[node name="Sprite2D" type="Sprite2D" parent="Mesa3"]
+[node name="Sprite2D2" type="Sprite2D" parent="Mesa3/Mesa3"]
+texture = ExtResource("6_ywdt8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mesa3/Mesa3"]
+position = Vector2(1.19209e-07, 0)
+scale = Vector2(2.84001, 2.84001)
+shape = SubResource("RectangleShape2D_o4yeg")
+
+[node name="ColisionMesa3" type="StaticBody2D" parent="Mesa3"]
+scale = Vector2(0.357145, 0.357145)
+collision_layer = 2
+collision_mask = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="Mesa3/ColisionMesa3"]
 position = Vector2(57, 61)
-scale = Vector2(0.197266, 0.197266)
+scale = Vector2(1.1, 1.1)
 texture = ExtResource("6_jacte")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Mesa3"]
-position = Vector2(58, 61)
-shape = SubResource("CircleShape2D_6e4c1")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mesa3/ColisionMesa3"]
+position = Vector2(57, 58.5)
+scale = Vector2(2.79998, 2.79998)
+shape = SubResource("RectangleShape2D_onjwd")
 
-[node name="Mesa4" type="Area2D" parent="."]
-position = Vector2(500, 578)
+[node name="Mesa4" type="Node2D" parent="."]
+position = Vector2(214, 550)
+rotation = 3.14159
+scale = Vector2(2.79998, 2.79998)
+
+[node name="Mesa4" type="Area2D" parent="Mesa4"]
+position = Vector2(20.0001, -17.8573)
+scale = Vector2(0.357145, 0.357145)
 script = ExtResource("4_gmdsm")
 
-[node name="Sprite2D" type="Sprite2D" parent="Mesa4"]
+[node name="Sprite2D2" type="Sprite2D" parent="Mesa4/Mesa4"]
+texture = ExtResource("6_ywdt8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mesa4/Mesa4"]
+position = Vector2(1.19209e-07, 0)
+scale = Vector2(2.84001, 2.84001)
+shape = SubResource("RectangleShape2D_o4yeg")
+
+[node name="ColisionMesa4" type="StaticBody2D" parent="Mesa4"]
+scale = Vector2(0.357145, 0.357145)
+
+[node name="Sprite2D" type="Sprite2D" parent="Mesa4/ColisionMesa4"]
 position = Vector2(57, 61)
-scale = Vector2(0.197266, 0.197266)
+scale = Vector2(1.1, 1.1)
 texture = ExtResource("6_jacte")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Mesa4"]
-position = Vector2(58, 61)
-shape = SubResource("CircleShape2D_6e4c1")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mesa4/ColisionMesa4"]
+position = Vector2(57, 58.5)
+scale = Vector2(2.79998, 2.79998)
+shape = SubResource("RectangleShape2D_onjwd")
 
-[node name="Mesa5" type="Area2D" parent="."]
-position = Vector2(300, 578)
+[node name="Mesa5" type="Node2D" parent="."]
+position = Vector2(439, 550)
+rotation = 3.14159
+scale = Vector2(2.79998, 2.79998)
+
+[node name="Mesa5" type="Area2D" parent="Mesa5"]
+position = Vector2(20.0001, -17.8573)
+scale = Vector2(0.357145, 0.357145)
 script = ExtResource("4_gmdsm")
 
-[node name="Sprite2D" type="Sprite2D" parent="Mesa5"]
+[node name="Sprite2D2" type="Sprite2D" parent="Mesa5/Mesa5"]
+texture = ExtResource("6_ywdt8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mesa5/Mesa5"]
+position = Vector2(1.19209e-07, 0)
+scale = Vector2(2.84001, 2.84001)
+shape = SubResource("RectangleShape2D_o4yeg")
+
+[node name="ColisionMesa5" type="StaticBody2D" parent="Mesa5"]
+scale = Vector2(0.357145, 0.357145)
+
+[node name="Sprite2D" type="Sprite2D" parent="Mesa5/ColisionMesa5"]
 position = Vector2(57, 61)
-scale = Vector2(0.197266, 0.197266)
+scale = Vector2(1.1, 1.1)
 texture = ExtResource("6_jacte")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Mesa5"]
-position = Vector2(58, 61)
-shape = SubResource("CircleShape2D_6e4c1")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mesa5/ColisionMesa5"]
+position = Vector2(57, 58.5)
+scale = Vector2(2.79998, 2.79998)
+shape = SubResource("RectangleShape2D_onjwd")
 
-[node name="Mesa6" type="Area2D" parent="."]
-position = Vector2(99, 577)
+[node name="Mesa6" type="Node2D" parent="."]
+position = Vector2(664, 550)
+rotation = 3.14159
+scale = Vector2(2.79998, 2.79998)
+
+[node name="Mesa6" type="StaticBody2D" parent="Mesa6"]
+position = Vector2(20.0001, -17.8573)
+scale = Vector2(0.357145, 0.357145)
 script = ExtResource("4_gmdsm")
 
-[node name="Sprite2D" type="Sprite2D" parent="Mesa6"]
+[node name="Sprite2D2" type="Sprite2D" parent="Mesa6/Mesa6"]
+texture = ExtResource("6_ywdt8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mesa6/Mesa6"]
+position = Vector2(6.10352e-05, 0)
+shape = SubResource("RectangleShape2D_6x8ud")
+
+[node name="ColisionMesa6" type="StaticBody2D" parent="Mesa6"]
+position = Vector2(3.05176e-05, -3.05176e-05)
+scale = Vector2(0.357145, 0.357145)
+
+[node name="Sprite2D" type="Sprite2D" parent="Mesa6/ColisionMesa6"]
 position = Vector2(57, 61)
-scale = Vector2(0.197266, 0.197266)
+scale = Vector2(1.1, 1.1)
 texture = ExtResource("6_jacte")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Mesa6"]
-position = Vector2(58, 61)
-shape = SubResource("CircleShape2D_6e4c1")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mesa6/ColisionMesa6"]
+position = Vector2(57, 58.5)
+scale = Vector2(2.79998, 2.79998)
+shape = SubResource("RectangleShape2D_onjwd")
 
 [connection signal="body_entered" from="RecogerCafe" to="Caracol" method="_on_recoger_cafe_body_entered"]
 [connection signal="body_entered" from="TirarCafe" to="Caracol" method="_on_tirar_cafe_body_entered"]
 [connection signal="body_entered" from="RecogerLechuga" to="Caracol" method="_on_recoger_lechuga_body_entered"]
 [connection signal="body_entered" from="TirarLechuga" to="Caracol" method="_on_tirar_lechuga_body_entered"]
-[connection signal="body_entered" from="Mesa1" to="Caracol" method="_on_mesa_1_body_entered"]
-[connection signal="body_entered" from="Mesa2" to="Caracol" method="_on_mesa_2_body_entered"]
-[connection signal="body_entered" from="Mesa3" to="Caracol" method="_on_mesa_3_body_entered"]
-[connection signal="body_entered" from="Mesa4" to="Caracol" method="_on_mesa_4_body_entered"]
-[connection signal="body_entered" from="Mesa5" to="Caracol" method="_on_mesa_5_body_entered"]
-[connection signal="body_entered" from="Mesa6" to="Caracol" method="_on_mesa_6_body_entered"]
+[connection signal="body_entered" from="Mesa1/Mesa1" to="Caracol" method="_on_mesa_1_body_entered"]
+[connection signal="body_entered" from="Mesa2/Mesa2" to="Caracol" method="_on_mesa_2_body_entered"]
+[connection signal="body_entered" from="Mesa3/Mesa3" to="Caracol" method="_on_mesa_3_body_entered"]
+[connection signal="body_entered" from="Mesa4/Mesa4" to="Caracol" method="_on_mesa_4_body_entered"]
+[connection signal="body_entered" from="Mesa5/Mesa5" to="Caracol" method="_on_mesa_5_body_entered"]
