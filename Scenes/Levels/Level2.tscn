@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://thj2nubeijma"]
+[gd_scene load_steps=16 format=3 uid="uid://thj2nubeijma"]
 
 [ext_resource type="PackedScene" uid="uid://2pcmu3q1xh3c" path="res://Scenes/Caracol/Caracollvl2.tscn" id="1_e1uyw"]
 [ext_resource type="Texture2D" uid="uid://dbsyc5p0wvpqi" path="res://Assets/Sprites/Characters/suelo.png" id="1_qadld"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://cpm1jbykry4ss" path="res://Assets/Sprites/spritesdeprueba/circulodemierda.png" id="2_dyi75"]
 [ext_resource type="Script" path="res://Scenes/Levels/soltar.gd" id="4_gmdsm"]
 [ext_resource type="Texture2D" uid="uid://ccebq1nyyt6eo" path="res://Assets/Sprites/Characters/mesa-arriba.png" id="6_jacte"]
+[ext_resource type="Texture2D" uid="uid://d4fqw0oss7sen" path="res://Assets/Sprites/Levels/Soltar.png" id="6_ywdt8"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_u2pje"]
 b = Vector2(0, 720)
@@ -341,6 +342,108 @@ texture = ExtResource("1_qadld")
 position = Vector2(-64, 64)
 texture = ExtResource("1_qadld")
 
+[node name="Fila7" type="Node2D" parent="fondo"]
+position = Vector2(-2, 900)
+
+[node name="Sprite2D" type="Sprite2D" parent="fondo/Fila7"]
+position = Vector2(65, 64)
+texture = ExtResource("1_qadld")
+
+[node name="Sprite2D2" type="Sprite2D" parent="fondo/Fila7"]
+position = Vector2(192, 64)
+texture = ExtResource("1_qadld")
+
+[node name="Sprite2D3" type="Sprite2D" parent="fondo/Fila7"]
+position = Vector2(320, 64)
+texture = ExtResource("1_qadld")
+
+[node name="Sprite2D4" type="Sprite2D" parent="fondo/Fila7"]
+position = Vector2(448, 64)
+texture = ExtResource("1_qadld")
+
+[node name="Sprite2D5" type="Sprite2D" parent="fondo/Fila7"]
+position = Vector2(576, 64)
+texture = ExtResource("1_qadld")
+
+[node name="Sprite2D6" type="Sprite2D" parent="fondo/Fila7"]
+position = Vector2(704, 64)
+texture = ExtResource("1_qadld")
+
+[node name="Sprite2D7" type="Sprite2D" parent="fondo/Fila7"]
+position = Vector2(831, 64)
+texture = ExtResource("1_qadld")
+
+[node name="Sprite2D8" type="Sprite2D" parent="fondo/Fila7"]
+position = Vector2(956, 64)
+texture = ExtResource("1_qadld")
+
+[node name="Sprite2D9" type="Sprite2D" parent="fondo/Fila7"]
+position = Vector2(1084, 64)
+texture = ExtResource("1_qadld")
+
+[node name="Sprite2D10" type="Sprite2D" parent="fondo/Fila7"]
+position = Vector2(1211, 64)
+texture = ExtResource("1_qadld")
+
+[node name="Sprite2D11" type="Sprite2D" parent="fondo/Fila7"]
+position = Vector2(1340, 64)
+texture = ExtResource("1_qadld")
+
+[node name="Sprite2D12" type="Sprite2D" parent="fondo/Fila7"]
+position = Vector2(-64, 64)
+texture = ExtResource("1_qadld")
+
+[node name="Fila8" type="Node2D" parent="fondo"]
+position = Vector2(-3, 771)
+
+[node name="Sprite2D" type="Sprite2D" parent="fondo/Fila8"]
+position = Vector2(65, 64)
+texture = ExtResource("1_qadld")
+
+[node name="Sprite2D2" type="Sprite2D" parent="fondo/Fila8"]
+position = Vector2(192, 64)
+texture = ExtResource("1_qadld")
+
+[node name="Sprite2D3" type="Sprite2D" parent="fondo/Fila8"]
+position = Vector2(320, 64)
+texture = ExtResource("1_qadld")
+
+[node name="Sprite2D4" type="Sprite2D" parent="fondo/Fila8"]
+position = Vector2(448, 64)
+texture = ExtResource("1_qadld")
+
+[node name="Sprite2D5" type="Sprite2D" parent="fondo/Fila8"]
+position = Vector2(576, 64)
+texture = ExtResource("1_qadld")
+
+[node name="Sprite2D6" type="Sprite2D" parent="fondo/Fila8"]
+position = Vector2(704, 64)
+texture = ExtResource("1_qadld")
+
+[node name="Sprite2D7" type="Sprite2D" parent="fondo/Fila8"]
+position = Vector2(831, 64)
+texture = ExtResource("1_qadld")
+
+[node name="Sprite2D8" type="Sprite2D" parent="fondo/Fila8"]
+position = Vector2(956, 64)
+texture = ExtResource("1_qadld")
+
+[node name="Sprite2D9" type="Sprite2D" parent="fondo/Fila8"]
+position = Vector2(1084, 64)
+texture = ExtResource("1_qadld")
+
+[node name="Sprite2D10" type="Sprite2D" parent="fondo/Fila8"]
+position = Vector2(1211, 64)
+texture = ExtResource("1_qadld")
+
+[node name="Sprite2D11" type="Sprite2D" parent="fondo/Fila8"]
+position = Vector2(1340, 64)
+texture = ExtResource("1_qadld")
+
+[node name="Sprite2D12" type="Sprite2D" parent="fondo/Fila8"]
+position = Vector2(-64, 64)
+texture = ExtResource("1_qadld")
+
 [node name="Left" type="StaticBody2D" parent="."]
 collision_layer = 2
 
@@ -445,7 +548,7 @@ scale = Vector2(0.357145, 0.357145)
 
 [node name="Sprite2D" type="Sprite2D" parent="Mesa1/ColisionMesa1"]
 position = Vector2(57, 61)
-scale = Vector2(0.677266, 0.677266)
+scale = Vector2(1.1, 1.1)
 texture = ExtResource("6_jacte")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Mesa1/ColisionMesa1"]
@@ -475,7 +578,7 @@ scale = Vector2(0.357145, 0.357145)
 
 [node name="Sprite2D" type="Sprite2D" parent="Mesa2/ColisionMesa2"]
 position = Vector2(57, 61)
-scale = Vector2(0.197266, 0.197266)
+scale = Vector2(1.1, 1.1)
 texture = ExtResource("6_jacte")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Mesa2/ColisionMesa2"]
@@ -507,7 +610,7 @@ collision_mask = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="Mesa3/ColisionMesa3"]
 position = Vector2(57, 61)
-scale = Vector2(0.197266, 0.197266)
+scale = Vector2(1.1, 1.1)
 texture = ExtResource("6_jacte")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Mesa3/ColisionMesa3"]
@@ -538,7 +641,7 @@ scale = Vector2(0.357145, 0.357145)
 
 [node name="Sprite2D" type="Sprite2D" parent="Mesa4/ColisionMesa4"]
 position = Vector2(57, 61)
-scale = Vector2(0.197266, 0.197266)
+scale = Vector2(1.1, 1.1)
 texture = ExtResource("6_jacte")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Mesa4/ColisionMesa4"]
@@ -569,7 +672,7 @@ scale = Vector2(0.357145, 0.357145)
 
 [node name="Sprite2D" type="Sprite2D" parent="Mesa5/ColisionMesa5"]
 position = Vector2(57, 61)
-scale = Vector2(0.197266, 0.197266)
+scale = Vector2(1.1, 1.1)
 texture = ExtResource("6_jacte")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Mesa5/ColisionMesa5"]
@@ -582,15 +685,13 @@ position = Vector2(664, 550)
 rotation = 3.14159
 scale = Vector2(2.79998, 2.79998)
 
-[node name="Mesa6" type="StaticBody2D" parent="Mesa6"]
+[node name="Mesa6" type="Area2D" parent="Mesa6"]
 position = Vector2(20.0001, -17.8573)
 scale = Vector2(0.357145, 0.357145)
 script = ExtResource("4_gmdsm")
 
-[node name="Sprite2D" type="Sprite2D" parent="Mesa6"]
-position = Vector2(57, 61)
-scale = Vector2(0.197266, 0.197266)
-texture = ExtResource("6_jacte")
+[node name="Sprite2D2" type="Sprite2D" parent="Mesa6/Mesa6"]
+texture = ExtResource("6_ywdt8")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Mesa6/Mesa6"]
 position = Vector2(6.10352e-05, 0)
