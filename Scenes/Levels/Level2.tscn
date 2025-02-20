@@ -685,7 +685,7 @@ position = Vector2(664, 550)
 rotation = 3.14159
 scale = Vector2(2.79998, 2.79998)
 
-[node name="Mesa6" type="StaticBody2D" parent="Mesa6"]
+[node name="Mesa6" type="Area2D" parent="Mesa6"]
 position = Vector2(20.0001, -17.8573)
 scale = Vector2(0.357145, 0.357145)
 script = ExtResource("4_gmdsm")

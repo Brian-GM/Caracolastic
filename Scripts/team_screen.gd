@@ -17,3 +17,4 @@ func _on_timer_timeout() -> void:
 
 func _on_timer_2_timeout() -> void:
 	$logo.visible = true
+	$AnimationPlayer.play("desvanecer_salir_team")

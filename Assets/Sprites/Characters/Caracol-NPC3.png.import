@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://r6xhh6rppwhr"
-path="res://.godot/imported/Lechuga.png-38a494d986f1d2d3d7e8c5c655e8bd75.ctex"
+uid="uid://c24xpd46a6qv4"
+path="res://.godot/imported/Caracol-NPC3.png-2c2caaed0712e3af17b1a97529f423a5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/Characters/Lechuga.png"
-dest_files=["res://.godot/imported/Lechuga.png-38a494d986f1d2d3d7e8c5c655e8bd75.ctex"]
+source_file="res://Assets/Sprites/Characters/Caracol-NPC3.png"
+dest_files=["res://.godot/imported/Caracol-NPC3.png-2c2caaed0712e3af17b1a97529f423a5.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://r6xhh6rppwhr"
-path="res://.godot/imported/Lechuga.png-38a494d986f1d2d3d7e8c5c655e8bd75.ctex"
+uid="uid://bo2n7hib2ihk6"
+path="res://.godot/imported/Fondo-menu.png-33b53bd755b211f44dee3956666f4c02.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/Characters/Lechuga.png"
-dest_files=["res://.godot/imported/Lechuga.png-38a494d986f1d2d3d7e8c5c655e8bd75.ctex"]
+source_file="res://Assets/Sprites/Characters/Fondo-menu.png"
+dest_files=["res://.godot/imported/Fondo-menu.png-33b53bd755b211f44dee3956666f4c02.ctex"]
 
 [params]
 
