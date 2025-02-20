@@ -45,6 +45,19 @@ Pendej"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="Guiones" type="Label" parent="."]
+offset_left = 492.0
+offset_top = 382.0
+offset_right = 792.0
+offset_bottom = 523.0
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("3_rsyrv")
+theme_override_font_sizes/font_size = 50
+text = "
+Pendej"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="Timer" type="Timer" parent="."]
 wait_time = 45.0
 one_shot = true

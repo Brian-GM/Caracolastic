@@ -79,6 +79,7 @@ func create_baba():
 		nueva_baba = rastro_baba_vertical.instantiate()
 	
 	nueva_baba.position = self.position
+	nueva_baba.z_index = 0
 	get_parent().add_child(nueva_baba)
 
 	last_direction = direction
@@ -110,4 +111,5 @@ func create_baba_esquina(position: Vector2, last_dir: Vector2, current_dir: Vect
 
 	if nueva_baba_esquina:
 		nueva_baba_esquina.position = position
+		nueva_baba_esquina.z_index = 0
 		get_parent().add_child(nueva_baba_esquina)

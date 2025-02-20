@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://bcxi8vqo4dnbf"]
+[gd_scene load_steps=13 format=3 uid="uid://bcxi8vqo4dnbf"]
 
 [ext_resource type="Script" path="res://Scripts/level_1.gd" id="1_2teri"]
 [ext_resource type="Texture2D" uid="uid://b1087rh6ipqww" path="res://Assets/Sprites/Levels/suelo.png" id="2_bjbo5"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://b6yo8ymw4ioqm" path="res://Scenes/Assets/obstaculo_oficina_1.tscn" id="3_o6p6k"]
 [ext_resource type="PackedScene" uid="uid://h4k8ar65lb2o" path="res://Scenes/Assets/mierdecita.tscn" id="4_m3nh1"]
 [ext_resource type="PackedScene" uid="uid://s6jup0d7ihu2" path="res://Scenes/Assets/obstaculo_oficina_2.tscn" id="5_52fjs"]
+[ext_resource type="FontFile" uid="uid://bre1cjdaepuvc" path="res://Assets/Fonts/PressStart2P-Regular.ttf" id="6_ohtr3"]
 [ext_resource type="Texture2D" uid="uid://6i1cf56go6jw" path="res://Assets/Sprites/Levels/Pared.png" id="7_gieu7"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_3isfn"]
@@ -307,6 +308,7 @@ position = Vector2(1342, 64)
 texture = ExtResource("2_bjbo5")
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("2_u4hch")]
+z_index = 2
 position = Vector2(40, 680)
 slide_on_ceiling = false
 
@@ -339,28 +341,43 @@ position = Vector2(0, 1.5)
 shape = SubResource("SegmentShape2D_xir2w")
 
 [node name="Node2D" parent="." instance=ExtResource("3_o6p6k")]
+z_index = 1
 position = Vector2(80, 79)
 scale = Vector2(2, 2)
 
 [node name="Node2D5" parent="." instance=ExtResource("3_o6p6k")]
+z_index = 1
 position = Vector2(395, 212)
 scale = Vector2(2, 2)
 
 [node name="Node2D2" parent="." instance=ExtResource("5_52fjs")]
-position = Vector2(533, 599)
+z_index = 1
+position = Vector2(516, 599)
 
 [node name="Node2D3" parent="." instance=ExtResource("5_52fjs")]
+z_index = 1
 position = Vector2(313, 679)
 
 [node name="Node2D4" parent="." instance=ExtResource("5_52fjs")]
+z_index = 1
 position = Vector2(773, 194)
 
 [node name="Node2D8" parent="." instance=ExtResource("5_52fjs")]
-position = Vector2(845, 31)
+z_index = 1
+position = Vector2(845, 18)
 
 [node name="Node2D6" parent="." instance=ExtResource("3_o6p6k")]
+z_index = 1
 position = Vector2(1200, 397)
 scale = Vector2(2, 2)
+
+[node name="Puntos" type="Label" parent="."]
+offset_left = 1018.0
+offset_top = 22.0
+offset_right = 1268.0
+offset_bottom = 91.0
+theme_override_fonts/font = ExtResource("6_ohtr3")
+theme_override_font_sizes/font_size = 50
 
 [node name="Mierdas" type="Node2D" parent="."]
 
@@ -373,7 +390,7 @@ position = Vector2(38, 560)
 scale = Vector2(1.5, 1.5)
 
 [node name="Mierdecita6" parent="Mierdas" instance=ExtResource("4_m3nh1")]
-position = Vector2(149, 677)
+position = Vector2(127, 677)
 scale = Vector2(1.5, 1.5)
 
 [node name="Mierdecita3" parent="Mierdas" instance=ExtResource("4_m3nh1")]
@@ -385,7 +402,7 @@ position = Vector2(414, 675)
 scale = Vector2(1.5, 1.5)
 
 [node name="Mierdecita9" parent="Mierdas" instance=ExtResource("4_m3nh1")]
-position = Vector2(156, 379)
+position = Vector2(189, 334)
 scale = Vector2(1.5, 1.5)
 
 [node name="Mierdecita7" parent="Mierdas" instance=ExtResource("4_m3nh1")]
@@ -393,11 +410,11 @@ position = Vector2(390, 383)
 scale = Vector2(1.5, 1.5)
 
 [node name="Mierdecita10" parent="Mierdas" instance=ExtResource("4_m3nh1")]
-position = Vector2(229, 481)
+position = Vector2(250, 480)
 scale = Vector2(1.5, 1.5)
 
 [node name="Mierdecita11" parent="Mierdas" instance=ExtResource("4_m3nh1")]
-position = Vector2(560, 247)
+position = Vector2(559, 274)
 scale = Vector2(1.5, 1.5)
 
 [node name="Mierdecita13" parent="Mierdas" instance=ExtResource("4_m3nh1")]
@@ -409,7 +426,7 @@ position = Vector2(320, 591)
 scale = Vector2(1.5, 1.5)
 
 [node name="Mierdecita16" parent="Mierdas" instance=ExtResource("4_m3nh1")]
-position = Vector2(866, 257)
+position = Vector2(869, 272)
 scale = Vector2(1.5, 1.5)
 
 [node name="Mierdecita17" parent="Mierdas" instance=ExtResource("4_m3nh1")]
@@ -417,7 +434,7 @@ position = Vector2(1193, 678)
 scale = Vector2(1.5, 1.5)
 
 [node name="Mierdecita19" parent="Mierdas" instance=ExtResource("4_m3nh1")]
-position = Vector2(527, 424)
+position = Vector2(520, 424)
 scale = Vector2(1.5, 1.5)
 
 [node name="Mierdecita20" parent="Mierdas" instance=ExtResource("4_m3nh1")]
@@ -429,7 +446,7 @@ position = Vector2(900, 536)
 scale = Vector2(1.5, 1.5)
 
 [node name="Mierdecita22" parent="Mierdas" instance=ExtResource("4_m3nh1")]
-position = Vector2(548, 518)
+position = Vector2(517, 519)
 scale = Vector2(1.5, 1.5)
 
 [node name="Mierdecita18" parent="Mierdas" instance=ExtResource("4_m3nh1")]
@@ -437,7 +454,7 @@ position = Vector2(1193, 678)
 scale = Vector2(1.5, 1.5)
 
 [node name="Mierdecita4" parent="Mierdas" instance=ExtResource("4_m3nh1")]
-position = Vector2(1211, 263)
+position = Vector2(1211, 276)
 scale = Vector2(1.5, 1.5)
 
 [node name="Mierdecita5" parent="Mierdas" instance=ExtResource("4_m3nh1")]
@@ -467,6 +484,7 @@ scale = Vector2(1, 5.89453)
 texture = ExtResource("7_gieu7")
 
 [node name="Pared3" type="Sprite2D" parent="."]
+z_index = 5
 position = Vector2(206, -18)
 rotation = 1.5708
 scale = Vector2(1.24748, 18.7027)

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bg0sr8mmsx7fe"
+path="res://.godot/imported/Elevador abriéndose.mp3-1b8f45e59328318ec568772e9417b23d.mp3str"
+
+[deps]
+
+source_file="res://Assets/Music/Effects/Elevador abriéndose.mp3"
+dest_files=["res://.godot/imported/Elevador abriéndose.mp3-1b8f45e59328318ec568772e9417b23d.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

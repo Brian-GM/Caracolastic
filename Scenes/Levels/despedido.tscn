@@ -1,0 +1,123 @@
+[gd_scene load_steps=14 format=3 uid="uid://nh1fgqennhcr"]
+
+[ext_resource type="Texture2D" uid="uid://cl66rssq75mfw" path="res://Assets/Sprites/animations/despedido/fotograma0000.png" id="1_o5ars"]
+[ext_resource type="Script" path="res://Scripts/despedido.gd" id="1_tmijj"]
+[ext_resource type="Texture2D" uid="uid://ci547fntw53qb" path="res://Assets/Sprites/animations/despedido/fotograma0001.png" id="2_iqruc"]
+[ext_resource type="Texture2D" uid="uid://74qxyi3pe03q" path="res://Assets/Sprites/animations/despedido/fotograma0002.png" id="3_kqsso"]
+[ext_resource type="Texture2D" uid="uid://b52tje1ovyddp" path="res://Assets/Sprites/animations/despedido/fotograma0003.png" id="4_c7njy"]
+[ext_resource type="Texture2D" uid="uid://d0heqns5fpheq" path="res://Assets/Sprites/animations/despedido/fotograma0004.png" id="5_xtga6"]
+[ext_resource type="Texture2D" uid="uid://bbe65h3ki6b83" path="res://Assets/Sprites/animations/despedido/fotograma0005.png" id="6_d46ou"]
+[ext_resource type="Texture2D" uid="uid://brlyrw1yqfvi0" path="res://Assets/Sprites/animations/despedido/fotograma0006.png" id="7_maovm"]
+[ext_resource type="FontFile" uid="uid://bre1cjdaepuvc" path="res://Assets/Fonts/PressStart2P-Regular.ttf" id="9_ge6we"]
+[ext_resource type="Texture2D" uid="uid://lvi1x4twpp0w" path="res://Assets/Sprites/Levels/sello.png" id="10_xsa42"]
+[ext_resource type="AudioStream" uid="uid://bwde0ujtelh70" path="res://Assets/Music/Soundtrack/SOUND EFFECT HELLO DARKNESS MY OLD FRIEND ORIGINAL.mp3" id="11_bethm"]
+[ext_resource type="AudioStream" uid="uid://0ge454sa5ux0" path="res://Assets/Music/Effects/Stamp Impact Sound Effect (mp3cut.net).mp3" id="12_x3anc"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_eadrw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_o5ars")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_iqruc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_kqsso")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_c7njy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_xtga6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_d46ou")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_maovm")
+}],
+"loop": true,
+"name": &"default",
+"speed": 15.0
+}]
+
+[node name="Despedido" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_tmijj")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(640, 360)
+sprite_frames = SubResource("SpriteFrames_eadrw")
+frame_progress = 0.311229
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 4.0
+one_shot = true
+autostart = true
+
+[node name="Play" type="Button" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -410.0
+offset_top = -288.0
+offset_right = -202.0
+offset_bottom = -230.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("9_ge6we")
+theme_override_font_sizes/font_size = 50
+text = "Retry"
+
+[node name="Menu" type="Button" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 225.0
+offset_top = -287.0
+offset_right = 433.0
+offset_bottom = -229.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("9_ge6we")
+theme_override_font_sizes/font_size = 50
+text = "Menu
+"
+
+[node name="sello" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+autostart = true
+
+[node name="sello_sprite" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(669, 439)
+rotation = 0.221653
+scale = Vector2(1.50427, 1.51354)
+texture = ExtResource("10_xsa42")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("11_bethm")
+autoplay = true
+
+[node name="AudioStreamPlayer2D2" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("12_x3anc")
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Menu" to="." method="_on_menu_pressed"]
+[connection signal="timeout" from="sello" to="." method="_on_sello_timeout"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://bw6kvlpj0jqoe"]
+[gd_scene load_steps=21 format=3 uid="uid://bw6kvlpj0jqoe"]
 
 [ext_resource type="Script" path="res://Scripts/lvl_3_win.gd" id="1_d65yg"]
 [ext_resource type="Texture2D" uid="uid://65i7cip1sjsc" path="res://Assets/Sprites/animations/animaciones_cambiar_nivel/lvl_3/asxensor/fotograma0000.png" id="2_m71ag"]
@@ -16,6 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://lf06hex3385o" path="res://Assets/Sprites/animations/animaciones_cambiar_nivel/lvl_3/abrir_puerta/fotograma0005.png" id="14_c8usa"]
 [ext_resource type="Texture2D" uid="uid://b0daulog7avd7" path="res://Assets/Sprites/animations/animaciones_cambiar_nivel/lvl_3/abrir_puerta/fotograma0006.png" id="15_2k4d5"]
 [ext_resource type="Texture2D" uid="uid://cm2rqhlxmc1kn" path="res://Assets/Sprites/animations/animaciones_cambiar_nivel/lvl_1/abrir_puerta/fotograma0000.png" id="16_ehex6"]
+[ext_resource type="AudioStream" uid="uid://bg0sr8mmsx7fe" path="res://Assets/Music/Effects/Elevador abriéndose.mp3" id="17_0hnp7"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_2mojs"]
 animations = [{
@@ -112,6 +113,24 @@ wait_time = 3.0
 one_shot = true
 autostart = true
 
+[node name="Timer2" type="Timer" parent="."]
+one_shot = true
+autostart = true
+
+[node name="pliopen" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(-2, 0)
+stream = ExtResource("17_0hnp7")
+
+[node name="Timer3" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+autostart = true
+
+[node name="Musica_ascensor" type="AudioStreamPlayer2D" parent="."]
+
 [connection signal="animation_finished" from="open" to="." method="_on_open_animation_finished"]
 [connection signal="animation_looped" from="open" to="." method="_on_open_animation_looped"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="Timer2" to="." method="_on_timer_2_timeout"]
+[connection signal="finished" from="pliopen" to="." method="_on_pliopen_finished"]
+[connection signal="timeout" from="Timer3" to="." method="_on_timer_3_timeout"]

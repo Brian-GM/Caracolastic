@@ -6,31 +6,35 @@ extends Node2D
 @onready var tiempo: Label = $Tiempo
 @onready var _1: Label = $"+1"
 @onready var puntos: Label = $Puntos
+@onready var guiones: Label = $Guiones
 
 var points = 0
 
 var words = [
-	"hotel", "animal", "salad", "mineral", "doctor", "dental", "universal", "ideal", 
-	"normal", "actor", "festival", "radio", "capital", "cultural", "total", "manual", 
-	"original", "fantastic", "banco", "popular", "material", "individual", "final", 
-	"central", "circuit", "intelligent", "local", "natural", "mobile", "original", 
-	"cultural", "color", "fiscal", "personal", "global", "legal", "cable", "horizontal", 
-	"interview", "sensible", "formal", "digital", "mental", "central", "original", 
-	"physical", "personal", "deluxe", "subtle", "crisis", "minimum", "manual"
-]
+	"hotel", "radio", "total", "final", "local", "legal", "color", "cable", 
+	"crisis", "manual", "ideal", "normal", "actor", "banco", "fiscal", "dental", 
+	"doctor", "movil", "mental", "formal", "digital", "global", "animal",
+	"virus", "motor", "piano", "metro", "robot", "puma", "pasta", "floral", 
+	"motel", "tropical", "brutal", "fatal", "lunar", "solar", "rural", "polar", 
+	"legal", "visual", "basico", "mágico"
+];
 
+var marca = "_"
 var success_words = []
 
 var current_word = ""
 var typed_word = ""
 
+
 func _ready() -> void:
+	GameManager.current_level = "res://Scenes/Levels/Level3.tscn"
 	puntos.text = str(points) + " /10"
 	_1.visible = false
 	new_word()
 	
 func _process(delta: float) -> void:
 	tiempo.text = str(int(timer.time_left))
+	guiones.text = marca
 
 	if points >= 10:
 		get_tree().change_scene_to_file("res://Scenes/Levels/lvl_4.tscn")
@@ -47,7 +51,7 @@ func _input(event: InputEvent) -> void:
 				print(typed_word)
 				type_word.text = typed_word
 				type_word.add_theme_color_override("font_color", Color(0, 1, 0, 1))  # Verde
-
+				marca += "_"
 			
 				## Si se completó la palabra, mostrar una nueva
 				if typed_word == current_word:
@@ -79,7 +83,8 @@ func new_word() -> void:
 	currentword.text = current_word
 	typed_word = ""
 	type_word.text = typed_word
+	marca = "_"
 
 
 func _on_timer_timeout() -> void:
-	print("Despedido")
+	get_tree().change_scene_to_file("res://Scenes/Levels/despedido.tscn")
