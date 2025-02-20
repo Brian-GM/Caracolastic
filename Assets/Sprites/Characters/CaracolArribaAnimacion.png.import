@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cqlx6su5rl4lf"
-path="res://.godot/imported/Lechuga.png-38a494d986f1d2d3d7e8c5c655e8bd75.ctex"
+uid="uid://djptsih1u6hn2"
+path="res://.godot/imported/CaracolArribaAnimacion.png-940cb795a9b84c16faafec9e83e96c2f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/Characters/Lechuga.png"
-dest_files=["res://.godot/imported/Lechuga.png-38a494d986f1d2d3d7e8c5c655e8bd75.ctex"]
+source_file="res://Assets/Sprites/Characters/CaracolArribaAnimacion.png"
+dest_files=["res://.godot/imported/CaracolArribaAnimacion.png-940cb795a9b84c16faafec9e83e96c2f.ctex"]
 
 [params]
 
