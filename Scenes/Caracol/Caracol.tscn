@@ -15,7 +15,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8uqjk"]
-size = Vector2(80, 80)
+size = Vector2(75, 75)
 
 [node name="Caracol" type="CharacterBody2D" groups=["caracol"]]
 z_index = 1
@@ -31,5 +31,6 @@ sprite_frames = SubResource("SpriteFrames_g0n4l")
 offset = Vector2(3.68511, -6.32826)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+z_index = 2
 shape = SubResource("RectangleShape2D_8uqjk")
 debug_color = Color(3.00817e-06, 0.647324, 0.214177, 0.42)

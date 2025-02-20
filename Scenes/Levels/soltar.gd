@@ -1,5 +1,5 @@
 # Mesa.gd
-extends Area2D
+extends Node2D
 
 var cafe: bool = false
 var lechuga: bool = false

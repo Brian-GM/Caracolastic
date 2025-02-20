@@ -1,12 +1,13 @@
 [gd_scene load_steps=4 format=3 uid="uid://cybcxj12ma8bx"]
 
 [ext_resource type="Script" path="res://Scripts/rastro_baba.gd" id="1_78eei"]
-[ext_resource type="Texture2D" uid="uid://detcbycq687yb" path="res://Assets/Sprites/Characters/Baba-esquina_izquierda-arriba.png" id="2_bhyhd"]
+[ext_resource type="Texture2D" uid="uid://cmu2bos34q68e" path="res://Assets/Sprites/Characters/Baba-esquina_izquierda-arriba.png" id="2_bhyhd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yq5ex"]
 size = Vector2(80, 80)
 
 [node name="Baba" type="StaticBody2D" groups=["baba"]]
+z_index = 1
 script = ExtResource("1_78eei")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="."]

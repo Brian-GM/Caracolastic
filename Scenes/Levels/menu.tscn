@@ -1,0 +1,89 @@
+[gd_scene load_steps=3 format=3 uid="uid://cx6rj2isurjb"]
+
+[ext_resource type="FontFile" uid="uid://bre1cjdaepuvc" path="res://Assets/Fonts/PressStart2P-Regular.ttf" id="1_dorf8"]
+[ext_resource type="Script" path="res://Scripts/menu.gd" id="1_n5bv2"]
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_n5bv2")
+
+[node name="Play" type="Button" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 555.0
+offset_top = 347.0
+offset_right = 763.0
+offset_bottom = 405.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_dorf8")
+theme_override_font_sizes/font_size = 50
+text = "Play"
+
+[node name="Exit" type="Button" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 560.0
+offset_top = 587.0
+offset_right = 768.0
+offset_bottom = 645.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_dorf8")
+theme_override_font_sizes/font_size = 50
+text = "Exit"
+
+[node name="Options" type="Button" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 481.0
+offset_top = 464.0
+offset_right = 839.0
+offset_bottom = 522.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_dorf8")
+theme_override_font_sizes/font_size = 50
+text = "Options"
+
+[node name="Titulo" type="Label" parent="."]
+layout_mode = 2
+offset_left = -103.0
+offset_top = 54.0
+offset_right = 1397.0
+offset_bottom = 285.0
+size_flags_horizontal = 6
+size_flags_vertical = 6
+theme_override_fonts/font = ExtResource("1_dorf8")
+theme_override_font_sizes/font_size = 75
+text = "Corporate
+
+ Shell"
+horizontal_alignment = 1
+
+[node name="Press Space to continue" type="Label" parent="."]
+layout_mode = 2
+offset_left = -73.0
+offset_top = 555.0
+offset_right = 1427.0
+offset_bottom = 786.0
+size_flags_horizontal = 6
+size_flags_vertical = 6
+theme_override_fonts/font = ExtResource("1_dorf8")
+theme_override_font_sizes/font_size = 35
+text = "Press Space to continue..."
+horizontal_alignment = 1
+
+[connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="Options" to="." method="_on_options_pressed"]

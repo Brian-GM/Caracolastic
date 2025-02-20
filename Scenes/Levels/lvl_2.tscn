@@ -1,0 +1,136 @@
+[gd_scene load_steps=21 format=3 uid="uid://b4g0d44yebq8w"]
+
+[ext_resource type="Script" path="res://Scripts/lvl_2_win.gd" id="1_jx7jv"]
+[ext_resource type="Texture2D" uid="uid://do3htyh3y0lp8" path="res://Assets/Sprites/animations/animaciones_cambiar_nivel/lvl_2/asxensor/fotograma0000.png" id="2_77c6b"]
+[ext_resource type="Texture2D" uid="uid://bed4renkvdvm8" path="res://Assets/Sprites/animations/animaciones_cambiar_nivel/lvl_2/asxensor/fotograma0001.png" id="3_nolam"]
+[ext_resource type="Texture2D" uid="uid://c7rjueklob5wu" path="res://Assets/Sprites/animations/animaciones_cambiar_nivel/lvl_2/asxensor/fotograma0002.png" id="4_6640i"]
+[ext_resource type="Texture2D" uid="uid://65rkh76i57gj" path="res://Assets/Sprites/animations/animaciones_cambiar_nivel/lvl_2/asxensor/fotograma0003.png" id="5_a4asc"]
+[ext_resource type="Texture2D" uid="uid://sohchd25sh31" path="res://Assets/Sprites/animations/animaciones_cambiar_nivel/lvl_2/asxensor/fotograma0004.png" id="6_ci3by"]
+[ext_resource type="Texture2D" uid="uid://b6fdxetmskyhk" path="res://Assets/Sprites/animations/animaciones_cambiar_nivel/lvl_2/asxensor/fotograma0005.png" id="7_1srak"]
+[ext_resource type="Texture2D" uid="uid://kee36tft3paw" path="res://Assets/Sprites/animations/animaciones_cambiar_nivel/lvl_2/asxensor/fotograma0006.png" id="8_lwups"]
+[ext_resource type="Texture2D" uid="uid://c3ha055cghgd5" path="res://Assets/Sprites/animations/animaciones_cambiar_nivel/lvl_2/abrir_puerta/fotograma0000.png" id="9_vwven"]
+[ext_resource type="Texture2D" uid="uid://ofg1dttlnic7" path="res://Assets/Sprites/animations/animaciones_cambiar_nivel/lvl_2/abrir_puerta/fotograma0001.png" id="10_flioa"]
+[ext_resource type="Texture2D" uid="uid://74isdw5stvdk" path="res://Assets/Sprites/animations/animaciones_cambiar_nivel/lvl_2/abrir_puerta/fotograma0002.png" id="11_ikn7k"]
+[ext_resource type="Texture2D" uid="uid://c7dfobdhdupjc" path="res://Assets/Sprites/animations/animaciones_cambiar_nivel/lvl_2/abrir_puerta/fotograma0003.png" id="12_2too0"]
+[ext_resource type="Texture2D" uid="uid://vua43viu1ypo" path="res://Assets/Sprites/animations/animaciones_cambiar_nivel/lvl_2/abrir_puerta/fotograma0004.png" id="13_bg4yx"]
+[ext_resource type="Texture2D" uid="uid://ggpru8yyfosi" path="res://Assets/Sprites/animations/animaciones_cambiar_nivel/lvl_2/abrir_puerta/fotograma0005.png" id="14_dpaa3"]
+[ext_resource type="Texture2D" uid="uid://efuvh0fbtsmn" path="res://Assets/Sprites/animations/animaciones_cambiar_nivel/lvl_2/abrir_puerta/fotograma0006.png" id="15_uucrk"]
+[ext_resource type="Texture2D" uid="uid://cm2rqhlxmc1kn" path="res://Assets/Sprites/animations/animaciones_cambiar_nivel/lvl_1/abrir_puerta/fotograma0000.png" id="16_p23a1"]
+[ext_resource type="AudioStream" uid="uid://bg0sr8mmsx7fe" path="res://Assets/Music/Effects/Elevador abriéndose.mp3" id="17_4t5sn"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lp6wd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_77c6b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_nolam")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_6640i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_a4asc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_ci3by")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_1srak")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_lwups")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jumrp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_vwven")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_flioa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_ikn7k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_2too0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_bg4yx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_dpaa3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_uucrk")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_uoylm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("16_p23a1")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="lvl_2" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_jx7jv")
+
+[node name="ascensor" type="AnimatedSprite2D" parent="."]
+position = Vector2(640, 360)
+sprite_frames = SubResource("SpriteFrames_lp6wd")
+
+[node name="open" type="AnimatedSprite2D" parent="."]
+position = Vector2(640, 360)
+sprite_frames = SubResource("SpriteFrames_jumrp")
+
+[node name="close" type="AnimatedSprite2D" parent="."]
+position = Vector2(640, 360)
+sprite_frames = SubResource("SpriteFrames_uoylm")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+autostart = true
+
+[node name="Timer2" type="Timer" parent="."]
+one_shot = true
+autostart = true
+
+[node name="pliopen" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(-2, 0)
+stream = ExtResource("17_4t5sn")
+
+[node name="Timer3" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+autostart = true
+
+[node name="Musica_ascensor" type="AudioStreamPlayer2D" parent="."]
+
+[connection signal="animation_finished" from="open" to="." method="_on_open_animation_finished"]
+[connection signal="animation_looped" from="open" to="." method="_on_open_animation_looped"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="Timer2" to="." method="_on_timer_2_timeout"]
+[connection signal="finished" from="pliopen" to="." method="_on_pliopen_finished"]
+[connection signal="timeout" from="Timer3" to="." method="_on_timer_3_timeout"]
