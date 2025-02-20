@@ -2,20 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-<<<<<<< HEAD
-uid="uid://dfwigwl1lxamq"
-=======
-uid="uid://c5ndqcbuuy5ll"
->>>>>>> bdd51d31cf68c0e15348b5cda7ae85cfdbb4bebc
-path="res://.godot/imported/Lechuga.png-38a494d986f1d2d3d7e8c5c655e8bd75.ctex"
+uid="uid://d4fqw0oss7sen"
+path="res://.godot/imported/Soltar.png-5f39d8d5cf4a44a3b3ecf765e54f4ae2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/Characters/Lechuga.png"
-dest_files=["res://.godot/imported/Lechuga.png-38a494d986f1d2d3d7e8c5c655e8bd75.ctex"]
+source_file="res://Assets/Sprites/Levels/Soltar.png"
+dest_files=["res://.godot/imported/Soltar.png-5f39d8d5cf4a44a3b3ecf765e54f4ae2.ctex"]
 
 [params]
 
