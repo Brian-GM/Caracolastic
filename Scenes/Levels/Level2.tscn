@@ -1,5 +1,6 @@
-[gd_scene load_steps=23 format=3 uid="uid://thj2nubeijma"]
+[gd_scene load_steps=30 format=3 uid="uid://thj2nubeijma"]
 
+[ext_resource type="Script" path="res://Scenes/Levels/level_2.gd" id="1_3g7rl"]
 [ext_resource type="PackedScene" uid="uid://2pcmu3q1xh3c" path="res://Scenes/Caracol/Caracollvl2.tscn" id="1_e1uyw"]
 [ext_resource type="Texture2D" uid="uid://dbsyc5p0wvpqi" path="res://Assets/Sprites/Characters/suelo.png" id="1_qadld"]
 [ext_resource type="Script" path="res://Scenes/Levels/recoger.gd" id="2_d3ryu"]
@@ -11,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://d4fqw0oss7sen" path="res://Assets/Sprites/Levels/Soltar.png" id="6_ywdt8"]
 [ext_resource type="Texture2D" uid="uid://chcdoq5wo6jjp" path="res://Assets/Sprites/Characters/Lechuguero.png" id="7_irdem"]
 [ext_resource type="Texture2D" uid="uid://d2i7iwqhxndfx" path="res://Assets/Sprites/Characters/papelera2.png" id="8_2ud6h"]
+[ext_resource type="Texture2D" uid="uid://drmstm88ixw2f" path="res://Assets/Sprites/UI/R.png" id="12_65c8k"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_u2pje"]
 b = Vector2(0, 720)
@@ -45,7 +47,125 @@ size = Vector2(37.8574, 48.2146)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6x8ud"]
 size = Vector2(54, 54)
 
+[sub_resource type="Animation" id="Animation_lfgtj"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TextureRect:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_uwxkt"]
+resource_name = "desvanecer_entrada"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TextureRect:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_2swc2"]
+resource_name = "desvanecer_salir"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TextureRect:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="Animation" id="Animation_7ubi0"]
+resource_name = "desvanecer_salir_team"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0333333, 3.06667, 3.96667),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TextureRect:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.0333333, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_xx4bh"]
+_data = {
+"RESET": SubResource("Animation_lfgtj"),
+"desvanecer_entrada": SubResource("Animation_uwxkt"),
+"desvanecer_salir": SubResource("Animation_2swc2"),
+"desvanecer_salir_team": SubResource("Animation_7ubi0")
+}
+
 [node name="Level2" type="Node2D"]
+script = ExtResource("1_3g7rl")
 
 [node name="fondo" type="Node2D" parent="."]
 
@@ -783,6 +903,26 @@ texture = ExtResource("6_jacte")
 position = Vector2(57, 58.5)
 scale = Vector2(2.79998, 2.79998)
 shape = SubResource("RectangleShape2D_onjwd")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_xx4bh")
+}
+
+[node name="TextureRect" type="TextureRect" parent="."]
+z_index = 10
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -71.0
+offset_top = -86.0
+offset_right = 1575.0
+offset_bottom = 873.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("12_65c8k")
 
 [connection signal="body_entered" from="Cafetera/RecogerCafe" to="Caracol" method="_on_recoger_cafe_body_entered"]
 [connection signal="body_entered" from="BasuraCafe/TirarCafe" to="Caracol" method="_on_tirar_cafe_body_entered"]

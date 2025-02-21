@@ -1,11 +1,11 @@
-[gd_scene load_steps=20 format=3 uid="uid://bcxi8vqo4dnbf"]
+[gd_scene load_steps=20 format=3 uid="uid://cage47ltllomp"]
 
 [ext_resource type="Script" path="res://Scripts/level_1.gd" id="1_2teri"]
 [ext_resource type="Texture2D" uid="uid://b1087rh6ipqww" path="res://Assets/Sprites/Levels/suelo.png" id="2_bjbo5"]
 [ext_resource type="PackedScene" uid="uid://dn351c0o6kfb3" path="res://Scenes/Caracol/Caracol.tscn" id="2_u4hch"]
 [ext_resource type="PackedScene" uid="uid://b6yo8ymw4ioqm" path="res://Scenes/Assets/obstaculo_oficina_1.tscn" id="3_o6p6k"]
 [ext_resource type="PackedScene" uid="uid://h4k8ar65lb2o" path="res://Scenes/Assets/mierdecita.tscn" id="4_m3nh1"]
-[ext_resource type="PackedScene" uid="uid://s6jup0d7ihu2" path="res://Scenes/Assets/obstaculo_oficina_2.tscn" id="5_52fjs"]
+[ext_resource type="PackedScene" path="res://Scenes/Assets/obstaculo_oficina_2.tscn" id="5_52fjs"]
 [ext_resource type="FontFile" uid="uid://bre1cjdaepuvc" path="res://Assets/Fonts/PressStart2P-Regular.ttf" id="6_ohtr3"]
 [ext_resource type="Texture2D" uid="uid://6i1cf56go6jw" path="res://Assets/Sprites/Levels/Pared.png" id="7_gieu7"]
 [ext_resource type="AudioStream" uid="uid://bbtxm3bnxpjyq" path="res://Assets/Music/Effects/Quick Reverb Fat - Sound Effect (HD) (mp3cut.net) (2).mp3" id="9_3sifq"]

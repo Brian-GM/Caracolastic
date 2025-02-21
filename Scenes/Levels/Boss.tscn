@@ -1,3 +1,109 @@
-[gd_scene format=3 uid="uid://b6nwhmwur2wkg"]
+[gd_scene load_steps=13 format=3 uid="uid://b6nwhmwur2wkg"]
 
-[node name="Node2D" type="Node2D"]
+[ext_resource type="Script" path="res://Scenes/Levels/boss.gd" id="1_sqbow"]
+[ext_resource type="Texture2D" uid="uid://cnaqgj6vltyj" path="res://Assets/Sprites/Levels/boss/fotograma0000.png" id="2_3ix4x"]
+[ext_resource type="FontFile" uid="uid://bre1cjdaepuvc" path="res://Assets/Fonts/PressStart2P-Regular.ttf" id="2_nyb7o"]
+[ext_resource type="Texture2D" uid="uid://42u5jo6i2i6a" path="res://Assets/Sprites/Levels/boss/fotograma0001.png" id="3_5cvkt"]
+[ext_resource type="Texture2D" uid="uid://btu8g5qdybjca" path="res://Assets/Sprites/Levels/boss/fotograma0002.png" id="4_lws8l"]
+[ext_resource type="Texture2D" uid="uid://daulh3pyqqsop" path="res://Assets/Sprites/Levels/boss/fotograma0003.png" id="5_pyig6"]
+[ext_resource type="Texture2D" uid="uid://djg3t42mvp4h2" path="res://Assets/Sprites/Levels/boss/fotograma0004.png" id="6_kv0ew"]
+[ext_resource type="Texture2D" uid="uid://l0uhaia2idh2" path="res://Assets/Sprites/Levels/boss/fotograma0005.png" id="7_wpxbu"]
+[ext_resource type="Texture2D" uid="uid://bit6sl0wysdlb" path="res://Assets/Sprites/Levels/boss/fotograma0006.png" id="8_a47jg"]
+[ext_resource type="Texture2D" uid="uid://djchvftpjciww" path="res://Assets/Sprites/Levels/boss/bocata.png" id="9_igfaa"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_h10pt"]
+animations = [{
+"frames": [{
+"duration": 1.3,
+"texture": ExtResource("2_3ix4x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_5cvkt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_lws8l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_pyig6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_kv0ew")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_wpxbu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_a47jg")
+}],
+"loop": true,
+"name": &"default",
+"speed": 8.0
+}]
+
+[sub_resource type="LabelSettings" id="LabelSettings_10p6v"]
+font = ExtResource("2_nyb7o")
+font_size = 24
+font_color = Color(0.997975, 0.363308, 0.171272, 1)
+outline_size = 6
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 2
+
+[node name="PreguntaUI" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_top = -14.0
+offset_bottom = -14.0
+script = ExtResource("1_sqbow")
+
+[node name="EscenaJefe" type="AnimatedSprite2D" parent="."]
+position = Vector2(640, 374)
+sprite_frames = SubResource("SpriteFrames_h10pt")
+frame_progress = 0.91504
+
+[node name="Bocata" type="Sprite2D" parent="EscenaJefe"]
+position = Vector2(316, -243)
+scale = Vector2(0.448466, 0.466278)
+texture = ExtResource("9_igfaa")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 696.0
+offset_top = 51.0
+offset_right = 1215.0
+offset_bottom = 201.0
+text = "fsduafjksdah"
+label_settings = SubResource("LabelSettings_10p6v")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 735.0
+offset_top = 261.0
+offset_right = 1118.0
+offset_bottom = 405.0
+
+[node name="Opcion1" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_nyb7o")
+theme_override_font_sizes/font_size = 25
+text = "dfsgdfsgsdfgdfs"
+
+[node name="Opcion2" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_nyb7o")
+theme_override_font_sizes/font_size = 25
+text = "dfsgdfsgsdfgdfs"
+
+[node name="Opcion3" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_nyb7o")
+theme_override_font_sizes/font_size = 25
+text = "dfsgdfsgsdfgdfs"
+
+[node name="Opcion4" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_nyb7o")
+theme_override_font_sizes/font_size = 25
+text = "dfsgdfsgsdfgdfs"
