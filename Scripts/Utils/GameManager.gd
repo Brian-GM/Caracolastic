@@ -3,6 +3,10 @@ extends Node
 var firs_time = true
 var current_level = ""
 var en_español = false
+
+var final_1_desbloque:bool = false
+var final_2_desbloque:bool = false
+
 func _ready() -> void:
 	pass
 
