@@ -53,7 +53,7 @@ var preguntas = {
 			]
 		},
 		{
-			"enunciado": "What were the foods you transported when you were an intern?",
+			"enunciado": "What food were you delivering when you were an intern?",
 			"respuestas": [
 				{"texto": "Coffee and Peas", "correcta": false},
 				{"texto": "Coffee and Lettuce", "correcta": true},
@@ -62,7 +62,7 @@ var preguntas = {
 			]
 		},
 		{
-			"enunciado": "What color was the cup on the desk when you were promoted to programmer?",
+			"enunciado": "What color was the cup on the desk when you were promoted to developer?",
 			"respuestas": [
 				{"texto": "Red and Yellow", "correcta": false},
 				{"texto": "Orange", "correcta": false},
