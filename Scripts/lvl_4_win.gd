@@ -20,6 +20,11 @@ func _ready() -> void:
 	$AnimationPlayer.play("desvanecer_entrada")
 
 	close.visible = true
+		
+	if GameManager.en_español:
+		$TextoESP.visible = true
+	else:
+		$TextoIng.visible = true
 
 func _on_timer_timeout() -> void:
 	close.visible = false

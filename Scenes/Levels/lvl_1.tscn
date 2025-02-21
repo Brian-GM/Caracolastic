@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://cmqahppklpn47"]
+[gd_scene load_steps=27 format=3 uid="uid://cmqahppklpn47"]
 
 [ext_resource type="Script" path="res://Scripts/lvl_1_win.gd" id="1_y6oqo"]
 [ext_resource type="Texture2D" uid="uid://dpspsweav8ids" path="res://Assets/Sprites/animations/animaciones_cambiar_nivel/lvl_1/asxensor/fotograma0000.png" id="2_wboix"]
@@ -17,6 +17,7 @@
 [ext_resource type="Texture2D" uid="uid://b6ldlmx5pcstk" path="res://Assets/Sprites/animations/animaciones_cambiar_nivel/lvl_1/abrir_puerta/fotograma0006.png" id="15_iiqsr"]
 [ext_resource type="AudioStream" uid="uid://bg0sr8mmsx7fe" path="res://Assets/Music/Effects/Elevador abriéndose.mp3" id="16_prw3g"]
 [ext_resource type="Texture2D" uid="uid://drmstm88ixw2f" path="res://Assets/Sprites/UI/R.png" id="17_g7sjp"]
+[ext_resource type="FontFile" uid="uid://bre1cjdaepuvc" path="res://Assets/Fonts/PressStart2P-Regular.ttf" id="18_3fnkh"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_dlo25"]
 animations = [{
@@ -246,6 +247,43 @@ one_shot = true
 autostart = true
 
 [node name="Musica_ascensor" type="AudioStreamPlayer2D" parent="."]
+
+[node name="TextoESP" type="Label" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 194.0
+offset_top = 59.0
+offset_right = 1044.0
+offset_bottom = 215.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("18_3fnkh")
+theme_override_font_sizes/font_size = 50
+text = "Ascendio a 
+
+Limpiador"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextoIng" type="Label" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 194.0
+offset_top = 59.0
+offset_right = 1044.0
+offset_bottom = 215.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("18_3fnkh")
+theme_override_font_sizes/font_size = 50
+text = "Promoted to
+
+Cleaner
+"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

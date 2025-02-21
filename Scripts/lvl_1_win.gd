@@ -15,6 +15,11 @@ func _ready() -> void:
 	$AnimationPlayer.play("desvanecer_entrada")
 
 	close.visible = true
+		
+	if GameManager.en_español:
+		$TextoESP.visible = true
+	else:
+		$TextoIng.visible = true
 
 func reproducir_musica_aleatoria() -> void:
 	var cancion_aleatoria = canciones[randi_range(0,canciones.size() - 1)]
