@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://s7vvnuqvnciu"
-path="res://.godot/imported/Captura de pantalla 2025-02-20 113057.png-ad068c118f6cd3816f78f6abcf00075d.ctex"
+uid="uid://bxhn865dhhav6"
+path="res://.godot/imported/Amarillo.png-a10e304eed1ae68e035c6e838251059b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/Levels/Captura de pantalla 2025-02-20 113057.png"
-dest_files=["res://.godot/imported/Captura de pantalla 2025-02-20 113057.png-ad068c118f6cd3816f78f6abcf00075d.ctex"]
+source_file="res://Assets/Sprites/Levels/level4/Amarillo.png"
+dest_files=["res://.godot/imported/Amarillo.png-a10e304eed1ae68e035c6e838251059b.ctex"]
 
 [params]
 

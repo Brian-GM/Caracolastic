@@ -132,10 +132,6 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_6oc1h")
 
-[node name="FinalMalo" type="Sprite2D" parent="."]
-position = Vector2(640, 360)
-texture = ExtResource("5_sgamq")
-
 [node name="Fin" type="Timer" parent="."]
 wait_time = 5.0
 one_shot = true
@@ -176,6 +172,10 @@ offset_bottom = 437.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("5_4hh2g")
+
+[node name="FinalMalo" type="Sprite2D" parent="."]
+position = Vector2(640, 360)
+texture = ExtResource("5_sgamq")
 
 [connection signal="timeout" from="Fin" to="." method="_on_fin_timeout"]
 [connection signal="timeout" from="sello" to="." method="_on_sello_timeout"]

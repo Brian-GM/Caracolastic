@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://b7lss7r4sdwom"]
+
+[ext_resource type="Script" path="res://tusmuerto/meta_2.gd" id="1_ogslb"]
+[ext_resource type="Texture2D" uid="uid://cqajm6touryrt" path="res://tusmuerto/Morado.png" id="2_pvovu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6riou"]
+size = Vector2(21.3333, 21.3333)
+
+[node name="Meta2" type="Area2D"]
+script = ExtResource("1_ogslb")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_pvovu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1.43051e-06, -1.43051e-06)
+scale = Vector2(3, 3)
+shape = SubResource("RectangleShape2D_6riou")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="area_exited" from="." to="." method="_on_area_exited"]

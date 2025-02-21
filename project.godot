@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 GameManager="*res://Scripts/Utils/GameManager.gd"
 MusicManager="*res://Scripts/Utils/music_manager.gd"
+GameManager2="*res://tusmuerto/game_manager_2.gd"
 
 [display]
 

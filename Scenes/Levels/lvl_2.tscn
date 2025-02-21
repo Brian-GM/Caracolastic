@@ -269,6 +269,7 @@ texture = ExtResource("18_1nycb")
 
 [node name="TextoESP" type="Label" parent="."]
 visible = false
+layout_mode = 0
 offset_left = 194.0
 offset_top = 59.0
 offset_right = 1044.0
@@ -286,6 +287,7 @@ vertical_alignment = 1
 
 [node name="TextoIng" type="Label" parent="."]
 visible = false
+layout_mode = 0
 offset_left = 194.0
 offset_top = 59.0
 offset_right = 1044.0
