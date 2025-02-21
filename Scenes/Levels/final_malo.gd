@@ -3,9 +3,15 @@ extends Control
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	$AnimationPlayer.play("desvanecer_entrada")
+	$TextureRect.visible = false
 	await get_tree().create_timer(1.0).timeout  # Espera 2 segundos
 	GameManager.final_1_desbloque = true
+	if GameManager.en_español:
+		$Label.text = "¡¡¡Ni para esto sirves!!!"
+		$Label2.text = "¡¡¡DESPEDIDO!!!"
+	else:
+		$Label.text = "You're useless!!!"
+		$Label2.text = "FIRED!!!"
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

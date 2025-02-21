@@ -13,5 +13,4 @@ func verificar_victoria():
 		cambiar_escena()
 
 func cambiar_escena():
-	print("¡Todos los NPCs están en su sitio! Cambiando de escena...")
-	get_tree().change_scene_to_file("Ruta de la escena del ascensor de brian")  # Cambia la escena
+	get_tree().change_scene_to_file()

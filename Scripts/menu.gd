@@ -37,4 +37,6 @@ func _on_play_pressed() -> void:
 
 
 func _on_options_pressed() -> void:
-	pass # Replace with function body.
+	$AnimationPlayer.play("desvanecer_salir")
+	await get_tree().create_timer(1.0).timeout 
+	get_tree().change_scene_to_file("res://Scenes/Levels/settings.tscn")

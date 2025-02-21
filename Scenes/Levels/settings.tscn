@@ -1,12 +1,23 @@
-[gd_scene load_steps=14 format=3 uid="uid://eb4olff17t3"]
+[gd_scene load_steps=11 format=3 uid="uid://cgtso2d6wnmfg"]
 
-[ext_resource type="Script" path="res://Scenes/Levels/final_malo.gd" id="1_6oc1h"]
-[ext_resource type="Texture2D" uid="uid://lvi1x4twpp0w" path="res://Assets/Sprites/Levels/sello.png" id="3_gypmi"]
-[ext_resource type="AudioStream" uid="uid://0ge454sa5ux0" path="res://Assets/Music/Effects/Stamp Impact Sound Effect (mp3cut.net).mp3" id="4_ekx7r"]
-[ext_resource type="Texture2D" uid="uid://drmstm88ixw2f" path="res://Assets/Sprites/UI/R.png" id="5_4hh2g"]
-[ext_resource type="Texture2D" uid="uid://cnaqgj6vltyj" path="res://Assets/Sprites/Levels/boss/fotograma0000.png" id="5_sgamq"]
-[ext_resource type="Texture2D" uid="uid://djchvftpjciww" path="res://Assets/Sprites/Levels/boss/bocata.png" id="6_7fo1i"]
-[ext_resource type="FontFile" uid="uid://bre1cjdaepuvc" path="res://Assets/Fonts/PressStart2P-Regular.ttf" id="7_c762p"]
+[ext_resource type="Script" path="res://Scenes/Levels/settings.gd" id="1_3jfv0"]
+[ext_resource type="Texture2D" uid="uid://di4ax0p7ftkng" path="res://Fondo-menu.png" id="2_k7x7r"]
+[ext_resource type="Texture2D" uid="uid://bgeq5ylio3nc8" path="res://Fondo-menu2.png" id="3_3kyvr"]
+[ext_resource type="Texture2D" uid="uid://drmstm88ixw2f" path="res://Assets/Sprites/UI/R.png" id="4_03x04"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_h217p"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_k7x7r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_3kyvr")
+}],
+"loop": true,
+"name": &"default",
+"speed": 0.5
+}]
 
 [sub_resource type="Animation" id="Animation_lfgtj"]
 length = 0.001
@@ -125,47 +136,19 @@ _data = {
 "desvanecer_salir_team": SubResource("Animation_7ubi0")
 }
 
-[sub_resource type="LabelSettings" id="LabelSettings_ylryn"]
-font = ExtResource("7_c762p")
-font_size = 24
-font_color = Color(0.997975, 0.363308, 0.171272, 1)
-outline_size = 6
-outline_color = Color(0, 0, 0, 1)
-shadow_size = 2
-
-[node name="FinalMalo" type="Control"]
+[node name="Control" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_6oc1h")
+script = ExtResource("1_3jfv0")
 
-[node name="Fin" type="Timer" parent="."]
-wait_time = 5.0
-one_shot = true
-autostart = true
-
-[node name="sello" type="Timer" parent="."]
-wait_time = 4.0
-one_shot = true
-autostart = true
-
-[node name="FinalMalo" type="Sprite2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+z_index = -3
 position = Vector2(640, 360)
-texture = ExtResource("5_sgamq")
-
-[node name="sello_sprite" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(635, 341)
-rotation = 0.221653
-scale = Vector2(1.50427, 1.51354)
-texture = ExtResource("3_gypmi")
-
-[node name="AudioStreamPlayer2D2" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("4_ekx7r")
-volume_db = 10.0
+sprite_frames = SubResource("SpriteFrames_h217p")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
@@ -173,45 +156,16 @@ libraries = {
 }
 
 [node name="TextureRect" type="TextureRect" parent="."]
+z_index = 5
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -800.0
-offset_top = -461.0
-offset_right = 747.0
-offset_bottom = 437.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -359.0
+offset_top = -242.0
+offset_right = 959.0
+offset_bottom = 526.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("5_4hh2g")
-
-[node name="Bocata" type="Sprite2D" parent="."]
-position = Vector2(961, 111)
-scale = Vector2(0.489258, 0.409028)
-texture = ExtResource("6_7fo1i")
-
-[node name="Label" type="Label" parent="."]
-offset_left = 697.0
-offset_top = -19.0
-offset_right = 1216.0
-offset_bottom = 131.0
-label_settings = SubResource("LabelSettings_ylryn")
-horizontal_alignment = 1
-vertical_alignment = 1
-autowrap_mode = 2
-
-[node name="Label2" type="Label" parent="."]
-offset_left = 701.0
-offset_top = 57.0
-offset_right = 1220.0
-offset_bottom = 207.0
-theme_override_font_sizes/font_size = 100
-label_settings = SubResource("LabelSettings_ylryn")
-horizontal_alignment = 1
-vertical_alignment = 1
-autowrap_mode = 2
-
-[connection signal="timeout" from="Fin" to="." method="_on_fin_timeout"]
-[connection signal="timeout" from="sello" to="." method="_on_sello_timeout"]
+scale = Vector2(2.33246, 1.74173)
+texture = ExtResource("4_03x04")

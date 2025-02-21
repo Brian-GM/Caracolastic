@@ -6,7 +6,12 @@ func _ready() -> void:
 	$AnimationPlayer.play("desvanecer_entrada")
 	await get_tree().create_timer(1.0).timeout  # Espera 2 segundos
 	GameManager.final_2_desbloque = true
-
+	if GameManager.en_español:
+		$Label.text = "¡¡¡Eres una BABOSA!!!"
+		$Label2.text = "¡¡¡DESPEDIDO!!!"
+	else:
+		$Label.text = "You are a SLUG!!!"
+		$Label2.text = "¡¡¡FIRED!!!"
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
