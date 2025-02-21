@@ -8,8 +8,8 @@ var puntos_previos: int = 0
 
 func _ready() -> void:
 	$AnimationPlayer.play("desvanecer_entrada")
-
 	GameManager.current_level = "res://Scenes/Levels/Level1.tscn"
+
 
 # Called when the node enters the scene tree for the first time.
 func _process(delta: float) -> void:

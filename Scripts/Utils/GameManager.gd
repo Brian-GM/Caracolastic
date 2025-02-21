@@ -2,7 +2,7 @@ extends Node
 
 var firs_time = true
 var current_level = ""
-
+var en_español = false
 func _ready() -> void:
 	pass
 

@@ -254,7 +254,7 @@ offset_right = 961.0
 offset_bottom = 611.0
 grow_horizontal = 2
 grow_vertical = 2
-scale = Vector2(2.33246, 1.74173)
+scale = Vector2(2.34864, 0.909252)
 texture = ExtResource("13_jcgh5")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

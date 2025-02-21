@@ -1,6 +1,128 @@
-[gd_scene load_steps=2 format=3 uid="uid://d2au6c8tni6bl"]
+[gd_scene load_steps=12 format=3 uid="uid://d2au6c8tni6bl"]
 
 [ext_resource type="Script" path="res://Scripts/history.gd" id="1_yqwk4"]
+[ext_resource type="Texture2D" uid="uid://b5bqgk31smy67" path="res://Assets/Sprites/Levels/historial.png" id="2_pi3i7"]
+[ext_resource type="Texture2D" uid="uid://drmstm88ixw2f" path="res://Assets/Sprites/UI/R.png" id="3_80k2j"]
+[ext_resource type="AudioStream" uid="uid://dbyvxsug4b8tj" path="res://Assets/Music/Effects/intro_espa.mp3" id="4_wiug5"]
+[ext_resource type="AudioStream" uid="uid://c1dd207glbod6" path="res://Assets/Music/Effects/intro_ingles.mp3" id="5_kpd3l"]
+[ext_resource type="Texture2D" uid="uid://verap2j7sw14" path="res://Assets/Sprites/Levels/eusx.png" id="6_0857u"]
+
+[sub_resource type="Animation" id="Animation_lfgtj"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TextureRect:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_uwxkt"]
+resource_name = "desvanecer_entrada"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TextureRect:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_2swc2"]
+resource_name = "desvanecer_salir"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TextureRect:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="Animation" id="Animation_7ubi0"]
+resource_name = "desvanecer_salir_team"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0333333, 3.06667, 3.96667),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TextureRect:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.0333333, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_xx4bh"]
+_data = {
+"RESET": SubResource("Animation_lfgtj"),
+"desvanecer_entrada": SubResource("Animation_uwxkt"),
+"desvanecer_salir": SubResource("Animation_2swc2"),
+"desvanecer_salir_team": SubResource("Animation_7ubi0")
+}
 
 [node name="History" type="Control"]
 layout_mode = 3
@@ -11,9 +133,127 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_yqwk4")
 
-[node name="Timer" type="Timer" parent="."]
-wait_time = 5.0
+[node name="Historial" type="Sprite2D" parent="."]
+position = Vector2(640, 360)
+texture = ExtResource("2_pi3i7")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_xx4bh")
+}
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -739.0
+offset_top = -438.0
+offset_right = 808.0
+offset_bottom = 460.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_80k2j")
+
+[node name="esp" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_wiug5")
+
+[node name="ing" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_kpd3l")
+
+[node name="tapar 1" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -637.0
+offset_top = -374.0
+offset_right = 348.0
+offset_bottom = 118.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.664927, 0.784634)
+texture = ExtResource("3_80k2j")
+
+[node name="tapar 2" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -12.0
+offset_top = -374.0
+offset_right = 973.0
+offset_bottom = 118.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.664927, 0.784634)
+texture = ExtResource("3_80k2j")
+
+[node name="tapar 3" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -639.0
+offset_top = -18.0
+offset_right = 346.0
+offset_bottom = 474.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.664927, 0.784634)
+texture = ExtResource("3_80k2j")
+
+[node name="tapar 4" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -12.0
+offset_top = -18.0
+offset_right = 973.0
+offset_bottom = 474.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.664927, 0.784634)
+texture = ExtResource("3_80k2j")
+
+[node name="mostrar 2" type="Timer" parent="."]
+wait_time = 12.0
 one_shot = true
 autostart = true
 
-[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[node name="mostrar 3" type="Timer" parent="."]
+wait_time = 18.0
+one_shot = true
+autostart = true
+
+[node name="mostrar 4" type="Timer" parent="."]
+wait_time = 22.0
+one_shot = true
+autostart = true
+
+[node name="eus" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+autostart = true
+
+[node name="Eusx" type="Sprite2D" parent="."]
+position = Vector2(640, 361)
+texture = ExtResource("6_0857u")
+
+[connection signal="finished" from="esp" to="." method="_on_esp_finished"]
+[connection signal="finished" from="ing" to="." method="_on_ing_finished"]
+[connection signal="timeout" from="mostrar 2" to="." method="_on_mostrar_2_timeout"]
+[connection signal="timeout" from="mostrar 3" to="." method="_on_mostrar_3_timeout"]
+[connection signal="timeout" from="mostrar 4" to="." method="_on_mostrar_4_timeout"]
+[connection signal="timeout" from="eus" to="." method="_on_eus_timeout"]

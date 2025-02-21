@@ -16,7 +16,7 @@ var words = [
 	"doctor", "movil", "mental", "formal", "digital", "global", "animal",
 	"virus", "motor", "piano", "metro", "robot", "puma", "pasta", "floral", 
 	"motel", "tropical", "brutal", "fatal", "lunar", "solar", "rural", "polar", 
-	"legal", "visual", "basico", "mágico"
+	"legal", "visual", "basico"
 ];
 
 var marca = "_"
