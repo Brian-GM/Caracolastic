@@ -6,43 +6,80 @@ var idioma = "english"
 var preguntas = {
 	"español": [
 		{
-			"enunciado": "tetas",
+			"enunciado": "¿Cuál de estos objetos fue un obstáculo cuando eras limpiador?",
 			"respuestas": [
-				{"texto": "Gordas", "correcta": true},
-				{"texto": "Flacas", "correcta": false},
-				{"texto": "Medianas", "correcta": false},
-				{"texto": "Pequeñas", "correcta": false}
+				{"texto": "Estanterías", "correcta": false},
+				{"texto": "Papeleras", "correcta": false},
+				{"texto": "Plantas", "correcta": true},
+				{"texto": "Neveras", "correcta": false}
 			]
 		},
 		{
-			"enunciado": "¿Cuál es la capital de España?",
+			"enunciado": "¿Cuáles son los alimentos que transportastes cuando eras becario?",
 			"respuestas": [
-				{"texto": "Barcelona", "correcta": false},
-				{"texto": "Madrid", "correcta": true},
-				{"texto": "Valencia", "correcta": false},
-				{"texto": "Sevilla", "correcta": false}
+				{"texto": "Café y Guisantes", "correcta": false},
+				{"texto": "Café y Lechuga", "correcta": true},
+				{"texto": "Agua y Guisantes", "correcta": false},
+				{"texto": "Soda y Lechuga", "correcta": false}
+			]
+		},
+		{
+			"enunciado": "¿De qué color es la taza del escritorio cuando ascendistes a programador?",
+			"respuestas": [
+				{"texto": "Rojigualda", "correcta": false},
+				{"texto": "Naranja", "correcta": false},
+				{"texto": "Amarillo", "correcta": false},
+				{"texto": "Verde", "correcta": true}
+			]
+		},
+		{
+			"enunciado": "¿Como Jefe de planta que responsabilidad tenías sobre tus empleados?",
+			"respuestas": [
+				{"texto": "Organizarlos", "correcta": true},
+				{"texto": "Acosarlos", "correcta": false},
+				{"texto": "Gritarles", "correcta": false},
+				{"texto": "Animarles", "correcta": false},
 			]
 		}
 	],
 	"english": [
 		{
-			"enunciado": "What is the capital of Spain?",
+			"enunciado": "Which of these objects was an obstacle when you were a cleaner?",
 			"respuestas": [
-				{"texto": "Barcelona", "correcta": false},
-				{"texto": "Madrid", "correcta": true},
-				{"texto": "Valencia", "correcta": false},
-				{"texto": "Sevilla", "correcta": false}
+				{"texto": "Shelves", "correcta": false},
+				{"texto": "Trash cans", "correcta": false},
+				{"texto": "Plants", "correcta": true},
+				{"texto": "Fridges", "correcta": false}
 			]
 		},
 		{
-			"enunciado": "What is the capital of France?",
+			"enunciado": "What were the foods you transported when you were an intern?",
 			"respuestas": [
-				{"texto": "Paris", "correcta": true},
-				{"texto": "Lyon", "correcta": false},
-				{"texto": "Marseille", "correcta": false},
-				{"texto": "Toulouse", "correcta": false}
+				{"texto": "Coffee and Peas", "correcta": false},
+				{"texto": "Coffee and Lettuce", "correcta": true},
+				{"texto": "Water and Peas", "correcta": false},
+				{"texto": "Soda and Lettuce", "correcta": false}
+			]
+		},
+		{
+			"enunciado": "What color was the cup on the desk when you were promoted to programmer?",
+			"respuestas": [
+				{"texto": "Red and Yellow", "correcta": false},
+				{"texto": "Orange", "correcta": false},
+				{"texto": "Yellow", "correcta": false},
+				{"texto": "Green", "correcta": true}
+			]
+		},
+		{
+			"enunciado": "As a floor manager, what responsibility did you have over your employees?",
+			"respuestas": [
+				{"texto": "Organize them", "correcta": true},
+				{"texto": "Harass them", "correcta": false},
+				{"texto": "Yell at them", "correcta": false},
+				{"texto": "Encourage them", "correcta": false},
 			]
 		}
+			
 	]
 }
 
@@ -58,6 +95,8 @@ func mostrar_pregunta():
 		print("¡Has terminado!")
 		return
 
+	
+
 	var indice = randi() % preguntas[idioma].size()
 	preguntaActual = preguntas[idioma][indice]
 	label_pregunta.text = preguntaActual["enunciado"]
@@ -65,6 +104,10 @@ func mostrar_pregunta():
 	for i in range(botones.size()):
 		botones[i].text = preguntaActual["respuestas"][i]["texto"]
 		botones[i].connect("pressed", _on_boton_presionado.bind(i))
+
+	$EscenaJefe.play("default")
+	await(get_tree().create_timer(2.0).timeout)
+	$EscenaJefe.stop()
 
 func _on_boton_presionado(indice):
 	var es_correcta = preguntaActual["respuestas"][indice]["correcta"]

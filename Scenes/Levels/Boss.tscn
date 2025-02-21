@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://b6nwhmwur2wkg"]
+[gd_scene load_steps=14 format=3 uid="uid://b6nwhmwur2wkg"]
 
 [ext_resource type="Script" path="res://Scenes/Levels/boss.gd" id="1_sqbow"]
 [ext_resource type="Texture2D" uid="uid://cnaqgj6vltyj" path="res://Assets/Sprites/Levels/boss/fotograma0000.png" id="2_3ix4x"]
@@ -48,6 +48,9 @@ outline_size = 6
 outline_color = Color(0, 0, 0, 1)
 shadow_size = 2
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_erhte"]
+bg_color = Color(0.232968, 0.696683, 0.489102, 1)
+
 [node name="PreguntaUI" type="Control"]
 layout_mode = 3
 anchors_preset = 0
@@ -58,10 +61,10 @@ script = ExtResource("1_sqbow")
 [node name="EscenaJefe" type="AnimatedSprite2D" parent="."]
 position = Vector2(640, 374)
 sprite_frames = SubResource("SpriteFrames_h10pt")
-frame_progress = 0.91504
+frame_progress = 0.750527
 
-[node name="Bocata" type="Sprite2D" parent="EscenaJefe"]
-position = Vector2(316, -243)
+[node name="Bocata" type="Sprite2D" parent="."]
+position = Vector2(956, 131)
 scale = Vector2(0.448466, 0.466278)
 texture = ExtResource("9_igfaa")
 
@@ -88,6 +91,7 @@ offset_bottom = 405.0
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_nyb7o")
 theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_erhte")
 text = "dfsgdfsgsdfgdfs"
 
 [node name="Opcion2" type="Button" parent="VBoxContainer"]
