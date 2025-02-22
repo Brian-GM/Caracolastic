@@ -186,7 +186,7 @@ script = ExtResource("1_sqbow")
 [node name="EscenaJefe" type="AnimatedSprite2D" parent="."]
 position = Vector2(640, 374)
 sprite_frames = SubResource("SpriteFrames_h10pt")
-frame_progress = 0.975793
+frame_progress = 0.0412874
 
 [node name="Bocata" type="Sprite2D" parent="."]
 position = Vector2(956, 131)
