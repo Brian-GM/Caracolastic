@@ -219,6 +219,46 @@ script = ExtResource("1_j3npd")
 position = Vector2(640, 360)
 sprite_frames = SubResource("SpriteFrames_fm4u6")
 
+[node name="TextoESP" type="Label" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 194.0
+offset_top = 59.0
+offset_right = 1044.0
+offset_bottom = 268.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("19_4jovu")
+theme_override_font_sizes/font_size = 50
+text = "Ascendio a 
+
+Jefe de
+Personal
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextoIng" type="Label" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 194.0
+offset_top = 59.0
+offset_right = 1044.0
+offset_bottom = 268.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("19_4jovu")
+theme_override_font_sizes/font_size = 50
+text = "Promoted to
+
+Personal 
+Manager
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="open" type="AnimatedSprite2D" parent="."]
 position = Vector2(640, 360)
 sprite_frames = SubResource("SpriteFrames_w1paa")
@@ -261,46 +301,6 @@ offset_bottom = 442.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("18_g2t68")
-
-[node name="TextoESP" type="Label" parent="."]
-visible = false
-layout_mode = 0
-offset_left = 194.0
-offset_top = 59.0
-offset_right = 1044.0
-offset_bottom = 268.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("19_4jovu")
-theme_override_font_sizes/font_size = 50
-text = "Ascendio a 
-
-Jefe de
-Personal
-"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="TextoIng" type="Label" parent="."]
-visible = false
-layout_mode = 0
-offset_left = 194.0
-offset_top = 59.0
-offset_right = 1044.0
-offset_bottom = 215.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("19_4jovu")
-theme_override_font_sizes/font_size = 50
-text = "Promoted to
-
-Personal 
-Manager
-"
-horizontal_alignment = 1
-vertical_alignment = 1
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

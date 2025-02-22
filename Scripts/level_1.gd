@@ -22,6 +22,9 @@ func _process(delta: float) -> void:
 	puntos.text = str(total_mierdas - mierdas.get_child_count()) + "/12"
 	tiempo.text = str(int(timer.time_left))
 	if mierdas.get_child_count() <= 0:
+		
+		await get_tree().create_timer(5.0).timeout 
+
 		$AnimationPlayer.play("desvanecer_salir")
 		await get_tree().create_timer(1.0).timeout 
 		get_tree().change_scene_to_file("res://Scenes/Levels/lvl_2.tscn")

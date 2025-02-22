@@ -13,4 +13,4 @@ func verificar_victoria():
 		cambiar_escena()
 
 func cambiar_escena():
-	get_tree().change_scene_to_file()
+	get_tree().change_scene_to_file("res://Scenes/Levels/lvl_boss.tscn")

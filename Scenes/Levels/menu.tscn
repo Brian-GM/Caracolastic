@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://cx6rj2isurjb"]
+[gd_scene load_steps=19 format=3 uid="uid://cx6rj2isurjb"]
 
 [ext_resource type="FontFile" uid="uid://bre1cjdaepuvc" path="res://Assets/Fonts/PressStart2P-Regular.ttf" id="1_dorf8"]
 [ext_resource type="Script" path="res://Scripts/menu.gd" id="1_n5bv2"]
@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://bpoi5xhya37yy" path="res://Assets/Sprites/Characters/Caracol-Brian.png" id="7_gfqrn"]
 [ext_resource type="Texture2D" uid="uid://ffot4hprk3rj" path="res://Assets/Sprites/Characters/Caracol-Gabri.png" id="10_cn7cd"]
 [ext_resource type="Texture2D" uid="uid://tjgyiig3tme3" path="res://Assets/Sprites/Characters/Caracol-Victor.png" id="11_yir8e"]
+[ext_resource type="AudioStream" uid="uid://b7xgllo3odeno" path="res://Assets/Music/Effects/Click.mp3" id="12_231ka"]
 
 [sub_resource type="Animation" id="Animation_lfgtj"]
 length = 0.001
@@ -282,6 +283,9 @@ modulate = Color(1, 1, 1, 0.317647)
 position = Vector2(59, 80)
 scale = Vector2(0.491803, 0.580645)
 texture = ExtResource("6_cbflw")
+
+[node name="Click" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("12_231ka")
 
 [connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="Options" to="." method="_on_options_pressed"]

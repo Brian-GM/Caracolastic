@@ -40,7 +40,25 @@ var preguntas = {
 				{"texto": "Gritarles", "correcta": false},
 				{"texto": "Animarles", "correcta": false},
 			]
-		}
+		},
+				{
+			"enunciado": "¿Cual es tu nombre?",
+			"respuestas": [
+				{"texto": "Eutanasio", "correcta": false},
+				{"texto": "Eufrasio", "correcta": false},
+				{"texto": "Eucalipto", "correcta": false},
+				{"texto": "Eustaquio", "correcta": true}
+			]
+		},
+		{
+			"enunciado": "¿Cual es el mejor juego de esta Jam?",
+			"respuestas": [
+				{"texto": "Shell Corporation", "correcta": true},
+				{"texto": "Este juego", "correcta": true},
+				{"texto": "Evidentemente este juego", "correcta": true},
+				{"texto": "¿Como no?, este juego", "correcta": true},
+			]
+		},
 	],
 	"english": [
 		{
@@ -88,6 +106,7 @@ var preguntas = {
 
 func _ready():
 	$AnimationPlayer.play("desvanecer_entrada")
+	GameManager.current_level = "res://Scenes/Levels/Boss.tscn"
 
 	idioma = "español" if GameManager.en_español else "english"
 	mostrar_pregunta()

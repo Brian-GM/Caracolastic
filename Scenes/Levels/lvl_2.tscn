@@ -219,6 +219,43 @@ script = ExtResource("1_jx7jv")
 position = Vector2(640, 360)
 sprite_frames = SubResource("SpriteFrames_lp6wd")
 
+[node name="TextoESP" type="Label" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 194.0
+offset_top = 59.0
+offset_right = 1044.0
+offset_bottom = 215.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("19_jmvoi")
+theme_override_font_sizes/font_size = 50
+text = "Ascendio a 
+
+Becario"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextoIng" type="Label" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 194.0
+offset_top = 59.0
+offset_right = 1044.0
+offset_bottom = 215.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("19_jmvoi")
+theme_override_font_sizes/font_size = 50
+text = "Promoted to
+
+Intern
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="open" type="AnimatedSprite2D" parent="."]
 position = Vector2(640, 360)
 sprite_frames = SubResource("SpriteFrames_jumrp")
@@ -266,43 +303,6 @@ offset_bottom = 434.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("18_1nycb")
-
-[node name="TextoESP" type="Label" parent="."]
-visible = false
-layout_mode = 0
-offset_left = 194.0
-offset_top = 59.0
-offset_right = 1044.0
-offset_bottom = 215.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("19_jmvoi")
-theme_override_font_sizes/font_size = 50
-text = "Ascendio a 
-
-Becario"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="TextoIng" type="Label" parent="."]
-visible = false
-layout_mode = 0
-offset_left = 194.0
-offset_top = 59.0
-offset_right = 1044.0
-offset_bottom = 215.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("19_jmvoi")
-theme_override_font_sizes/font_size = 50
-text = "Promoted to
-
-Intern
-"
-horizontal_alignment = 1
-vertical_alignment = 1
 
 [connection signal="animation_finished" from="open" to="." method="_on_open_animation_finished"]
 [connection signal="animation_looped" from="open" to="." method="_on_open_animation_looped"]

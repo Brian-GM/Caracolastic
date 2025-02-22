@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://nh1fgqennhcr"]
+[gd_scene load_steps=21 format=3 uid="uid://nh1fgqennhcr"]
 
 [ext_resource type="Texture2D" uid="uid://cl66rssq75mfw" path="res://Assets/Sprites/animations/despedido/fotograma0000.png" id="1_o5ars"]
 [ext_resource type="Script" path="res://Scripts/despedido.gd" id="1_tmijj"]
@@ -13,6 +13,7 @@
 [ext_resource type="AudioStream" uid="uid://bwde0ujtelh70" path="res://Assets/Music/Soundtrack/SOUND EFFECT HELLO DARKNESS MY OLD FRIEND ORIGINAL.mp3" id="11_bethm"]
 [ext_resource type="AudioStream" uid="uid://0ge454sa5ux0" path="res://Assets/Music/Effects/Stamp Impact Sound Effect (mp3cut.net).mp3" id="12_x3anc"]
 [ext_resource type="Texture2D" uid="uid://drmstm88ixw2f" path="res://Assets/Sprites/UI/R.png" id="13_jcgh5"]
+[ext_resource type="AudioStream" uid="uid://b7xgllo3odeno" path="res://Assets/Music/Effects/Click.mp3" id="14_nf0v7"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_eadrw"]
 animations = [{
@@ -256,6 +257,9 @@ grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(2.34864, 0.909252)
 texture = ExtResource("13_jcgh5")
+
+[node name="Click" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("14_nf0v7")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="pressed" from="Play" to="." method="_on_play_pressed"]

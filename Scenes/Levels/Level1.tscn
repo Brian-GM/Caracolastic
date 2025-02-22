@@ -606,4 +606,6 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("10_apfvb")
 
+[node name="win" type="AudioStreamPlayer2D" parent="."]
+
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
