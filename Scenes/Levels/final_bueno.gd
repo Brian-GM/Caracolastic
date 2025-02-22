@@ -4,15 +4,29 @@ extends Control
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	$AnimationPlayer.play("desvanecer_entrada")
-	await get_tree().create_timer(1.0).timeout  # Espera 2 segundos
 	GameManager.final_2_desbloque = true
 	if GameManager.en_español:
-		$Label.text = "¡¡¡Eres una BABOSA!!!"
-		$Label2.text = "¡¡¡DESPEDIDO!!!"
+		$Label.text = "Eres un digno sucesor,
+							dame la mano"
+		$Label2.text = "Eres una BABOSA
+						¡¡¡DESPEDIDO!!!"
 	else:
-		$Label.text = "You are a SLUG!!!"
-		$Label2.text = "¡¡¡FIRED!!!"
+		$Label.text = "You are a worthy successor,
+							give me your hand"
+		$Label2.text = "You are a SLUG!!!
+						¡¡¡FIRED!!!"
 # Called every frame. 'delta' is the elapsed time since the previous frame.
+	$habla.play()
+	$FinalBueno.play("default")
+	$Label.visible = true
+	await get_tree().create_timer(3).timeout 
+	$habla.play()
+
+	$Label.visible = false
+	$Label2.visible = true
+
+
+
 func _process(delta: float) -> void:
 	pass
 

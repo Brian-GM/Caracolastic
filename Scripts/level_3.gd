@@ -41,10 +41,11 @@ func _process(delta: float) -> void:
 	if points >= 10:
 		$AnimationPlayer.play("desvanecer_salir")
 		await get_tree().create_timer(1.0).timeout  # Espera 2 segundos
-		get_tree().change_scene_to_file("res://Scenes/Levels/lvl_4.tscn")
+		get_tree().change_scene_to_file("res://Scenes/stonks/programadorpasado.tscn")
 
 func _input(event: InputEvent) -> void:
 	if event is InputEventKey:
+		$AudioStreamPlayer2D.play()
 		var key_unicode = event.unicode
 		if key_unicode > 0:
 			var letter = char(key_unicode)
@@ -61,6 +62,7 @@ func _input(event: InputEvent) -> void:
 				if typed_word == current_word:
 					success_words.append(current_word)
 					points += 1
+					$AudioStreamPlayer2D2.play()
 					_1.visible = true
 					puntos.text = str(points) + " /10"
 					await get_tree().create_timer(1).timeout
@@ -68,6 +70,7 @@ func _input(event: InputEvent) -> void:
 
 					new_word()
 			else:
+				$AudioStreamPlayer2D3.play()
 				type_word.add_theme_color_override("font_color", Color(1, 0, 0, 1)) 
 				await get_tree().create_timer(0.3).timeout
 				type_word.add_theme_color_override("font_color", Color(0, 1, 0, 1)) 

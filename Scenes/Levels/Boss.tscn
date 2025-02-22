@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://b6nwhmwur2wkg"]
+[gd_scene load_steps=23 format=3 uid="uid://b6nwhmwur2wkg"]
 
 [ext_resource type="Script" path="res://Scenes/Levels/boss.gd" id="1_sqbow"]
 [ext_resource type="Texture2D" uid="uid://cnaqgj6vltyj" path="res://Assets/Sprites/Levels/boss/fotograma0000.png" id="2_3ix4x"]
@@ -11,6 +11,9 @@
 [ext_resource type="Texture2D" uid="uid://bit6sl0wysdlb" path="res://Assets/Sprites/Levels/boss/fotograma0006.png" id="8_a47jg"]
 [ext_resource type="Texture2D" uid="uid://djchvftpjciww" path="res://Assets/Sprites/Levels/boss/bocata.png" id="9_igfaa"]
 [ext_resource type="Texture2D" uid="uid://drmstm88ixw2f" path="res://Assets/Sprites/UI/R.png" id="11_ey5pl"]
+[ext_resource type="AudioStream" uid="uid://li844irlcfx6" path="res://Assets/Music/Effects/Correcto.mp3" id="12_canfe"]
+[ext_resource type="AudioStream" uid="uid://dis5ydyu1o166" path="res://Scenes/Levels/bosshablando (mp3cut.net).mp3" id="12_wvb8e"]
+[ext_resource type="AudioStream" uid="uid://43dxugi7680q" path="res://Assets/Music/Effects/Error.mp3" id="13_iapf2"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_h10pt"]
 animations = [{
@@ -260,3 +263,12 @@ offset_bottom = 830.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("11_ey5pl")
+
+[node name="habla" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("12_wvb8e")
+
+[node name="correcta" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("12_canfe")
+
+[node name="mala" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("13_iapf2")

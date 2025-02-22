@@ -12,6 +12,10 @@ func _ready() -> void:
 	else:
 		$Label.text = "You're useless!!!"
 		$Label2.text = "FIRED!!!"
+	$EscenaJefe.play("default")
+	$habla.play()
+	await(get_tree().create_timer(2.0).timeout)
+	$EscenaJefe.stop()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

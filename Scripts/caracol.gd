@@ -29,21 +29,27 @@ func _process(delta: float) -> void:
 
 	if not moving:
 		if Input.is_action_just_pressed("ui_left"):
+			$AnimatedSprite2D.play("default")
 			direction = Vector2.LEFT
 			animated_sprite_2d.rotation_degrees = 270
 			moving = true
 			check_and_create_baba_esquina()  # Verificar si hay una colisión pendiente
 		elif Input.is_action_just_pressed("ui_right"):
+			$AnimatedSprite2D.play("default")
 			direction = Vector2.RIGHT
 			animated_sprite_2d.rotation_degrees = 90
 			moving = true
 			check_and_create_baba_esquina()  # Verificar si hay una colisión pendiente
-		elif Input.is_action_just_pressed("ui_up"):
+		elif Input.is_action_just_pressed("ui_up"):			
+			$AnimatedSprite2D.play("default")
+
 			direction = Vector2.UP
 			animated_sprite_2d.rotation_degrees = 0
 			moving = true
 			check_and_create_baba_esquina()  # Verificar si hay una colisión pendiente
 		elif Input.is_action_just_pressed("ui_down"):
+			$AnimatedSprite2D.play("default")
+
 			direction = Vector2.DOWN
 			animated_sprite_2d.rotation_degrees = 180
 			moving = true
@@ -67,6 +73,8 @@ func move(delta: float) -> void:
 		waiting_for_new_movement = true  # Esperar a que el caracol inicie un nuevo movimiento
 		moving = false
 		direction = Vector2.ZERO
+		$AnimatedSprite2D.stop()
+
 func check_and_create_baba_esquina():
 	if waiting_for_new_movement:
 		create_baba_esquina(collision_position, last_direction, direction)

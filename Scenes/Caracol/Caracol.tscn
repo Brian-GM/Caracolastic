@@ -1,13 +1,21 @@
-[gd_scene load_steps=5 format=3 uid="uid://dn351c0o6kfb3"]
+[gd_scene load_steps=7 format=3 uid="uid://dn351c0o6kfb3"]
 
 [ext_resource type="Script" path="res://Scripts/caracol.gd" id="1_bwwei"]
 [ext_resource type="Texture2D" uid="uid://74uugiq4tesw" path="res://Assets/Sprites/Characters/CaracolArriba.png" id="2_3ut1r"]
+[ext_resource type="Texture2D" uid="uid://covs1a17memv3" path="res://Assets/Sprites/Characters/CaracolArribaAnimacion.png" id="3_8bo28"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3788f"]
+atlas = ExtResource("3_8bo28")
+region = Rect2(0, 0, 128, 128)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_g0n4l"]
 animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("2_3ut1r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3788f")
 }],
 "loop": true,
 "name": &"default",
@@ -28,6 +36,7 @@ position = Vector2(-5, -2.22045e-16)
 rotation = 1.5708
 scale = Vector2(0.763147, 0.691121)
 sprite_frames = SubResource("SpriteFrames_g0n4l")
+frame_progress = 0.183821
 offset = Vector2(3.68511, -6.32826)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dis5ydyu1o166"
+path="res://.godot/imported/bosshablando (mp3cut.net).mp3-6d06f9f45753aa36eed34610f3b15911.mp3str"
+
+[deps]
+
+source_file="res://Scenes/Levels/bosshablando (mp3cut.net).mp3"
+dest_files=["res://.godot/imported/bosshablando (mp3cut.net).mp3-6d06f9f45753aa36eed34610f3b15911.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

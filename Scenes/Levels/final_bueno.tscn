@@ -1,12 +1,80 @@
-[gd_scene load_steps=14 format=3 uid="uid://bhj54f16rqwxl"]
+[gd_scene load_steps=30 format=3 uid="uid://bhj54f16rqwxl"]
 
 [ext_resource type="Script" path="res://Scenes/Levels/final_bueno.gd" id="1_gq06p"]
-[ext_resource type="Texture2D" uid="uid://b3tpfvva5s7x2" path="res://Assets/Sprites/Levels/final bueno.png" id="1_n004g"]
+[ext_resource type="Texture2D" uid="uid://3hlu1eq6pyoh" path="res://Assets/Sprites/animations/finalbuenoanim/fotograma0000.png" id="2_4wbxh"]
 [ext_resource type="Texture2D" uid="uid://drmstm88ixw2f" path="res://Assets/Sprites/UI/R.png" id="3_m23uy"]
+[ext_resource type="Texture2D" uid="uid://drh2bwbiwks78" path="res://Assets/Sprites/animations/finalbuenoanim/fotograma0001.png" id="3_rersl"]
+[ext_resource type="Texture2D" uid="uid://bhhdjpbh0ujg" path="res://Assets/Sprites/animations/finalbuenoanim/fotograma0002.png" id="4_d5xfv"]
 [ext_resource type="Texture2D" uid="uid://lvi1x4twpp0w" path="res://Assets/Sprites/Levels/sello.png" id="4_d66f1"]
+[ext_resource type="Texture2D" uid="uid://fko23hvvaa3f" path="res://Assets/Sprites/animations/finalbuenoanim/fotograma0003.png" id="5_b345n"]
 [ext_resource type="AudioStream" uid="uid://0ge454sa5ux0" path="res://Assets/Music/Effects/Stamp Impact Sound Effect (mp3cut.net).mp3" id="5_ehq8f"]
+[ext_resource type="Texture2D" uid="uid://bv2yok6f7qstv" path="res://Assets/Sprites/animations/finalbuenoanim/fotograma0004.png" id="6_5qmou"]
 [ext_resource type="Texture2D" uid="uid://djchvftpjciww" path="res://Assets/Sprites/Levels/boss/bocata.png" id="6_sx4qb"]
 [ext_resource type="FontFile" uid="uid://bre1cjdaepuvc" path="res://Assets/Fonts/PressStart2P-Regular.ttf" id="7_17e81"]
+[ext_resource type="Texture2D" uid="uid://dgb56x1ntjyju" path="res://Assets/Sprites/animations/finalbuenoanim/fotograma0005.png" id="7_neogj"]
+[ext_resource type="Texture2D" uid="uid://fxms3ikn226e" path="res://Assets/Sprites/animations/finalbuenoanim/fotograma0006.png" id="8_8vors"]
+[ext_resource type="Texture2D" uid="uid://dpe6i0bwdnq1m" path="res://Assets/Sprites/animations/finalbuenoanim/fotograma0007.png" id="9_fa8a0"]
+[ext_resource type="Texture2D" uid="uid://b0bi8q55j05k3" path="res://Assets/Sprites/animations/finalbuenoanim/fotograma0008.png" id="10_kbs4a"]
+[ext_resource type="Texture2D" uid="uid://bru2pdimnme3f" path="res://Assets/Sprites/animations/finalbuenoanim/fotograma0009.png" id="11_cdcx2"]
+[ext_resource type="Texture2D" uid="uid://dsvaajvvblqiy" path="res://Assets/Sprites/animations/finalbuenoanim/fotograma0010.png" id="12_fko68"]
+[ext_resource type="Texture2D" uid="uid://bbrh5m5eotmav" path="res://Assets/Sprites/animations/finalbuenoanim/fotograma0011.png" id="13_fsdeg"]
+[ext_resource type="Texture2D" uid="uid://bf0c2tfsxgwig" path="res://Assets/Sprites/animations/finalbuenoanim/fotograma0012.png" id="14_tyyfp"]
+[ext_resource type="Texture2D" uid="uid://bji7xkusuxjxf" path="res://Assets/Sprites/animations/finalbuenoanim/fotograma0013.png" id="15_ui2mo"]
+[ext_resource type="Texture2D" uid="uid://c8qr062vvvrvc" path="res://Assets/Sprites/animations/finalbuenoanim/fotograma0014.png" id="16_c6h7l"]
+[ext_resource type="AudioStream" uid="uid://dis5ydyu1o166" path="res://Scenes/Levels/bosshablando (mp3cut.net).mp3" id="22_ajnm7"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lakqc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_4wbxh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_rersl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_d5xfv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_b345n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_5qmou")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_neogj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_8vors")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_fa8a0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_kbs4a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_cdcx2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_fko68")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_fsdeg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_tyyfp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_ui2mo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_c6h7l")
+}],
+"loop": false,
+"name": &"default",
+"speed": 10.0
+}]
 
 [sub_resource type="Animation" id="Animation_lfgtj"]
 length = 0.001
@@ -142,9 +210,11 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_gq06p")
 
-[node name="FinalBueno" type="Sprite2D" parent="."]
+[node name="FinalBueno" type="AnimatedSprite2D" parent="."]
 position = Vector2(640, 360)
-texture = ExtResource("1_n004g")
+sprite_frames = SubResource("SpriteFrames_lakqc")
+frame = 14
+frame_progress = 1.0
 
 [node name="Fin" type="Timer" parent="."]
 wait_time = 5.0
@@ -172,6 +242,44 @@ libraries = {
 "": SubResource("AnimationLibrary_xx4bh")
 }
 
+[node name="Bocata1" type="Sprite2D" parent="."]
+position = Vector2(961, 111)
+scale = Vector2(0.489258, 0.409028)
+texture = ExtResource("6_sx4qb")
+
+[node name="Bocata2" type="Sprite2D" parent="."]
+position = Vector2(961, 111)
+scale = Vector2(0.489258, 0.409028)
+texture = ExtResource("6_sx4qb")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 700.0
+offset_top = 25.0
+offset_right = 1219.0
+offset_bottom = 175.0
+text = "Eres un digno sucesor,
+dame la mano"
+label_settings = SubResource("LabelSettings_q8sbs")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Label2" type="Label" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 705.0
+offset_top = 27.0
+offset_right = 1224.0
+offset_bottom = 177.0
+theme_override_font_sizes/font_size = 100
+text = "Eres una babosa!!
+Despedido"
+label_settings = SubResource("LabelSettings_q8sbs")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 1
 anchors_preset = 8
@@ -187,31 +295,9 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("3_m23uy")
 
-[node name="Bocata" type="Sprite2D" parent="."]
-position = Vector2(961, 111)
-scale = Vector2(0.489258, 0.409028)
-texture = ExtResource("6_sx4qb")
-
-[node name="Label" type="Label" parent="."]
-offset_left = 697.0
-offset_top = -19.0
-offset_right = 1216.0
-offset_bottom = 131.0
-label_settings = SubResource("LabelSettings_q8sbs")
-horizontal_alignment = 1
-vertical_alignment = 1
-autowrap_mode = 2
-
-[node name="Label2" type="Label" parent="."]
-offset_left = 701.0
-offset_top = 57.0
-offset_right = 1220.0
-offset_bottom = 207.0
-theme_override_font_sizes/font_size = 100
-label_settings = SubResource("LabelSettings_q8sbs")
-horizontal_alignment = 1
-vertical_alignment = 1
-autowrap_mode = 2
+[node name="habla" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("22_ajnm7")
 
 [connection signal="timeout" from="Fin" to="." method="_on_fin_timeout"]
 [connection signal="timeout" from="sello" to="." method="_on_sello_timeout"]
+[connection signal="finished" from="habla" to="." method="_on_habla_finished"]

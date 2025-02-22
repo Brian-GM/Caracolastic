@@ -128,6 +128,7 @@ func mostrar_pregunta():
 		botones[i].connect("pressed", _on_boton_presionado.bind(i))
 
 	$EscenaJefe.play("default")
+	$habla.play()
 	await(get_tree().create_timer(2.0).timeout)
 	$EscenaJefe.stop()
 
@@ -135,8 +136,10 @@ func _on_boton_presionado(indice):
 	var es_correcta = preguntaActual["respuestas"][indice]["correcta"]
 	if es_correcta:
 		print("¡Respuesta correcta!")
+		$correcta.play()
 		preguntas[idioma].erase(preguntaActual)  
 		mostrar_pregunta()
 	else:
-		await get_tree().create_timer(1.0).timeout  # Espera 2 segundos
+		$mala.play()
+		await get_tree().create_timer(0.5).timeout  # Espera 2 segundos
 		get_tree().change_scene_to_file("res://Scenes/Levels/final_malo.tscn")

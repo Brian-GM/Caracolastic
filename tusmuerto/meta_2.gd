@@ -8,7 +8,10 @@ func _on_area_entered(area: Area2D) -> void:
 	print(area.name)
 	if area.name == npc_name:
 		game_manager.npcs_en_su_sitio[npc_name] = true
+		$correcta.play()
 		game_manager.verificar_victoria()
+	else:
+		$mal.play()
 
 
 func _on_area_exited(area: Area2D) -> void:
