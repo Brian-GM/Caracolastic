@@ -87,16 +87,19 @@ var preguntas = {
 @onready var botones = $VBoxContainer.get_children()
 
 func _ready():
+	$AnimationPlayer.play("desvanecer_entrada")
+
 	idioma = "español" if GameManager.en_español else "english"
 	mostrar_pregunta()
 
 func mostrar_pregunta():
-	if preguntas[idioma].is_empty():
-		print("¡Has terminado!")
+	if preguntas[idioma].size() == 0:	
+		print("ceroooooo")
+		$AnimationPlayer.play("desvanecer_salir")
+		get_tree().change_scene_to_file("res://Scenes/Levels/final_bueno.tscn")
 		return
 
 	
-
 	var indice = randi() % preguntas[idioma].size()
 	preguntaActual = preguntas[idioma][indice]
 	label_pregunta.text = preguntaActual["enunciado"]
@@ -116,4 +119,5 @@ func _on_boton_presionado(indice):
 		preguntas[idioma].erase(preguntaActual)  
 		mostrar_pregunta()
 	else:
-		print("Respuesta incorrecta.")
+		await get_tree().create_timer(1.0).timeout  # Espera 2 segundos
+		get_tree().change_scene_to_file("res://Scenes/Levels/final_malo.tscn")

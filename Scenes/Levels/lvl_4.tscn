@@ -247,11 +247,6 @@ autostart = true
 
 [node name="Musica_ascensor" type="AudioStreamPlayer2D" parent="."]
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-libraries = {
-"": SubResource("AnimationLibrary_xx4bh")
-}
-
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 1
 anchors_preset = 8
@@ -269,6 +264,7 @@ texture = ExtResource("18_g2t68")
 
 [node name="TextoESP" type="Label" parent="."]
 visible = false
+layout_mode = 0
 offset_left = 194.0
 offset_top = 59.0
 offset_right = 1044.0
@@ -288,6 +284,7 @@ vertical_alignment = 1
 
 [node name="TextoIng" type="Label" parent="."]
 visible = false
+layout_mode = 0
 offset_left = 194.0
 offset_top = 59.0
 offset_right = 1044.0
@@ -304,6 +301,11 @@ Manager
 "
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_xx4bh")
+}
 
 [connection signal="animation_finished" from="open" to="." method="_on_open_animation_finished"]
 [connection signal="animation_looped" from="open" to="." method="_on_open_animation_looped"]

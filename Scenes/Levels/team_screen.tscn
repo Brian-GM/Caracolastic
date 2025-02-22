@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=3 uid="uid://db54lhvh5jg1n"]
 
 [ext_resource type="Script" path="res://Scripts/team_screen.gd" id="1_5hcok"]
-[ext_resource type="Texture2D" uid="uid://s7vvnuqvnciu" path="res://Assets/Sprites/Levels/Captura de pantalla 2025-02-20 113057.png" id="2_gu4js"]
+[ext_resource type="Texture2D" uid="uid://s7vvnuqvnciu" path="res://Assets/Sprites/Levels/level4/Captura de pantalla 2025-02-20 113057.png" id="2_gu4js"]
 [ext_resource type="AudioStream" uid="uid://c1vxjy3xkt51l" path="res://Assets/Music/Effects/Cartoon Explosion Sound Effect - Free Download & No Copyright (mp3cut.net).mp3" id="3_nrfk6"]
 [ext_resource type="Texture2D" uid="uid://drmstm88ixw2f" path="res://Assets/Sprites/UI/R.png" id="4_rd1wj"]
 

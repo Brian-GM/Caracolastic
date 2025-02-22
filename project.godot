@@ -19,11 +19,14 @@ config/icon="res://icon.svg"
 
 GameManager="*res://Scripts/Utils/GameManager.gd"
 MusicManager="*res://Scripts/Utils/music_manager.gd"
+GameManager2="*res://tusmuerto/game_manager_2.gd"
 
 [display]
 
 window/size/viewport_width=1280
 window/size/viewport_height=720
+window/stretch/mode="viewport"
+window/stretch/aspect="expand"
 window/main_scene=""
 
 [global_group]

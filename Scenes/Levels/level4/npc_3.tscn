@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://bsseg17uhwupv"]
+
+[ext_resource type="Texture2D" uid="uid://cqarb5by1iwxm" path="res://Sprites/Caracol-NPC3.png" id="1_mtyq3"]
+[ext_resource type="Script" path="res://npc_3.gd" id="1_x02gd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pct20"]
+size = Vector2(111, 88)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cqcvl"]
+size = Vector2(113, 90)
+
+[node name="NPC3" type="CharacterBody2D"]
+script = ExtResource("1_x02gd")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_mtyq3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-5.5, -4)
+shape = SubResource("RectangleShape2D_pct20")
+
+[node name="NPC3" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NPC3"]
+position = Vector2(-5.5, -4)
+shape = SubResource("RectangleShape2D_cqcvl")

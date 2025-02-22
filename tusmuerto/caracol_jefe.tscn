@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://cn8d16v4abypi"]
+
+[ext_resource type="Texture2D" uid="uid://bqhf54yh1s4dm" path="res://tusmuerto/Caracol-JefeDePlanta.png" id="1_b3sic"]
+[ext_resource type="Script" path="res://tusmuerto/caracol_jefe.gd" id="1_i82vu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ttrc1"]
+size = Vector2(112, 91)
+
+[node name="CaracolJefe" type="CharacterBody2D"]
+script = ExtResource("1_i82vu")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_b3sic")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, -5.5)
+shape = SubResource("RectangleShape2D_ttrc1")

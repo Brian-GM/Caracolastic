@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://b6nwhmwur2wkg"]
+[gd_scene load_steps=20 format=3 uid="uid://b6nwhmwur2wkg"]
 
 [ext_resource type="Script" path="res://Scenes/Levels/boss.gd" id="1_sqbow"]
 [ext_resource type="Texture2D" uid="uid://cnaqgj6vltyj" path="res://Assets/Sprites/Levels/boss/fotograma0000.png" id="2_3ix4x"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://l0uhaia2idh2" path="res://Assets/Sprites/Levels/boss/fotograma0005.png" id="7_wpxbu"]
 [ext_resource type="Texture2D" uid="uid://bit6sl0wysdlb" path="res://Assets/Sprites/Levels/boss/fotograma0006.png" id="8_a47jg"]
 [ext_resource type="Texture2D" uid="uid://djchvftpjciww" path="res://Assets/Sprites/Levels/boss/bocata.png" id="9_igfaa"]
+[ext_resource type="Texture2D" uid="uid://drmstm88ixw2f" path="res://Assets/Sprites/UI/R.png" id="11_ey5pl"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_h10pt"]
 animations = [{
@@ -57,6 +58,123 @@ corner_radius_top_left = 4
 corner_radius_top_right = 4
 corner_radius_bottom_right = 4
 corner_radius_bottom_left = 4
+
+[sub_resource type="Animation" id="Animation_lfgtj"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TextureRect:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_uwxkt"]
+resource_name = "desvanecer_entrada"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TextureRect:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_2swc2"]
+resource_name = "desvanecer_salir"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TextureRect:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="Animation" id="Animation_7ubi0"]
+resource_name = "desvanecer_salir_team"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0333333, 3.06667, 3.96667),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TextureRect:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.0333333, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_xx4bh"]
+_data = {
+"RESET": SubResource("Animation_lfgtj"),
+"desvanecer_entrada": SubResource("Animation_uwxkt"),
+"desvanecer_salir": SubResource("Animation_2swc2"),
+"desvanecer_salir_team": SubResource("Animation_7ubi0")
+}
 
 [node name="PreguntaUI" type="Control"]
 layout_mode = 3
@@ -121,3 +239,24 @@ theme_override_fonts/font = ExtResource("2_nyb7o")
 theme_override_font_sizes/font_size = 17
 theme_override_styles/normal = SubResource("StyleBoxFlat_erhte")
 text = "dfsgdfsgsdfgdfs"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_xx4bh")
+}
+
+[node name="TextureRect" type="TextureRect" parent="."]
+z_index = 10
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -151.0
+offset_top = -129.0
+offset_right = 1495.0
+offset_bottom = 830.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("11_ey5pl")

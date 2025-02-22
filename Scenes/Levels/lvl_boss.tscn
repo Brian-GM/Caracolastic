@@ -1,0 +1,312 @@
+[gd_scene load_steps=28 format=3 uid="uid://co0rm6ku5e4q6"]
+
+[ext_resource type="Script" path="res://Scenes/Levels/lvl_boss.gd" id="1_cbp6a"]
+[ext_resource type="Texture2D" uid="uid://cecukutu158b5" path="res://Assets/Sprites/animations/animaciones_cambiar_nivel/lvl_4/asxensor/fotograma0000.png" id="2_y52qu"]
+[ext_resource type="Texture2D" uid="uid://cwxl0l35ay43p" path="res://Assets/Sprites/animations/animaciones_cambiar_nivel/lvl_4/asxensor/fotograma0001.png" id="3_sy66u"]
+[ext_resource type="Texture2D" uid="uid://b4oemx0xvasik" path="res://Assets/Sprites/animations/animaciones_cambiar_nivel/lvl_4/asxensor/fotograma0002.png" id="4_ky38q"]
+[ext_resource type="Texture2D" uid="uid://bb8h76r07ubqi" path="res://Assets/Sprites/animations/animaciones_cambiar_nivel/lvl_4/asxensor/fotograma0003.png" id="5_glbjn"]
+[ext_resource type="Texture2D" uid="uid://dpegsqyimq4i2" path="res://Assets/Sprites/animations/animaciones_cambiar_nivel/lvl_4/asxensor/fotograma0004.png" id="6_puqx7"]
+[ext_resource type="Texture2D" uid="uid://bxd8cj8axa5sf" path="res://Assets/Sprites/animations/animaciones_cambiar_nivel/lvl_4/asxensor/fotograma0005.png" id="7_kprhb"]
+[ext_resource type="Texture2D" uid="uid://cxm4b423ewfn7" path="res://Assets/Sprites/animations/animaciones_cambiar_nivel/lvl_4/asxensor/fotograma0006.png" id="8_0i7bp"]
+[ext_resource type="Texture2D" uid="uid://dlgmdghvinufe" path="res://Assets/Sprites/animations/animaciones_cambiar_nivel/lvl_4/abrir_puerta/fotograma0000.png" id="9_fl1w7"]
+[ext_resource type="Texture2D" uid="uid://w07y8j5i2bud" path="res://Assets/Sprites/animations/animaciones_cambiar_nivel/lvl_4/abrir_puerta/fotograma0001.png" id="10_35tm4"]
+[ext_resource type="Texture2D" uid="uid://lk1obu63ia7o" path="res://Assets/Sprites/animations/animaciones_cambiar_nivel/lvl_4/abrir_puerta/fotograma0002.png" id="11_30s32"]
+[ext_resource type="Texture2D" uid="uid://biadn6cqkapf8" path="res://Assets/Sprites/animations/animaciones_cambiar_nivel/lvl_4/abrir_puerta/fotograma0003.png" id="12_horuw"]
+[ext_resource type="Texture2D" uid="uid://clso2uty3qcjq" path="res://Assets/Sprites/animations/animaciones_cambiar_nivel/lvl_4/abrir_puerta/fotograma0004.png" id="13_h2kyv"]
+[ext_resource type="Texture2D" uid="uid://c0d54qskde0fm" path="res://Assets/Sprites/animations/animaciones_cambiar_nivel/lvl_4/abrir_puerta/fotograma0005.png" id="14_3dla8"]
+[ext_resource type="Texture2D" uid="uid://d4awsqrkeok25" path="res://Assets/Sprites/animations/animaciones_cambiar_nivel/lvl_4/abrir_puerta/fotograma0006.png" id="15_lna1h"]
+[ext_resource type="Texture2D" uid="uid://cm2rqhlxmc1kn" path="res://Assets/Sprites/animations/animaciones_cambiar_nivel/lvl_1/abrir_puerta/fotograma0000.png" id="16_4oh8o"]
+[ext_resource type="AudioStream" uid="uid://bg0sr8mmsx7fe" path="res://Assets/Music/Effects/Elevador abriéndose.mp3" id="17_sb0se"]
+[ext_resource type="Texture2D" uid="uid://drmstm88ixw2f" path="res://Assets/Sprites/UI/R.png" id="18_fpb4w"]
+[ext_resource type="FontFile" uid="uid://bre1cjdaepuvc" path="res://Assets/Fonts/PressStart2P-Regular.ttf" id="19_lplo8"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fm4u6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_y52qu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_sy66u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ky38q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_glbjn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_puqx7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_kprhb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_0i7bp")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_w1paa"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_fl1w7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_35tm4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_30s32")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_horuw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_h2kyv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_3dla8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_lna1h")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_uoylm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("16_4oh8o")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="Animation_lfgtj"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TextureRect:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_uwxkt"]
+resource_name = "desvanecer_entrada"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TextureRect:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_2swc2"]
+resource_name = "desvanecer_salir"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TextureRect:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="Animation" id="Animation_7ubi0"]
+resource_name = "desvanecer_salir_team"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0333333, 3.06667, 3.96667),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TextureRect:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.0333333, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_xx4bh"]
+_data = {
+"RESET": SubResource("Animation_lfgtj"),
+"desvanecer_entrada": SubResource("Animation_uwxkt"),
+"desvanecer_salir": SubResource("Animation_2swc2"),
+"desvanecer_salir_team": SubResource("Animation_7ubi0")
+}
+
+[node name="lvl_boss" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_cbp6a")
+
+[node name="ascensor" type="AnimatedSprite2D" parent="."]
+position = Vector2(640, 360)
+sprite_frames = SubResource("SpriteFrames_fm4u6")
+
+[node name="open" type="AnimatedSprite2D" parent="."]
+position = Vector2(640, 360)
+sprite_frames = SubResource("SpriteFrames_w1paa")
+
+[node name="close" type="AnimatedSprite2D" parent="."]
+position = Vector2(640, 360)
+sprite_frames = SubResource("SpriteFrames_uoylm")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+autostart = true
+
+[node name="Timer2" type="Timer" parent="."]
+one_shot = true
+autostart = true
+
+[node name="pliopen" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(-2, 0)
+stream = ExtResource("17_sb0se")
+
+[node name="Timer3" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+autostart = true
+
+[node name="Musica_ascensor" type="AudioStreamPlayer2D" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -777.0
+offset_top = -456.0
+offset_right = 770.0
+offset_bottom = 442.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("18_fpb4w")
+
+[node name="TextoESP" type="Label" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 194.0
+offset_top = 59.0
+offset_right = 1044.0
+offset_bottom = 268.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("19_lplo8")
+theme_override_font_sizes/font_size = 50
+text = "Reunion con
+el jefe
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextoIng" type="Label" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 194.0
+offset_top = 59.0
+offset_right = 1044.0
+offset_bottom = 215.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("19_lplo8")
+theme_override_font_sizes/font_size = 50
+text = "Meeting 
+
+Boss
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_xx4bh")
+}
+
+[connection signal="animation_finished" from="open" to="." method="_on_open_animation_finished"]
+[connection signal="animation_looped" from="open" to="." method="_on_open_animation_looped"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="Timer2" to="." method="_on_timer_2_timeout"]
+[connection signal="finished" from="pliopen" to="." method="_on_pliopen_finished"]
+[connection signal="timeout" from="Timer3" to="." method="_on_timer_3_timeout"]
