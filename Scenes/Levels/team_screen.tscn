@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=3 uid="uid://db54lhvh5jg1n"]
 
 [ext_resource type="Script" path="res://Scripts/team_screen.gd" id="1_5hcok"]
-[ext_resource type="Texture2D" uid="uid://s7vvnuqvnciu" path="res://Assets/Sprites/Levels/level4/Captura de pantalla 2025-02-20 113057.png" id="2_gu4js"]
+[ext_resource type="Texture2D" uid="uid://bd8vmarcrbl3j" path="res://Assets/Sprites/Levels/bombita.png" id="2_12iob"]
 [ext_resource type="AudioStream" uid="uid://c1vxjy3xkt51l" path="res://Assets/Music/Effects/Cartoon Explosion Sound Effect - Free Download & No Copyright (mp3cut.net).mp3" id="3_nrfk6"]
 [ext_resource type="Texture2D" uid="uid://drmstm88ixw2f" path="res://Assets/Sprites/UI/R.png" id="4_rd1wj"]
 
@@ -59,6 +59,33 @@ tracks/1/keys = {
 "values": [false]
 }
 
+[sub_resource type="Animation" id="Animation_2swc2"]
+resource_name = "desvanecer_salir"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TextureRect:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
 [sub_resource type="Animation" id="Animation_7ubi0"]
 resource_name = "desvanecer_salir_team"
 length = 4.0
@@ -82,33 +109,6 @@ tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
 "times": PackedFloat32Array(0.0333333, 4),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [true, false]
-}
-
-[sub_resource type="Animation" id="Animation_2swc2"]
-resource_name = "desvanecer_salir"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("TextureRect:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("TextureRect:visible")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [true, false]
@@ -143,7 +143,7 @@ autostart = true
 
 [node name="logo" type="Sprite2D" parent="."]
 position = Vector2(644, 364)
-texture = ExtResource("2_gu4js")
+texture = ExtResource("2_12iob")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_nrfk6")

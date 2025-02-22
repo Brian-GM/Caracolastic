@@ -182,6 +182,7 @@ position = Vector2(57, 196)
 
 [node name="S2" type="Label" parent="."]
 visible = false
+layout_mode = 0
 offset_left = -14.0
 offset_top = 197.0
 offset_right = 1316.0
@@ -198,6 +199,7 @@ vertical_alignment = 1
 
 [node name="S" type="Label" parent="."]
 visible = false
+layout_mode = 0
 offset_left = 21.0
 offset_top = 221.0
 offset_right = 1351.0
@@ -213,6 +215,7 @@ vertical_alignment = 1
 
 [node name="S3" type="Label" parent="."]
 visible = false
+layout_mode = 0
 offset_left = 57.0
 offset_top = 196.0
 offset_right = 1387.0

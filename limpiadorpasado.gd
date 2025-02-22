@@ -12,7 +12,7 @@ func _ready() -> void:
 		
 	else:
 		$Texto.text = "You 
-		'S'NAILED 
+		  NAILED 
 		IT!"
 		$S.visible = true
 		$S3.visible = true
