@@ -1089,18 +1089,19 @@ texture = ExtResource("12_hyrdl")
 
 [node name="Cafetera" type="Node2D" parent="."]
 unique_name_in_owner = true
-position = Vector2(1190, 15)
+position = Vector2(916, 15)
+scale = Vector2(-1, 1)
 
 [node name="RecogerCafe" type="Area2D" parent="Cafetera"]
 position = Vector2(-36, 40)
 script = ExtResource("4_lw4xx")
 
 [node name="Sprite2D2" type="Sprite2D" parent="Cafetera/RecogerCafe"]
-position = Vector2(93, 12)
+position = Vector2(94, 12)
 texture = ExtResource("16_vd3r7")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Cafetera/RecogerCafe"]
-position = Vector2(50, 59)
+position = Vector2(55, 62)
 shape = SubResource("CircleShape2D_qi25n")
 
 [node name="Caracol" parent="." instance=ExtResource("17_7gbvm")]

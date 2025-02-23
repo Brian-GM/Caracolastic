@@ -1088,7 +1088,8 @@ texture = ExtResource("12_t4epx")
 
 [node name="Cafetera" type="Node2D" parent="."]
 unique_name_in_owner = true
-position = Vector2(1190, 15)
+position = Vector2(915, 15)
+scale = Vector2(-1, 1)
 
 [node name="RecogerCafe" type="Area2D" parent="Cafetera"]
 position = Vector2(-36, 40)
@@ -1099,7 +1100,7 @@ position = Vector2(93, 12)
 texture = ExtResource("16_vwbqf")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Cafetera/RecogerCafe"]
-position = Vector2(50, 59)
+position = Vector2(52, 62)
 shape = SubResource("CircleShape2D_qi25n")
 
 [node name="Caracol" parent="." instance=ExtResource("1_e1uyw")]
