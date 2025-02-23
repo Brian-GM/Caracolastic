@@ -1,0 +1,635 @@
+[gd_scene load_steps=21 format=3 uid="uid://bwyv30h84jrny"]
+
+[ext_resource type="Script" path="res://Scripts/level_1.2.gd" id="1_ocbys"]
+[ext_resource type="Texture2D" uid="uid://b1087rh6ipqww" path="res://Assets/Sprites/Levels/suelo.png" id="2_xlrl7"]
+[ext_resource type="PackedScene" uid="uid://dn351c0o6kfb3" path="res://Scenes/Caracol/Caracol.tscn" id="3_ygupi"]
+[ext_resource type="PackedScene" uid="uid://b6yo8ymw4ioqm" path="res://Scenes/Assets/obstaculo_oficina_1.tscn" id="4_106gb"]
+[ext_resource type="PackedScene" uid="uid://s6jup0d7ihu2" path="res://Scenes/Assets/obstaculo_oficina_2.tscn" id="5_udd16"]
+[ext_resource type="FontFile" uid="uid://bre1cjdaepuvc" path="res://Assets/Fonts/PressStart2P-Regular.ttf" id="6_qky6r"]
+[ext_resource type="PackedScene" uid="uid://h4k8ar65lb2o" path="res://Scenes/Assets/mierdecita.tscn" id="7_25k8i"]
+[ext_resource type="Texture2D" uid="uid://6i1cf56go6jw" path="res://Assets/Sprites/Levels/Pared.png" id="8_ixq7y"]
+[ext_resource type="AudioStream" uid="uid://bbtxm3bnxpjyq" path="res://Assets/Music/Effects/Quick Reverb Fat - Sound Effect (HD) (mp3cut.net) (2).mp3" id="9_pxoyi"]
+[ext_resource type="PackedScene" uid="uid://d0kcrfxfsxk82" path="res://Scenes/Assets/barraprogreso/progressbar.tscn" id="10_sq1lx"]
+[ext_resource type="Texture2D" uid="uid://drmstm88ixw2f" path="res://Assets/Sprites/UI/R.png" id="11_ujmrj"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_3isfn"]
+b = Vector2(0, 720)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_i06g8"]
+a = Vector2(1280, 0)
+b = Vector2(1280, 720)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_6oiuq"]
+b = Vector2(1280, 0)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_xir2w"]
+a = Vector2(0, 720)
+b = Vector2(1280, 720)
+
+[sub_resource type="Animation" id="Animation_lfgtj"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TextureRect:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_uwxkt"]
+resource_name = "desvanecer_entrada"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TextureRect:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_2swc2"]
+resource_name = "desvanecer_salir"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TextureRect:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="Animation" id="Animation_7ubi0"]
+resource_name = "desvanecer_salir_team"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0333333, 3.06667, 3.96667),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TextureRect:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.0333333, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_xx4bh"]
+_data = {
+"RESET": SubResource("Animation_lfgtj"),
+"desvanecer_entrada": SubResource("Animation_uwxkt"),
+"desvanecer_salir": SubResource("Animation_2swc2"),
+"desvanecer_salir_team": SubResource("Animation_7ubi0")
+}
+
+[node name="Level1_2" type="Node2D"]
+script = ExtResource("1_ocbys")
+
+[node name="Sueloo" type="Node2D" parent="."]
+
+[node name="Suelo" type="Sprite2D" parent="Sueloo"]
+position = Vector2(63, 64)
+texture = ExtResource("2_xlrl7")
+
+[node name="Suelo2" type="Sprite2D" parent="Sueloo"]
+position = Vector2(190, 64)
+texture = ExtResource("2_xlrl7")
+
+[node name="Suelo3" type="Sprite2D" parent="Sueloo"]
+position = Vector2(318, 64)
+texture = ExtResource("2_xlrl7")
+
+[node name="Suelo4" type="Sprite2D" parent="Sueloo"]
+position = Vector2(446, 64)
+texture = ExtResource("2_xlrl7")
+
+[node name="Suelo5" type="Sprite2D" parent="Sueloo"]
+position = Vector2(574, 64)
+texture = ExtResource("2_xlrl7")
+
+[node name="Suelo6" type="Sprite2D" parent="Sueloo"]
+position = Vector2(702, 64)
+texture = ExtResource("2_xlrl7")
+
+[node name="Suelo7" type="Sprite2D" parent="Sueloo"]
+position = Vector2(830, 64)
+texture = ExtResource("2_xlrl7")
+
+[node name="Suelo8" type="Sprite2D" parent="Sueloo"]
+position = Vector2(958, 64)
+texture = ExtResource("2_xlrl7")
+
+[node name="Suelo9" type="Sprite2D" parent="Sueloo"]
+position = Vector2(1086, 64)
+texture = ExtResource("2_xlrl7")
+
+[node name="Suelo10" type="Sprite2D" parent="Sueloo"]
+position = Vector2(1214, 64)
+texture = ExtResource("2_xlrl7")
+
+[node name="Suelo11" type="Sprite2D" parent="Sueloo"]
+position = Vector2(1342, 64)
+texture = ExtResource("2_xlrl7")
+
+[node name="Sueloo2" type="Node2D" parent="."]
+position = Vector2(0, 128)
+
+[node name="Suelo" type="Sprite2D" parent="Sueloo2"]
+position = Vector2(63, 64)
+texture = ExtResource("2_xlrl7")
+
+[node name="Suelo2" type="Sprite2D" parent="Sueloo2"]
+position = Vector2(190, 64)
+texture = ExtResource("2_xlrl7")
+
+[node name="Suelo3" type="Sprite2D" parent="Sueloo2"]
+position = Vector2(318, 64)
+texture = ExtResource("2_xlrl7")
+
+[node name="Suelo4" type="Sprite2D" parent="Sueloo2"]
+position = Vector2(446, 64)
+texture = ExtResource("2_xlrl7")
+
+[node name="Suelo5" type="Sprite2D" parent="Sueloo2"]
+position = Vector2(574, 64)
+texture = ExtResource("2_xlrl7")
+
+[node name="Suelo6" type="Sprite2D" parent="Sueloo2"]
+position = Vector2(702, 64)
+texture = ExtResource("2_xlrl7")
+
+[node name="Suelo7" type="Sprite2D" parent="Sueloo2"]
+position = Vector2(830, 64)
+texture = ExtResource("2_xlrl7")
+
+[node name="Suelo8" type="Sprite2D" parent="Sueloo2"]
+position = Vector2(958, 64)
+texture = ExtResource("2_xlrl7")
+
+[node name="Suelo9" type="Sprite2D" parent="Sueloo2"]
+position = Vector2(1086, 64)
+texture = ExtResource("2_xlrl7")
+
+[node name="Suelo10" type="Sprite2D" parent="Sueloo2"]
+position = Vector2(1214, 64)
+texture = ExtResource("2_xlrl7")
+
+[node name="Suelo11" type="Sprite2D" parent="Sueloo2"]
+position = Vector2(1342, 64)
+texture = ExtResource("2_xlrl7")
+
+[node name="Sueloo3" type="Node2D" parent="."]
+position = Vector2(0, 256)
+
+[node name="Suelo" type="Sprite2D" parent="Sueloo3"]
+position = Vector2(63, 64)
+texture = ExtResource("2_xlrl7")
+
+[node name="Suelo2" type="Sprite2D" parent="Sueloo3"]
+position = Vector2(190, 64)
+texture = ExtResource("2_xlrl7")
+
+[node name="Suelo3" type="Sprite2D" parent="Sueloo3"]
+position = Vector2(318, 64)
+texture = ExtResource("2_xlrl7")
+
+[node name="Suelo4" type="Sprite2D" parent="Sueloo3"]
+position = Vector2(446, 64)
+texture = ExtResource("2_xlrl7")
+
+[node name="Suelo5" type="Sprite2D" parent="Sueloo3"]
+position = Vector2(574, 64)
+texture = ExtResource("2_xlrl7")
+
+[node name="Suelo6" type="Sprite2D" parent="Sueloo3"]
+position = Vector2(702, 64)
+texture = ExtResource("2_xlrl7")
+
+[node name="Suelo7" type="Sprite2D" parent="Sueloo3"]
+position = Vector2(830, 64)
+texture = ExtResource("2_xlrl7")
+
+[node name="Suelo8" type="Sprite2D" parent="Sueloo3"]
+position = Vector2(958, 64)
+texture = ExtResource("2_xlrl7")
+
+[node name="Suelo9" type="Sprite2D" parent="Sueloo3"]
+position = Vector2(1086, 64)
+texture = ExtResource("2_xlrl7")
+
+[node name="Suelo10" type="Sprite2D" parent="Sueloo3"]
+position = Vector2(1214, 64)
+texture = ExtResource("2_xlrl7")
+
+[node name="Suelo11" type="Sprite2D" parent="Sueloo3"]
+position = Vector2(1342, 64)
+texture = ExtResource("2_xlrl7")
+
+[node name="Sueloo4" type="Node2D" parent="."]
+position = Vector2(0, 384)
+
+[node name="Suelo" type="Sprite2D" parent="Sueloo4"]
+position = Vector2(63, 64)
+texture = ExtResource("2_xlrl7")
+
+[node name="Suelo2" type="Sprite2D" parent="Sueloo4"]
+position = Vector2(190, 64)
+texture = ExtResource("2_xlrl7")
+
+[node name="Suelo3" type="Sprite2D" parent="Sueloo4"]
+position = Vector2(318, 64)
+texture = ExtResource("2_xlrl7")
+
+[node name="Suelo4" type="Sprite2D" parent="Sueloo4"]
+position = Vector2(446, 64)
+texture = ExtResource("2_xlrl7")
+
+[node name="Suelo5" type="Sprite2D" parent="Sueloo4"]
+position = Vector2(574, 64)
+texture = ExtResource("2_xlrl7")
+
+[node name="Suelo6" type="Sprite2D" parent="Sueloo4"]
+position = Vector2(702, 64)
+texture = ExtResource("2_xlrl7")
+
+[node name="Suelo7" type="Sprite2D" parent="Sueloo4"]
+position = Vector2(830, 64)
+texture = ExtResource("2_xlrl7")
+
+[node name="Suelo8" type="Sprite2D" parent="Sueloo4"]
+position = Vector2(958, 64)
+texture = ExtResource("2_xlrl7")
+
+[node name="Suelo9" type="Sprite2D" parent="Sueloo4"]
+position = Vector2(1086, 64)
+texture = ExtResource("2_xlrl7")
+
+[node name="Suelo10" type="Sprite2D" parent="Sueloo4"]
+position = Vector2(1214, 64)
+texture = ExtResource("2_xlrl7")
+
+[node name="Suelo11" type="Sprite2D" parent="Sueloo4"]
+position = Vector2(1342, 64)
+texture = ExtResource("2_xlrl7")
+
+[node name="Sueloo5" type="Node2D" parent="."]
+position = Vector2(0, 512)
+
+[node name="Suelo" type="Sprite2D" parent="Sueloo5"]
+position = Vector2(63, 64)
+texture = ExtResource("2_xlrl7")
+
+[node name="Suelo2" type="Sprite2D" parent="Sueloo5"]
+position = Vector2(190, 64)
+texture = ExtResource("2_xlrl7")
+
+[node name="Suelo3" type="Sprite2D" parent="Sueloo5"]
+position = Vector2(318, 64)
+texture = ExtResource("2_xlrl7")
+
+[node name="Suelo4" type="Sprite2D" parent="Sueloo5"]
+position = Vector2(446, 64)
+texture = ExtResource("2_xlrl7")
+
+[node name="Suelo5" type="Sprite2D" parent="Sueloo5"]
+position = Vector2(574, 64)
+texture = ExtResource("2_xlrl7")
+
+[node name="Suelo6" type="Sprite2D" parent="Sueloo5"]
+position = Vector2(702, 64)
+texture = ExtResource("2_xlrl7")
+
+[node name="Suelo7" type="Sprite2D" parent="Sueloo5"]
+position = Vector2(830, 64)
+texture = ExtResource("2_xlrl7")
+
+[node name="Suelo8" type="Sprite2D" parent="Sueloo5"]
+position = Vector2(958, 64)
+texture = ExtResource("2_xlrl7")
+
+[node name="Suelo9" type="Sprite2D" parent="Sueloo5"]
+position = Vector2(1086, 64)
+texture = ExtResource("2_xlrl7")
+
+[node name="Suelo10" type="Sprite2D" parent="Sueloo5"]
+position = Vector2(1214, 64)
+texture = ExtResource("2_xlrl7")
+
+[node name="Suelo11" type="Sprite2D" parent="Sueloo5"]
+position = Vector2(1342, 64)
+texture = ExtResource("2_xlrl7")
+
+[node name="Sueloo6" type="Node2D" parent="."]
+position = Vector2(0, 640)
+
+[node name="Suelo" type="Sprite2D" parent="Sueloo6"]
+position = Vector2(63, 64)
+texture = ExtResource("2_xlrl7")
+
+[node name="Suelo2" type="Sprite2D" parent="Sueloo6"]
+position = Vector2(190, 64)
+texture = ExtResource("2_xlrl7")
+
+[node name="Suelo3" type="Sprite2D" parent="Sueloo6"]
+position = Vector2(318, 64)
+texture = ExtResource("2_xlrl7")
+
+[node name="Suelo4" type="Sprite2D" parent="Sueloo6"]
+position = Vector2(446, 64)
+texture = ExtResource("2_xlrl7")
+
+[node name="Suelo5" type="Sprite2D" parent="Sueloo6"]
+position = Vector2(574, 64)
+texture = ExtResource("2_xlrl7")
+
+[node name="Suelo6" type="Sprite2D" parent="Sueloo6"]
+position = Vector2(702, 64)
+texture = ExtResource("2_xlrl7")
+
+[node name="Suelo7" type="Sprite2D" parent="Sueloo6"]
+position = Vector2(830, 64)
+texture = ExtResource("2_xlrl7")
+
+[node name="Suelo8" type="Sprite2D" parent="Sueloo6"]
+position = Vector2(958, 64)
+texture = ExtResource("2_xlrl7")
+
+[node name="Suelo9" type="Sprite2D" parent="Sueloo6"]
+position = Vector2(1086, 64)
+texture = ExtResource("2_xlrl7")
+
+[node name="Suelo10" type="Sprite2D" parent="Sueloo6"]
+position = Vector2(1214, 64)
+texture = ExtResource("2_xlrl7")
+
+[node name="Suelo11" type="Sprite2D" parent="Sueloo6"]
+position = Vector2(1342, 64)
+texture = ExtResource("2_xlrl7")
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("3_ygupi")]
+z_index = 2
+position = Vector2(1240, 680)
+slide_on_ceiling = false
+
+[node name="Left" type="StaticBody2D" parent="."]
+position = Vector2(-1.5, 0)
+collision_layer = 2
+
+[node name="Left" type="CollisionShape2D" parent="Left"]
+shape = SubResource("SegmentShape2D_3isfn")
+
+[node name="Right" type="StaticBody2D" parent="."]
+collision_layer = 2
+
+[node name="Right" type="CollisionShape2D" parent="Right"]
+position = Vector2(1.5, 0)
+shape = SubResource("SegmentShape2D_i06g8")
+
+[node name="Up" type="StaticBody2D" parent="."]
+collision_layer = 2
+
+[node name="Up" type="CollisionShape2D" parent="Up"]
+position = Vector2(0, -1.5)
+shape = SubResource("SegmentShape2D_6oiuq")
+
+[node name="Bottom" type="StaticBody2D" parent="."]
+collision_layer = 2
+
+[node name="Bottom" type="CollisionShape2D" parent="Bottom"]
+position = Vector2(0, 1.5)
+shape = SubResource("SegmentShape2D_xir2w")
+
+[node name="Node2D" parent="." instance=ExtResource("4_106gb")]
+z_index = 1
+position = Vector2(81, 81)
+scale = Vector2(2, 2)
+
+[node name="Node2D5" parent="." instance=ExtResource("4_106gb")]
+z_index = 1
+position = Vector2(81, 639)
+scale = Vector2(2, 2)
+
+[node name="Node2D2" parent="." instance=ExtResource("5_udd16")]
+z_index = 1
+position = Vector2(1096, 493)
+
+[node name="Node2D3" parent="." instance=ExtResource("5_udd16")]
+z_index = 1
+position = Vector2(767, 677)
+
+[node name="Node2D4" parent="." instance=ExtResource("5_udd16")]
+z_index = 1
+position = Vector2(458, 365)
+
+[node name="Node2D8" parent="." instance=ExtResource("5_udd16")]
+z_index = 1
+position = Vector2(834, 280)
+
+[node name="Node2D9" parent="." instance=ExtResource("5_udd16")]
+z_index = 1
+position = Vector2(209, 34)
+
+[node name="Node2D6" parent="." instance=ExtResource("4_106gb")]
+position = Vector2(1200, 80)
+scale = Vector2(2, 2)
+
+[node name="Mierdas" type="Node2D" parent="."]
+
+[node name="Mierdecita2" parent="Mierdas" instance=ExtResource("7_25k8i")]
+position = Vector2(737, 279)
+scale = Vector2(1.5, 1.5)
+
+[node name="Mierdecita6" parent="Mierdas" instance=ExtResource("7_25k8i")]
+position = Vector2(435, 510)
+scale = Vector2(1.5, 1.5)
+
+[node name="Mierdecita8" parent="Mierdas" instance=ExtResource("7_25k8i")]
+position = Vector2(233, 351)
+scale = Vector2(1.5, 1.5)
+
+[node name="Mierdecita3" parent="Mierdas" instance=ExtResource("7_25k8i")]
+position = Vector2(231, 650)
+scale = Vector2(1.5, 1.5)
+
+[node name="Mierdecita9" parent="Mierdas" instance=ExtResource("7_25k8i")]
+position = Vector2(233, 129)
+scale = Vector2(1.5, 1.5)
+
+[node name="Mierdecita7" parent="Mierdas" instance=ExtResource("7_25k8i")]
+position = Vector2(390, 383)
+scale = Vector2(1.5, 1.5)
+
+[node name="Mierdecita11" parent="Mierdas" instance=ExtResource("7_25k8i")]
+position = Vector2(362, 280)
+scale = Vector2(1.5, 1.5)
+
+[node name="Mierdecita14" parent="Mierdas" instance=ExtResource("7_25k8i")]
+position = Vector2(320, 591)
+scale = Vector2(1.5, 1.5)
+
+[node name="Mierdecita17" parent="Mierdas" instance=ExtResource("7_25k8i")]
+position = Vector2(827, 354)
+scale = Vector2(1.5, 1.5)
+
+[node name="Mierdecita18" parent="Mierdas" instance=ExtResource("7_25k8i")]
+position = Vector2(532, 133)
+scale = Vector2(1.5, 1.5)
+
+[node name="Mierdecita19" parent="Mierdas" instance=ExtResource("7_25k8i")]
+position = Vector2(536, 679)
+scale = Vector2(1.5, 1.5)
+
+[node name="Mierdecita20" parent="Mierdas" instance=ExtResource("7_25k8i")]
+position = Vector2(817, 134)
+scale = Vector2(1.5, 1.5)
+
+[node name="Mierdecita21" parent="Mierdas" instance=ExtResource("7_25k8i")]
+position = Vector2(951, 679)
+scale = Vector2(1.5, 1.5)
+
+[node name="Mierdecita22" parent="Mierdas" instance=ExtResource("7_25k8i")]
+position = Vector2(1098, 414)
+scale = Vector2(1.5, 1.5)
+
+[node name="Mierdecita4" parent="Mierdas" instance=ExtResource("7_25k8i")]
+position = Vector2(1236, 589)
+scale = Vector2(1.5, 1.5)
+
+[node name="Tiempo" type="Label" parent="."]
+visible = false
+offset_left = 13.0
+offset_top = 1.0
+offset_right = 70.0
+offset_bottom = 70.0
+theme_override_font_sizes/font_size = 50
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 45.0
+one_shot = true
+autostart = true
+
+[node name="Pared" type="Sprite2D" parent="."]
+position = Vector2(-14, 347.75)
+scale = Vector2(1, 5.89453)
+texture = ExtResource("8_ixq7y")
+
+[node name="Pared2" type="Sprite2D" parent="."]
+position = Vector2(1294, 368)
+scale = Vector2(1, 5.89453)
+texture = ExtResource("8_ixq7y")
+
+[node name="Pared3" type="Sprite2D" parent="."]
+z_index = 5
+position = Vector2(206, -18)
+rotation = 1.5708
+scale = Vector2(1.24748, 18.7027)
+texture = ExtResource("8_ixq7y")
+
+[node name="Pared4" type="Sprite2D" parent="."]
+position = Vector2(604, 737)
+rotation = 1.5708
+scale = Vector2(1.24748, 18.7027)
+texture = ExtResource("8_ixq7y")
+
+[node name="Puntos" type="Label" parent="."]
+offset_left = 1018.0
+offset_top = 22.0
+offset_right = 1268.0
+offset_bottom = 91.0
+theme_override_fonts/font = ExtResource("6_qky6r")
+theme_override_font_sizes/font_size = 50
+
+[node name="pedo" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("9_pxoyi")
+
+[node name="Progressbar" parent="." instance=ExtResource("10_sq1lx")]
+z_index = 1
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 10.0
+offset_bottom = 10.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_xx4bh")
+}
+
+[node name="TextureRect" type="TextureRect" parent="."]
+z_index = 10
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -151.0
+offset_top = -129.0
+offset_right = 1495.0
+offset_bottom = 830.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("11_ujmrj")
+
+[node name="win" type="AudioStreamPlayer2D" parent="."]
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -112,9 +112,8 @@ func _process(_delta: float) -> void:
 	if pedidos_completados >= pedidos_totales:
 		$"../AnimationPlayer".play("desvanecer_salir")
 		await get_tree().create_timer(1.0).timeout 
-		get_tree().change_scene_to_file("res://Scenes/stonks/becariopasado.tscn")
+		get_tree().change_scene_to_file("res://Scenes/round_two.tscn")
 	var direction = Vector2.ZERO
-
 	if Input.is_action_pressed("ui_right"):
 		direction.x += 1
 	if Input.is_action_pressed("ui_left"):
@@ -324,7 +323,8 @@ func entregar_pedido(mesa_index: int) -> void:
 					%PedidoCompletado.play()
 					print("Café y Lechuga entregados en " + mesa.name + ". Pedido completado.")
 					pedidos_completados += 2
-					print(pedidos_completados)
+					$"../Progressbar".aumentar_tiempo(2)
+
 				elif cafe_en_bandeja:
 					# Entregar solo el café
 					if cafe1Recogido:
@@ -338,6 +338,7 @@ func entregar_pedido(mesa_index: int) -> void:
 					mesa.sprite_pedido.texture = textura_lechuga  # Cambiar el sprite para mostrar que falta la lechuga
 					%PedidoAMedias.play()
 					print("Café entregado en " + mesa.name + ". Falta la lechuga.")
+					
 				elif lechuga_en_bandeja:
 					# Entregar solo la lechuga
 					if lechuga1Recogida:
@@ -369,8 +370,8 @@ func entregar_pedido(mesa_index: int) -> void:
 					mesa.sprite_pedido.visible = false  # Ocultar el sprite del pedido
 					%PedidoCompletado.play()
 					print("Lechuga entregada en " + mesa.name + ". Pedido completado.")
-					pedidos_completados += 1
-					print(pedidos_completados)
+					pedidos_completados += 2
+					$"../Progressbar".aumentar_tiempo(2)
 
 				else:
 					%Error.play()
@@ -390,8 +391,8 @@ func entregar_pedido(mesa_index: int) -> void:
 					mesa.sprite_pedido.visible = false  # Ocultar el sprite del pedido
 					%PedidoCompletado.play()
 					print("Café entregado en " + mesa.name + ". Pedido completado.")
-					pedidos_completados += 1
-					print(pedidos_completados)
+					pedidos_completados += 2
+					$"../Progressbar".aumentar_tiempo(2)
 
 				else:
 					%Error.play()
@@ -412,6 +413,7 @@ func entregar_pedido(mesa_index: int) -> void:
 				%PedidoCompletado.play()
 				print("Pedido de café entregado en " + mesa.name)
 				pedidos_completados += 1
+				$"../Progressbar".aumentar_tiempo(1)
 
 			else:
 				%Error.play()
@@ -432,6 +434,8 @@ func entregar_pedido(mesa_index: int) -> void:
 				%PedidoCompletado.play()
 				print("Pedido de lechuga entregado en " + mesa.name)
 				pedidos_completados += 1
+				$"../Progressbar".aumentar_tiempo(1)
+
 			else:
 				%Error.play()
 				print("No tienes lechuga para " + mesa.name)

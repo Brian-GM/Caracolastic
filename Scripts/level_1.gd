@@ -27,7 +27,7 @@ func _process(delta: float) -> void:
 	if mierdas.get_child_count() <= 0:
 		$AnimationPlayer.play("desvanecer_salir")
 		await get_tree().create_timer(1.0).timeout 
-		get_tree().change_scene_to_file("res://Scenes/stonks/limpiadorpasado.tscn")
+		get_tree().change_scene_to_file("res://Scenes/round_two.tscn")
 
 
 func _on_temporizador_tiempo_agotado():

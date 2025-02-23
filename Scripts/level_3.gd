@@ -11,12 +11,11 @@ extends Node2D
 var points = 0
 
 var words = [
-	"hotel", "radio", "total", "final", "local", "legal", "color", "cable", 
-	"crisis", "manual", "ideal", "normal", "actor", "banco", "fiscal", "dental", 
-	"doctor", "movil", "mental", "formal", "digital", "global", "animal",
-	"virus", "motor", "piano", "metro", "robot", "puma", "pasta", "floral", 
-	"motel", "tropical", "brutal", "fatal", "lunar", "solar", "rural", "polar", 
-	"legal", "visual", "basico"
+	"hotel", "radio", "final", "local", "legal", "color",
+	"piano", "metro", "robot", "puma", "pasta", "floral",
+	"motel", "fatal", "lunar", "solar", "rural", "polar", "virus",
+	"motor", "ideal", "moral", "panel", "metal", "ritual", "usual",
+	"coral", "delta", "extra", "favor", "opera", "rival",
 ];
 
 var marca = "_"
@@ -33,7 +32,7 @@ func _ready() -> void:
 	$AnimationPlayer.play("desvanecer_entrada")
 
 	GameManager.current_level = "res://Scenes/Levels/Level3.tscn"
-	puntos.text = str(points) + " /10"
+	puntos.text = str(points) + "/10"
 	_1.visible = false
 	new_word()
 	
@@ -43,9 +42,8 @@ func _process(delta: float) -> void:
 
 	if points >= 10:
 		$AnimationPlayer.play("desvanecer_salir")
-		await get_tree().create_timer(1.0).timeout  # Espera 2 segundos
-		get_tree().change_scene_to_file("res://Scenes/stonks/programadorpasado.tscn")
-
+		await get_tree().create_timer(1.0).timeout  
+		get_tree().change_scene_to_file("res://Scenes/round_two.tscn")
 func _input(event: InputEvent) -> void:
 	if event is InputEventKey:
 		$AudioStreamPlayer2D.play()
@@ -67,7 +65,7 @@ func _input(event: InputEvent) -> void:
 					points += 1
 					$AudioStreamPlayer2D2.play()
 					_1.visible = true
-					puntos.text = str(points) + " /10"
+					puntos.text = str(points) + "/10"
 					await get_tree().create_timer(1).timeout
 					_1.visible = false
 

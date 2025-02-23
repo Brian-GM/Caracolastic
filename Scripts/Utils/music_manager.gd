@@ -1,7 +1,7 @@
 extends AudioStreamPlayer2D
 
 var songs = [
-	"res://Assets/Music/Soundtrack/levels/CaracolSong.wav",
+	"res://Assets/Music/Soundtrack/levels/CaracolSong.mp3",
 ]
 
 var current_scene_name = ""
@@ -13,13 +13,12 @@ func _process(_delta: float) -> void:
 	
 	current_scene_name = current_scene.name
 	match current_scene_name:
-		"Level1","Level2","Level3","Nivel4":
+		"Level1","Level1_2","Level2","Level2_1","Level3","Level3_2","Nivel4","Nivel4_2":
 			if playing: stop()
 			play_random_song()
 		"Menu","Settings":
 			if !playing:
-				play_song("res://Assets/Music/Soundtrack/levels/CaracolSong.wav")
-			
+				play_song("res://Assets/Music/Soundtrack/levels/CaracolSong.mp3")
 		_:
 			stop()
 
