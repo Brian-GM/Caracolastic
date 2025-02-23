@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://twxigihp4v0p"]
+[gd_scene load_steps=14 format=3 uid="uid://d3hmnc4qn585w"]
 
 [ext_resource type="Script" path="res://Scripts/level_3.2.gd" id="1_4wxwl"]
 [ext_resource type="Texture2D" uid="uid://clk5fy4ftenbe" path="res://Assets/Sprites/Levels/Ordenador-lvl3.png" id="2_263vg"]

@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://cw3x0mhgi3b4m" path="res://tusmuerto/suelo.png" id="1_qfk3g"]
 [ext_resource type="PackedScene" uid="uid://cn8d16v4abypi" path="res://tusmuerto/caracol_jefe.tscn" id="2_euv3y"]
 [ext_resource type="PackedScene" uid="uid://bplyqahqbqgyh" path="res://tusmuerto/npc_1.tscn" id="3_dsbki"]
-[ext_resource type="PackedScene" uid="uid://s6jup0d7ihu2" path="res://Scenes/Assets/obstaculo_oficina_2.tscn" id="5_jqb17"]
+[ext_resource type="PackedScene" path="res://Scenes/Assets/obstaculo_oficina_2.tscn" id="5_jqb17"]
 [ext_resource type="PackedScene" uid="uid://bsseg17uhwupv" path="res://tusmuerto/npc_3.tscn" id="5_l3fw4"]
 [ext_resource type="PackedScene" uid="uid://bol431v0udnc1" path="res://tusmuerto/meta_1.tscn" id="7_gheld"]
 [ext_resource type="PackedScene" uid="uid://b7lss7r4sdwom" path="res://tusmuerto/meta_2.tscn" id="7_ymyuc"]
