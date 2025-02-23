@@ -482,6 +482,10 @@ position = Vector2(313, 679)
 z_index = 1
 position = Vector2(773, 194)
 
+[node name="Node2D7" parent="." instance=ExtResource("5_52fjs")]
+z_index = 1
+position = Vector2(676, 132)
+
 [node name="Node2D8" parent="." instance=ExtResource("5_52fjs")]
 z_index = 1
 position = Vector2(845, 18)
