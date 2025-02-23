@@ -432,10 +432,6 @@ position = Vector2(1226, 53)
 z_index = 1
 position = Vector2(437, 58)
 
-[node name="Node2D7" parent="." instance=ExtResource("5_a37mk")]
-z_index = 1
-position = Vector2(829, 220)
-
 [node name="Node2D" parent="." instance=ExtResource("6_r6dhv")]
 z_index = 1
 position = Vector2(1189, 371)
@@ -450,7 +446,7 @@ scale = Vector2(2, 2)
 
 [node name="Node2D8" parent="." instance=ExtResource("5_a37mk")]
 z_index = 1
-position = Vector2(237, 413)
+position = Vector2(238, 364)
 
 [node name="Node2D6" parent="." instance=ExtResource("5_a37mk")]
 z_index = 1
@@ -459,6 +455,10 @@ position = Vector2(458, 280)
 [node name="Node2D9" parent="." instance=ExtResource("5_a37mk")]
 z_index = 1
 position = Vector2(816, 486)
+
+[node name="Node2D11" parent="." instance=ExtResource("5_a37mk")]
+z_index = 1
+position = Vector2(798, 169)
 
 [node name="Meta1" parent="." instance=ExtResource("6_yqhkt")]
 position = Vector2(1172, 574)
@@ -469,10 +469,10 @@ position = Vector2(110, 148)
 script = ExtResource("10_nrslq")
 
 [node name="NPC1" parent="." instance=ExtResource("8_aypxv")]
-position = Vector2(270, 553)
+position = Vector2(294, 538)
 
 [node name="NPC3" parent="." instance=ExtResource("9_6nhlh")]
-position = Vector2(1002, 223)
+position = Vector2(899, 173)
 
 [node name="Mesa-arriba-sola" type="Sprite2D" parent="."]
 position = Vector2(130, 63)
