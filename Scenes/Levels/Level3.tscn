@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://l4gufc3u6gnk"]
+[gd_scene load_steps=14 format=3 uid="uid://l4gufc3u6gnk"]
 
 [ext_resource type="Script" path="res://Scripts/level_3.gd" id="1_iadf1"]
 [ext_resource type="Texture2D" uid="uid://clk5fy4ftenbe" path="res://Assets/Sprites/Levels/Ordenador-lvl3.png" id="2_qvmdx"]
@@ -7,6 +7,7 @@
 [ext_resource type="AudioStream" uid="uid://43dxugi7680q" path="res://Assets/Music/Effects/Error.mp3" id="4_lrh32"]
 [ext_resource type="AudioStream" uid="uid://boo6pdicslta7" path="res://Assets/Music/Effects/Tecla.mp3" id="4_mlo4g"]
 [ext_resource type="AudioStream" uid="uid://li844irlcfx6" path="res://Assets/Music/Effects/Correcto.mp3" id="4_o6p2n"]
+[ext_resource type="PackedScene" uid="uid://d0kcrfxfsxk82" path="res://Scenes/Assets/barraprogreso/progressbar.tscn" id="7_2h6tr"]
 
 [sub_resource type="Animation" id="Animation_lfgtj"]
 length = 0.001
@@ -181,6 +182,7 @@ one_shot = true
 autostart = true
 
 [node name="Tiempo" type="Label" parent="."]
+visible = false
 offset_left = 63.0
 offset_top = 65.0
 offset_right = 103.0
@@ -209,6 +211,12 @@ stream = ExtResource("4_mlo4g")
 libraries = {
 "": SubResource("AnimationLibrary_xx4bh")
 }
+
+[node name="Progressbar" parent="." instance=ExtResource("7_2h6tr")]
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 10.0
+offset_bottom = 10.0
 
 [node name="TextureRect" type="TextureRect" parent="."]
 anchors_preset = 8

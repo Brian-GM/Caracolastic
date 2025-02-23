@@ -73,7 +73,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"default",
-"speed": 10.0
+"speed": 7.0
 }]
 
 [sub_resource type="Animation" id="Animation_lfgtj"]
@@ -217,12 +217,12 @@ frame = 14
 frame_progress = 1.0
 
 [node name="Fin" type="Timer" parent="."]
-wait_time = 5.0
+wait_time = 7.0
 one_shot = true
 autostart = true
 
 [node name="sello" type="Timer" parent="."]
-wait_time = 4.0
+wait_time = 5.5
 one_shot = true
 autostart = true
 

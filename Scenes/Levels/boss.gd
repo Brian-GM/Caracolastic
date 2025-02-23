@@ -13,6 +13,24 @@ var preguntas = {
 				{"texto": "Plantas", "correcta": true},
 				{"texto": "Neveras", "correcta": false}
 			]
+		},		
+		{
+			"enunciado": "¿Cual es tu nombre?",
+			"respuestas": [
+				{"texto": "Eufrasio", "correcta": false},
+				{"texto": "Eutanasio", "correcta": false},
+				{"texto": "Eustaquio", "correcta": true},
+				{"texto": "Eulalio", "correcta": false}
+			]
+		},
+		{
+			"enunciado": "¿Cual es el mejor juego de esta Jam?",
+			"respuestas": [
+				{"texto": "Este juego", "correcta": true},
+				{"texto": "Shell Corporation", "correcta": true},
+				{"texto": "Evidentemente, este juego", "correcta": true},
+				{"texto": "¿Como no?, este juego", "correcta": true}
+			]
 		},
 		{
 			"enunciado": "¿Cuáles son los alimentos que transportastes cuando eras becario?",
@@ -41,24 +59,6 @@ var preguntas = {
 				{"texto": "Animarles", "correcta": false},
 			]
 		},
-				{
-			"enunciado": "¿Cual es tu nombre?",
-			"respuestas": [
-				{"texto": "Eutanasio", "correcta": false},
-				{"texto": "Eufrasio", "correcta": false},
-				{"texto": "Eucalipto", "correcta": false},
-				{"texto": "Eustaquio", "correcta": true}
-			]
-		},
-		{
-			"enunciado": "¿Cual es el mejor juego de esta Jam?",
-			"respuestas": [
-				{"texto": "Shell Corporation", "correcta": true},
-				{"texto": "Este juego", "correcta": true},
-				{"texto": "Evidentemente este juego", "correcta": true},
-				{"texto": "¿Como no?, este juego", "correcta": true},
-			]
-		},
 	],
 	"english": [
 		{
@@ -68,6 +68,24 @@ var preguntas = {
 				{"texto": "Trash cans", "correcta": false},
 				{"texto": "Plants", "correcta": true},
 				{"texto": "Fridges", "correcta": false}
+			]
+		},
+			{
+			"enunciado": "What's your name?",
+			"respuestas": [
+				{"texto": "Eufrasio", "correcta": false},
+				{"texto": "Eutanasio", "correcta": false},
+				{"texto": "Eustaquio", "correcta": true},
+				{"texto": "Eulalio", "correcta": false}
+			]
+		},
+		{
+			"enunciado": "What is the best game of this Jam?",
+			"respuestas": [
+				{"texto": "This game", "correcta": true},
+				{"texto": "Shell Corporation", "correcta": true},
+				{"texto": "Obviously, this game", "correcta": true},
+				{"texto": "Why not, this game", "correcta": true}
 			]
 		},
 		{

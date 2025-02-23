@@ -1,12 +1,13 @@
-[gd_scene load_steps=5 format=3 uid="uid://2pcmu3q1xh3c"]
+[gd_scene load_steps=7 format=3 uid="uid://2pcmu3q1xh3c"]
 
 [ext_resource type="Script" path="res://Scripts/caracollvl_2.gd" id="1_kw7h6"]
 [ext_resource type="Texture2D" uid="uid://cat1glswei00n" path="res://Assets/Sprites/Characters/Caracol-Becario.png" id="2_dbv2l"]
+[ext_resource type="Texture2D" uid="uid://beb2hsc4415i2" path="res://Assets/Sprites/Levels/BANDEJA.png" id="3_qv8fo"]
+[ext_resource type="Texture2D" uid="uid://dvsi6f74cdr1a" path="res://Assets/Sprites/Characters/cofee.png" id="4_ovj5w"]
+[ext_resource type="Texture2D" uid="uid://r6xhh6rppwhr" path="res://Assets/Sprites/Characters/Lechuga.png" id="5_sqkgr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_glsgq"]
-size = Vector2(90.9055, 116.271)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_afuok"]
+size = Vector2(99.1696, 116.271)
 
 [node name="Caracol" type="CharacterBody2D"]
 position = Vector2(216, 281)
@@ -14,16 +15,39 @@ scale = Vector2(0.5, 0.5)
 collision_mask = 2
 script = ExtResource("1_kw7h6")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="CaracolSprite" type="Sprite2D" parent="."]
 texture = ExtResource("2_dbv2l")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-3.99997, 3)
+position = Vector2(3.05176e-05, 3)
 rotation = -3.14159
 scale = Vector2(0.968038, -0.567638)
 shape = SubResource("RectangleShape2D_glsgq")
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="Bandeja" type="Sprite2D" parent="."]
+position = Vector2(-28, -28)
+texture = ExtResource("3_qv8fo")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-sprite_frames = SubResource("SpriteFrames_afuok")
+[node name="Cafe1" type="Sprite2D" parent="Bandeja"]
+visible = false
+position = Vector2(-12, -28)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("4_ovj5w")
+
+[node name="Cafe2" type="Sprite2D" parent="Bandeja"]
+visible = false
+position = Vector2(18, -28)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("4_ovj5w")
+
+[node name="Lechuga1" type="Sprite2D" parent="Bandeja"]
+visible = false
+position = Vector2(-14, -18)
+scale = Vector2(0.11, 0.11)
+texture = ExtResource("5_sqkgr")
+
+[node name="Lechuga2" type="Sprite2D" parent="Bandeja"]
+visible = false
+position = Vector2(24, -18)
+scale = Vector2(0.11, 0.11)
+texture = ExtResource("5_sqkgr")
