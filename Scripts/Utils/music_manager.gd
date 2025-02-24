@@ -19,6 +19,9 @@ func _process(_delta: float) -> void:
 		"Menu","Settings":
 			if !playing:
 				play_song("res://Assets/Music/Soundtrack/levels/CaracolSong.mp3")
+		"Boss","PreguntaUI":
+			if playing: stop()
+			play_song("res://Assets/Music/Soundtrack/CancionBoss.mp3")
 		_:
 			stop()
 

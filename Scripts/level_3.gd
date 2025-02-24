@@ -71,10 +71,7 @@ func _input(event: InputEvent) -> void:
 
 					new_word()
 			else:
-				$AudioStreamPlayer2D3.play()
-				type_word.add_theme_color_override("font_color", Color(1, 0, 0, 1)) 
-				await get_tree().create_timer(0.3).timeout
-				type_word.add_theme_color_override("font_color", Color(0, 1, 0, 1)) 
+				pass
 
 
 

@@ -1,8 +1,9 @@
-[gd_scene load_steps=12 format=3 uid="uid://clqsql0i31i2g"]
+[gd_scene load_steps=13 format=3 uid="uid://clqsql0i31i2g"]
 
 [ext_resource type="Script" path="res://limpiadorpasado.gd" id="1_qhpxw"]
 [ext_resource type="Texture2D" uid="uid://snyqnqb3ngy5" path="res://Scenes/Assets/stonks/a.png" id="2_ys3ek"]
 [ext_resource type="Texture2D" uid="uid://drmstm88ixw2f" path="res://Assets/Sprites/UI/R.png" id="4_l5wrq"]
+[ext_resource type="AudioStream" uid="uid://d3g3cmyygga5k" path="res://Assets/Music/Soundtrack/Victoria.wav" id="5_3xxmm"]
 [ext_resource type="Texture2D" uid="uid://dxesretvekrur" path="res://Scenes/Assets/stonks/jefepasadol.png" id="5_du43h"]
 [ext_resource type="FontFile" uid="uid://bre1cjdaepuvc" path="res://Assets/Fonts/PressStart2P-Regular.ttf" id="5_k8uex"]
 
@@ -179,6 +180,7 @@ autostart = true
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 position = Vector2(57, 196)
+stream = ExtResource("5_3xxmm")
 
 [node name="S2" type="Label" parent="."]
 visible = false

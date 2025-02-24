@@ -3,7 +3,7 @@ extends Node2D
 
 func _ready() -> void:
 	$Progressbar.connect("tiempo_agotado", Callable(self, "_on_temporizador_tiempo_agotado"))
-	$Progressbar.set_tiempo_total(60)
+	$Progressbar.set_tiempo_total(90)
 
 	$AnimationPlayer.play("desvanecer_entrada")
 	GameManager.current_level = "res://Scenes/Levels/Level2.1.tscn"

@@ -251,7 +251,7 @@ theme_override_fonts/font = ExtResource("19_427ea")
 theme_override_font_sizes/font_size = 50
 text = "Promoted to
 
-Programmer
+Developer
 "
 horizontal_alignment = 1
 vertical_alignment = 1
